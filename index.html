@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- script -->
+    <script src="items/item/items.js"></script>
+    <script src="crafts/crafts.js"></script>
+    <script src="crafts/tagMap.js"></script>
+    <script src="scripts/get_item.js"></script>
+    <script src="scripts/craft.js"></script>
+    <script src="scripts/game.js"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="style/page.css">
+    <link rel="stylesheet" href="style/craft.css">
+</head>
+<body>
+    <div id="header">
+        <input type="button" id="start-game" value="Start Game" onclick="start_game()">
+    </div>
+    <div id="container">
+        <div id="select-item">
+            <div id="item_selected"></div>
+            <h1>Items</h1>
+            <input type="text" id="search" placeholder="Search for items..." oninput="display_item(this.value)">
+            <div id="items_list">
+                
+            </div>
+        </div>
+        <div id="craft-table">
+            <h1>Crafting Table</h1>
+            <div id="crafting-grid">
+                <div class="grid-item" id="place-1" data-item="null" onClick="place_item(this)"></div>
+                <div class="grid-item" id="place-2" data-item="null" onClick="place_item(this)"></div>
+                <div class="grid-item" id="place-3" data-item="null" onClick="place_item(this)"></div>
+                <div class="grid-item" id="place-4" data-item="null" onClick="place_item(this)"></div>
+                <div class="grid-item" id="place-5" data-item="null" onClick="place_item(this)"></div>
+                <div class="grid-item" id="place-6" data-item="null" onClick="place_item(this)"></div>
+                <div class="grid-item" id="place-7" data-item="null" onClick="place_item(this)"></div>
+                <div class="grid-item" id="place-8" data-item="null" onClick="place_item(this)"></div>
+                <div class="grid-item" id="place-9" data-item="null" onClick="place_item(this)"></div>
+            </div>
+            <p id="craft-result"></p>
+        </div>
+        <div id="wanted-item">
+
+        </div>
+    </div>
+    <script>
+    </script>
+</body>
+</html>

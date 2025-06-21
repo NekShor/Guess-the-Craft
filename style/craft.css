@@ -1,0 +1,15 @@
+
+#crafting-grid{
+    display: flex;
+    width: 220px;
+    height: 220px;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.grid-item{
+    border: 1px solid black;
+    height: 70px;
+    width: 70px;
+}
+
