@@ -20,8 +20,16 @@
 <body>
     <div id="header">
         <input type="button" id="start-game" value="Start Game" onclick="start_game()">
+        <div id="info">
+            <div id="timer">
+                <span id="time">00:00</span>
+            </div>
+            <div id="score">
+                <span id="score-value">0</span>
+            </div>
+        </div>
     </div>
-    <div id="container">
+    <div id="container" style="display: none;">
         <div id="select-item">
             <div id="item_selected"></div>
             <h1>Items</h1>
@@ -45,8 +53,11 @@
             </div>
             <p id="craft-result"></p>
         </div>
-        <div id="wanted-item">
-
+        <div id="wanted">
+            <h1>Wanted Item</h1>
+            <div id="wanted-item">
+    
+            </div>
         </div>
     </div>
     <script>

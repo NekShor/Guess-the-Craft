@@ -3,12 +3,15 @@ var timer = null;
 var countdown = null; // Variable pour le setInterval
 var item_wanted = null;
 
+
 function start_game() {
     count_good = 0;
     timer = 60;
 
     new_wanted_item();
     start_countdown();
+    var game_div = document.getElementById("container");
+    game_div.style.display = "flex";
 }
 
 function is_good_craft(item) {
@@ -19,6 +22,8 @@ function is_good_craft(item) {
     
 function good_item() {
     count_good++;
+    var score_display = document.getElementById("score");
+    score_display.textContent = count_good;
     new_wanted_item();
 
     clear_table();
@@ -38,10 +43,23 @@ function start_countdown() {
     countdown = setInterval(function () {
         if (timer > 0) {
             timer--;
-            console.log("Time left: " + timer);
+            set_timer(timer);
         } else {
-            clearInterval(countdown);
-            console.log("Game over!");
+            clearInterval(countdown); 
+            lose();
         }
     }, 1000); // Décompte toutes les secondes
+}
+
+function set_timer (seconds) {
+    var timerDisplay = document.getElementById("timer");
+    var minutes = Math.floor(seconds / 60);
+    var secs = seconds % 60;
+    timerDisplay.textContent = (minutes < 10 ? "0" : "") + minutes + ":" + (secs < 10 ? "0" : "") + secs;
+}
+
+function lose () {
+    var game_div = document.getElementById("container");
+    game_div.style.display = "none";
+    alert("Game Over! You scored: " + count_good + " points.");
 }
