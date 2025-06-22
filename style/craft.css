@@ -1,15 +1,105 @@
-
+/* 
 #crafting-grid{
     display: flex;
     width: 220px;
     height: 220px;
     justify-content: start;
     flex-wrap: wrap;
+    align-items: start;
 }
 
 .grid-item{
     border: 1px solid black;
     height: 70px;
     width: 70px;
+} */
+
+.mcui {
+    display: inline-block;
+    position: relative;
+    background-color: #C6C6C6;
+    border: 4px solid;
+    border-color: #DBDBDB #5B5B5B #5B5B5B #DBDBDB;
+    padding: 12px;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: bottom;
 }
 
+.mcui {
+    display: inline-block;
+    position: relative;
+    background-color: #C6C6C6;
+    border: 4px solid;
+    border-color: #DBDBDB #5B5B5B #5B5B5B #DBDBDB;
+    padding: 12px;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
+.mcui-Crafting_Table > .mcui-arrow {
+    background: url(../images/arrow.webp) no-repeat center center / 64px 52px;
+    width: 64px;
+    height: 52px;
+    margin: 80px 8px 0;
+}
+
+.mcui-Crafting_Table .mcui-row {
+    display: flex;
+}
+
+.invslot {
+    position: relative;
+    display: inline-block;
+    background: #8B8B8B no-repeat center center / 64px 64px;
+    border: 4px solid;
+    border-color: #373737 #FFF #FFF #373737;
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+    line-height: 2;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.invslot:hover {
+    background: #A9A9A9 no-repeat center center / 64px 64px;
+    border-color: #373737 #FFF #FFF #373737;
+}
+
+.mcwiki-header-grass, .ns-special .gallerybox img, .ns-14 .gallerybox img, .filehistory a img, .pixel-image, .invslot-item-image, .sprite {
+    image-rendering: optimizeSpeed;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.wikitable {
+    background-color: #f8f9fa;
+    color: #202122;
+    margin: 2em 0;
+    border: 2px solid #a2a9b1;
+    border-collapse: collapse;
+}
+
+.mcui-Crafting_Table > *, .mcui-Furnace > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mcui-Crafting_Table > .mcui-output {
+    margin-top: 56px;
+}
+
+.invslot-large {
+    padding: 16px;
+}
+
+.invslot img {
+    width: 100%;
+}

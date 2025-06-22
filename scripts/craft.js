@@ -16,6 +16,7 @@ function place_item(case_place) {
 
 function clear_table() {
     var crafting_grid = document.getElementById("crafting-grid");
+    console.log(crafting_grid);
     var crafting_places_obj = crafting_grid.querySelectorAll(".grid-item");
     crafting_places_obj.forEach(function(place) {
         place.setAttribute("data-item", 'null');
@@ -47,21 +48,21 @@ function formate_craft_item() {
         array.slice(3, 6),
         array.slice(6, 9)
     ]
-    console.log(array_craft);
 
     var item_crafted = validateCraft(array_craft, crafts, tagMap);
 
     var result = document.getElementById("craft-result");
     if (item_crafted) {
-        var item_formated = item_crafted.id.replace('minecraft:', 'minecraft_');
-        var obj = items.find(function(item) {
-            return item.code === item_formated;
-        });
+      var item_formated = item_crafted.id.replace('minecraft:', 'minecraft_');
+      var obj = items.find(function(item) {
+        return item.code === item_formated;
+      });
         is_good_craft(obj);
-
+      
+        console.log(result)
         result.innerHTML = "<img src=\"items/texture/" + obj.code + ".png\" alt=\"" + obj.name + "\"> " + obj.name;
     } else {
-        result.innerHTML = "Aucun item ne peut être fabriqué avec cette configuration.";
+        result.innerHTML = "";
     }
 }
 
@@ -191,9 +192,9 @@ function matchesIngredient(expected, actual, tagMap) {
     return null;
   }
   const inputGrid = [
-    ['minecraft:diamond', 'minecraft:diamond', 'minecraft:diamond'],
-    [null, 'minecraft:stick', null],
-    [null, 'minecraft:stick', null]
+    [null, null, null],
+     [null, 'minecraft:infested_stone', 'minecraft:infested_stone'],
+     [null, 'minecraft:infested_stone', 'minecraft:infested_stone']
   ];
   
   const result = validateCraft(inputGrid, crafts, tagMap);
