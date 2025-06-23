@@ -214,5 +214,7 @@ body {
         text-align: center;
     }
 
-    
+    .no_mobile {
+        display: none;
+    }    
 }

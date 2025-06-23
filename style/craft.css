@@ -112,10 +112,12 @@
 .btn_in_game p {
     margin: 0;
     padding: 0 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 70%;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    white-space: normal;
+    word-break: break-word;
 }
 
 .shadow_btn {
