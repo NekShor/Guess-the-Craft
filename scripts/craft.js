@@ -19,7 +19,6 @@ function place_item(case_place) {
         formate_craft_item();
     } catch (error) {
     }
-
 }
 
 function clear_table() {
@@ -65,7 +64,7 @@ function formate_craft_item() {
             return item.code === item_formated;
         });
         is_good_craft(obj);
-      
+
         result.innerHTML = "<img src=\"items/texture/" + obj.code + ".png\" alt=\"" + obj.name + "\"> ";
     } else {
         result.innerHTML = "";
@@ -103,7 +102,7 @@ document.addEventListener("mouseup", function(event) {
 
 function matchesIngredient(expected, actual, tagMap) {
     if (!expected) return false;
-  
+
     const matchOne = (exp) => {
         if (exp.startsWith("#")) {
             const tagItems = tagMap[exp] || [];
@@ -111,7 +110,7 @@ function matchesIngredient(expected, actual, tagMap) {
         }
         return exp === actual;
     };
-  
+
     if (Array.isArray(expected)) {
         return expected.some(e => matchOne(e));
     } else {
@@ -123,12 +122,11 @@ function matchShaped(recipe, inputGrid, tagMap) {
     const pattern = recipe.pattern;
     const height = pattern.length;
     const width = pattern[0].length;
-  
+
     for (let yOffset = 0; yOffset <= 3 - height; yOffset++) {
         for (let xOffset = 0; xOffset <= 3 - width; xOffset++) {
             let match = true;
     
-            // Vérifie le motif
             for (let y = 0; y < height; y++) {
                 for (let x = 0; x < width; x++) {
                     const symbol = pattern[y][x];
@@ -163,7 +161,6 @@ function matchShaped(recipe, inputGrid, tagMap) {
                     if (!match) break;
                 }
             }
-    
             if (match) return true;
         }
     }
@@ -174,7 +171,7 @@ function matchShaped(recipe, inputGrid, tagMap) {
 
 function validateCraft(inputGrid, recipes, tagMap = {}) {
     const flatten = grid => grid.flat().filter(x => x);
-  
+
     const matchShapeless = (recipe, inputGrid) => {
         const input = flatten(inputGrid);
         const required = [...recipe.ingredients];
@@ -187,19 +184,19 @@ function validateCraft(inputGrid, recipes, tagMap = {}) {
     
         return required.length === 0;
     };
-  
+
     const matchStonecutting = (recipe, inputGrid) => {
         const input = flatten(inputGrid);
         return input.length === 1 &&
             matchesIngredient(recipe.ingredient, input[0], tagMap);
     };
-  
+
     const matchSmelting = (recipe, inputGrid) => {
         const input = flatten(inputGrid);
         return input.length === 1 &&
             matchesIngredient(recipe.ingredient, input[0], tagMap);
     };
-  
+
     for (const recipe of recipes) {
         switch (recipe.type) {
             case "minecraft:crafting_shaped":
@@ -216,6 +213,6 @@ function validateCraft(inputGrid, recipes, tagMap = {}) {
                 break;
         }
     }
-  
+
     return null;
 }
