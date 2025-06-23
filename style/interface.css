@@ -39,6 +39,26 @@ h2 {
     margin: 0.5rem 0;
 }
 
+.clear_btn {
+    background: url('../images/cancel.webp') no-repeat center center / 24px 24px;
+    border: 4px solid;
+    border-color: #fdfbfc #646e76 #606065 #fdfbfc;
+    color: #4d4d4d;
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2rem;
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+    box-sizing: border-box;
+}
+
+.clear_btn:hover {
+    background: #9e9e9e no-repeat center center / 64px 64px;
+    border-color: #b0b0b0 #6a6a6a #6a6a6a #b0b0b0;
+}
+
 @media (max-width: 600px) {
     .interface_btn {
         width: 40%!important;
