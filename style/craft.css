@@ -10,11 +10,17 @@
     vertical-align: bottom;
 }
 
+.mcui-Crafting_Table {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .mcui-Crafting_Table > .mcui-arrow {
     background: url(../images/arrow.webp) no-repeat center center / 64px 52px;
     width: 64px;
     height: 52px;
-    margin: 80px 8px 0;
+    margin: 0px 8px 0;
 }
 
 .mcui-Crafting_Table .mcui-row {
@@ -65,7 +71,6 @@
 }
 
 .mcui-Crafting_Table > .mcui-output {
-    margin-top: 56px;
 }
 
 .invslot-large {
@@ -154,7 +159,7 @@ h1 {
     }
 
     .btn_in_game {
-        width: 100%!important;
+        width: 90%!important;
         justify-content: center;
     }
 
