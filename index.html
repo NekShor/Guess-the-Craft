@@ -51,31 +51,33 @@
         </div>
         <div id="craft-table">
             <h1>Crafting Table</h1>
-            <span class="mcui mcui-Crafting_Table pixel-image" id="crafting-grid">
-                <span class="mcui-input">
-                    <span class="mcui-row">
-                        <div class="invslot grid-item" id="place-1" data-item="null" onClick="place_item(this)"></div>
-                        <div class="invslot grid-item" id="place-2" data-item="null" onClick="place_item(this)"></div>
-                        <div class="invslot grid-item" id="place-3" data-item="null" onClick="place_item(this)"></div>
+            <span class="mcui pixel-image" id="crafting-grid">
+                <div class="mcui-Crafting_Table">
+                    <span class="mcui-input">
+                        <span class="mcui-row">
+                            <div class="invslot grid-item" id="place-1" data-item="null" onClick="place_item(this)"></div>
+                            <div class="invslot grid-item" id="place-2" data-item="null" onClick="place_item(this)"></div>
+                            <div class="invslot grid-item" id="place-3" data-item="null" onClick="place_item(this)"></div>
+                        </span>
+                        <span class="mcui-row">
+                            <div class="invslot grid-item" id="place-4" data-item="null" onClick="place_item(this)"></div>
+                            <div class="invslot grid-item" id="place-5" data-item="null" onClick="place_item(this)"></div>
+                            <div class="invslot grid-item" id="place-6" data-item="null" onClick="place_item(this)"></div>
+                        </span>
+                        <span class="mcui-row">
+                            <div class="invslot grid-item" id="place-7" data-item="null" onClick="place_item(this)"></div>
+                            <div class="invslot grid-item" id="place-8" data-item="null" onClick="place_item(this)"></div>
+                            <div class="invslot grid-item" id="place-9" data-item="null" onClick="place_item(this)"></div>
+                        </span>
                     </span>
-                    <span class="mcui-row">
-                        <div class="invslot grid-item" id="place-4" data-item="null" onClick="place_item(this)"></div>
-                        <div class="invslot grid-item" id="place-5" data-item="null" onClick="place_item(this)"></div>
-                        <div class="invslot grid-item" id="place-6" data-item="null" onClick="place_item(this)"></div>
+                    <span class="mcui-arrow">
                     </span>
-                    <span class="mcui-row">
-                        <div class="invslot grid-item" id="place-7" data-item="null" onClick="place_item(this)"></div>
-                        <div class="invslot grid-item" id="place-8" data-item="null" onClick="place_item(this)"></div>
-                        <div class="invslot grid-item" id="place-9" data-item="null" onClick="place_item(this)"></div>
+                    <span class="mcui-output">
+                        <span class="invslot invslot-large" id="craft-result">
+                            
+                        </span>
                     </span>
-                </span>
-                <span class="mcui-arrow">
-                </span>
-                <span class="mcui-output">
-                    <span class="invslot invslot-large" id="craft-result">
-                        
-                    </span>
-                </span>
+                </div>
                 <div id="wanted" style="display: none;">
                     <h1>Wanted Item</h1>
                     <div id="found-items">

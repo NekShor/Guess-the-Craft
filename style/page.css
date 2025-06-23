@@ -187,6 +187,12 @@ body {
     display: none!important;
 }
 
+#select-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media (max-width: 800px) {
     #container {
         flex-direction: column-reverse;

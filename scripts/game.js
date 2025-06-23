@@ -8,7 +8,8 @@ var list_item_found = [];
 
 function start_game() {
     count_good = 0;
-    timer = 60;
+    // timer = 60;
+    timer = 60000;
     timer_total = timer;
     list_item_found = [];
     set_timer(timer);
