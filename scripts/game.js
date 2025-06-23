@@ -9,6 +9,7 @@ var list_item_found = [];
 function start_game() {
     count_good = 0;
     timer = 60;
+    // timer = 1;
     // timer = 60000;
     timer_total = timer;
     list_item_found = [];
@@ -51,6 +52,13 @@ function stop_game() {
     clear_table();
 }
 
+function close_end_interface () {
+    var end_game_div = document.getElementById("end-game");
+    end_game_div.style.display = "none";
+    var body = document.querySelector("body");
+    body.classList.remove("game");
+}
+
 function is_good_craft(item) {
     if (!item_wanted) {
         return;
@@ -78,7 +86,6 @@ function good_item() {
 
 function new_wanted_item() {
     item_wanted = crafts[Math.floor(Math.random() * crafts.length)];
-    console.log("Nouvel item voulu: " + item_wanted.result.id);
 }
 
 function start_countdown() {

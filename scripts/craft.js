@@ -21,7 +21,6 @@ function place_item(case_place) {
 
 function clear_table() {
     var crafting_grid = document.getElementById("crafting-grid");
-    console.log(crafting_grid);
     var crafting_places_obj = crafting_grid.querySelectorAll(".grid-item");
     crafting_places_obj.forEach(function(place) {
         place.setAttribute("data-item", 'null');
@@ -94,7 +93,6 @@ document.addEventListener("mousedown", function(event) {
 });
 
 document.addEventListener("mouseup", function(event) {
-    console.log("mouseup");
     if (event.button === 0) {
         is_left_click = false;
     }

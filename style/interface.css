@@ -33,3 +33,20 @@ h2 {
     margin: 0.5rem 0;
     text-align: center;
 }
+
+.infos span {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+    .interface_btn {
+        width: 40%!important;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .infos span {
+        font-size: 1.5rem;
+    }
+}
