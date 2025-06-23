@@ -18,7 +18,7 @@ function display_item(text) {
 function set_item_selected (item) {
     var itemObject = items.find(function(i) { return i.code === item; });
     item_selected = itemObject;
-    document.getElementById("item_selected").innerHTML = "<img src=\"items/texture/"+item_selected.code+".png\"> <p>" + item_selected.name.replace('minecraft ', '') + "</p>";
+    document.getElementById("item_selected").innerHTML = "<img src=\"items/texture/"+item_selected.code+".png\"><p>" + item_selected.name.replace('minecraft ', '').trim() + "</p>";
     
     var crafting_grid = document.getElementById("crafting-grid");
     crafting_grid.style.cursor = "url('items/texture/"+item_selected.code+".png') 32 32, auto";
