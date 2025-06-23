@@ -30,7 +30,6 @@ function stop_game() {
     var body = document.querySelector("body");
     body.classList.remove("game");
     set_timer(0);
-    alert("Game stopped! You scored: " + count_good + " points.");
     count_good = 0;
     var score_display = document.getElementById("score-value");
     score_display.textContent = count_good;
@@ -47,6 +46,7 @@ function stop_game() {
     var minutes = Math.floor(timer_total / 60);
     var seconds = timer_total % 60;
     final_time.textContent = (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+
 }
 
 function is_good_craft(item) {
