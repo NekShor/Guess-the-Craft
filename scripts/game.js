@@ -35,7 +35,10 @@ function stop_game() {
     score_display.textContent = count_good;
     list_item_found = [];
     item_wanted = null;
-    display_found_items();
+    try{
+        display_found_items();
+    } catch (e) {
+    }
     clear_table();
 
     var end_game_div = document.getElementById("end-game");
