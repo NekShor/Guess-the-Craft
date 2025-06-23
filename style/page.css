@@ -193,6 +193,28 @@ body {
     align-items: center;
 }
 
+#search_bar_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#item_selected {
+    width: 50%;
+}
+
+#item_selected img {
+    width: 48px;
+    height: 48px;
+}
+
+#item_selected p {
+    font-size: 0.5em;
+    margin: 0;
+    padding: 0;
+}
+
 @media (max-width: 800px) {
     #container {
         flex-direction: column-reverse;
