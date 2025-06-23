@@ -22,6 +22,10 @@ function set_item_selected (item) {
     
     var crafting_grid = document.getElementById("crafting-grid");
     crafting_grid.style.cursor = "url('items/texture/"+item_selected.code+".png') 32 32, auto";
+    var found_items = document.getElementById("found-items");
+    found_items.style.cursor = "url('items/texture/"+item_selected.code+".png') 32 32, auto";
+    var select_item = document.getElementById("select-item");
+    select_item.style.cursor = "url('items/texture/"+item_selected.code+".png') 32 32, auto";
 }
 
 function get_items (text) {

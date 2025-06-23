@@ -125,3 +125,18 @@
     background-color: #8b8b8b;
     border-color: #606065 #606065 #fff #373737;
 }
+
+h1 {
+    font-family: 'Minecraft', sans-serif;
+    font-size: 2rem;
+    color: #4c4c4c;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.found_list {
+    width: 400px;
+    /* breakword */
+    word-break: break-all;
+    overflow-wrap: break-word;
+}

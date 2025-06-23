@@ -17,24 +17,34 @@
     <link rel="stylesheet" href="style/page.css">
     <link rel="stylesheet" href="style/craft.css">
     <link rel="stylesheet" href="style/get_item.css">
+    <link rel="stylesheet" href="style/interface.css">
+    <link rel="stylesheet" href="style/end_game.css">
 </head>
 <body>
+    <div id="end-game" class="white shadow mcui" style="display: none;">
+        <h1>Game Over</h1>
+        <p id="end-message">You have finished the game!</p>
+        <p id="end-score">Your score: <span id="final-score">0</span></p>
+        <p id="end-time">Time taken: <span id="final-time">00:00</span></p>
+        <input type="button" class="interface_btn white shadow" id="restart-game" value="Restart Game" onclick="restart_game()">
+    </div>
     <div id="header">
-        <input type="button" id="start-game" value="Start Game" onclick="start_game()">
-        <div id="info">
-            <div id="timer">
-                <span id="time">00:00</span>
-            </div>
-            <div id="score">
-                <span id="score-value">0</span>
-            </div>
+        <input type="button" class="interface_btn white shadow start_button" id="start-game" value="Start Game" onclick="start_game()">
+        <input type="button" class="interface_btn white shadow stop_button" id="stop-game" value="Stop Game" onclick="stop_game()">
+        <div id="timer" class="infos white" style="display: none;"> 
+            <h2>Timer</h2>
+            <span id="time">00:00</span>
+        </div>
+        <div id="score" class="infos white" style="display: none;">
+            <h2>Score</h2>
+            <span id="score-value">0</span>
         </div>
     </div>
     <div id="container" style="display: flex;">
         <div id="select-item">
             <h1>Items</h1>
             <div id="item_selected" class="btn_in_game"></div>
-            <input type="text" class="invslot search_bar white shadow" id="search" placeholder="Search for items..." oninput="display_item(this.value)">
+            <input type="text" class="invslot search_bar white shadow" id="search" placeholder="Search for items..." oninput="display_item(this.value)" onclick="this.value = ''; display_item('')">
             <div id="items_list">
                 
             </div>
@@ -67,17 +77,17 @@
                         
                     </span>
                 </span>
+                <br>
+                <div id="wanted" style="display: none;">
+                    <h1>Wanted Item</h1>
+                    <div id="found-items">
+        
+                    </div>
+                </div>
             </span>
-            <br>
-            <input type="button" id="craft-button" value="Clear" onclick="clear_table()">
-        </div>
-        <div id="wanted">
-            <h1>Wanted Item</h1>
-            <div id="found-items">
-
-            </div>
         </div>
     </div>
+
 
     <script>
         set_item_selected("minecraft_oak_planks")

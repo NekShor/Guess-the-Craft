@@ -151,6 +151,7 @@ body {
   font-family: 'Minecraftia'!important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #c6c6c6;
   
 }
 
@@ -159,8 +160,29 @@ body {
 }
 
 #container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.game #wanted {
+    display: block!important;
+}
+
+.game .infos {
+    display: flex!important;
+}
+
+.stop_button {
+    display: none;
+}
+
+.game .stop_button {
+    display: block!important;
+}
+
+.game .start_button {
+    display: none!important;
 }
