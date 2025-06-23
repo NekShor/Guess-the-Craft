@@ -59,14 +59,25 @@ function formate_craft_item() {
       });
         is_good_craft(obj);
       
-        console.log(result)
-        result.innerHTML = "<img src=\"items/texture/" + obj.code + ".png\" alt=\"" + obj.name + "\"> " + obj.name;
+        result.innerHTML = "<img src=\"items/texture/" + obj.code + ".png\" alt=\"" + obj.name + "\"> ";
     } else {
         result.innerHTML = "";
     }
 }
 
 
+document.addEventListener("contextmenu", function(event) {
+  var target = event.target;
+  console.log(target);
+  if (target.classList.contains("grid-item") || target.tagName === "IMG") {
+      event.preventDefault();
+      var item = target.closest(".grid-item");
+      item.setAttribute("data-item", 'null');
+      item.innerHTML = "";
+
+      formate_craft_item();
+  }
+});
 
 
 
@@ -191,11 +202,3 @@ function matchesIngredient(expected, actual, tagMap) {
   
     return null;
   }
-  const inputGrid = [
-    [null, null, null],
-     [null, 'minecraft:infested_stone', 'minecraft:infested_stone'],
-     [null, 'minecraft:infested_stone', 'minecraft:infested_stone']
-  ];
-  
-  const result = validateCraft(inputGrid, crafts, tagMap);
-  console.log(result);

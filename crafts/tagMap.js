@@ -1216,7 +1216,20 @@ var tagMap = {
     "minecraft:bamboo_stairs",
     "minecraft:cherry_stairs"
   ],
-  "#minecraft:wooden_tool_materials": [],
+  "#minecraft:wooden_tool_materials": [
+    "minecraft:acacia_planks",
+    "minecraft:birch_planks",
+    "minecraft:dark_oak_planks",
+    "minecraft:pale_oak_planks",
+    "minecraft:jungle_planks",
+    "minecraft:oak_planks",
+    "minecraft:spruce_planks",
+    "minecraft:crimson_planks",
+    "minecraft:warped_planks",
+    "minecraft:mangrove_planks",
+    "minecraft:bamboo_planks",
+    "minecraft:cherry_planks"
+  ],
   "#minecraft:wooden_trapdoors": [
     "minecraft:acacia_trapdoor",
     "minecraft:birch_trapdoor",

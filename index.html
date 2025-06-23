@@ -32,9 +32,9 @@
     </div>
     <div id="container" style="display: flex;">
         <div id="select-item">
-            <div id="item_selected"></div>
             <h1>Items</h1>
-            <input type="text" id="search" placeholder="Search for items..." oninput="display_item(this.value)">
+            <div id="item_selected" class="btn_in_game"></div>
+            <input type="text" class="invslot search_bar white shadow" id="search" placeholder="Search for items..." oninput="display_item(this.value)">
             <div id="items_list">
                 
             </div>
@@ -73,13 +73,14 @@
         </div>
         <div id="wanted">
             <h1>Wanted Item</h1>
-            <div id="wanted-item">
-    
+            <div id="found-items">
+
             </div>
         </div>
     </div>
 
     <script>
+        set_item_selected("minecraft_oak_planks")
         display_item("")
     </script>
     

@@ -18,17 +18,17 @@ function display_item(text) {
 function set_item_selected (item) {
     var itemObject = items.find(function(i) { return i.code === item; });
     item_selected = itemObject;
-    document.getElementById("item_selected").innerHTML = "<img src=\"items/texture/"+item_selected.code+".png\"> " + item_selected.name;
+    document.getElementById("item_selected").innerHTML = "<img src=\"items/texture/"+item_selected.code+".png\"> <p>" + item_selected.name.replace('minecraft ', '') + "</p>";
     
     var crafting_grid = document.getElementById("crafting-grid");
     crafting_grid.style.cursor = "url('items/texture/"+item_selected.code+".png') 32 32, auto";
 }
 
-function get_items(text) {
+function get_items (text) {
     var itemsList = items || [];
     var filteredItems = itemsList
     .filter(function(item) {
-      if (item.name.toLowerCase().includes(text.toLowerCase()) || item.code.toLowerCase().includes(text.toLowerCase())) {
+      if (item.name.replace('minecraft', '').toLowerCase().includes(text.toLowerCase()) || item.code.replace('minecraft', '').toLowerCase().includes(text.toLowerCase())) {
         return true;
       }
     })
@@ -37,15 +37,15 @@ function get_items(text) {
     });
 
     filteredItems.sort(function(a, b) {
-		const distanceA = levenshteinDistance(text.toLowerCase(), a.name.toLowerCase());
-		const distanceB = levenshteinDistance(text.toLowerCase(), b.name.toLowerCase());
+		const distanceA = levenshteinDistance(text.toLowerCase(), a.name.replace('minecraft', '').toLowerCase());
+		const distanceB = levenshteinDistance(text.toLowerCase(), b.name.replace('minecraft', '').toLowerCase());
 		return distanceA - distanceB;
     });
 
     return filteredItems;
 }
 
-function levenshteinDistance(str1, str2) {
+function levenshteinDistance (str1, str2) {
   const len1 = str1.length;
   const len2 = str2.length;
   const dp = Array.from({ length: len1 + 1 }, () => Array(len2 + 1).fill(0));

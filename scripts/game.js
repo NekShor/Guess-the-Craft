@@ -3,12 +3,15 @@ var timer = null;
 var countdown = null;
 var item_wanted = null;
 
+var list_item_found = [];
 
 function start_game() {
     count_good = 0;
     timer = 60;
+    list_item_found = [];
 
     new_wanted_item();
+    display_found_items();
     start_countdown();
     var game_div = document.getElementById("container");
     game_div.style.display = "flex";
@@ -27,8 +30,10 @@ function good_item() {
     count_good++;
     var score_display = document.getElementById("score");
     score_display.textContent = count_good;
+    list_item_found.push(item_wanted.result.id.replace("minecraft:", "minecraft_"));
     new_wanted_item();
 
+    display_found_items();
     clear_table();
 
     timer += 5;
@@ -37,9 +42,6 @@ function good_item() {
 function new_wanted_item() {
     item_wanted = crafts[Math.floor(Math.random() * crafts.length)];
     console.log("Nouvel item voulu: " + item_wanted.result.id);
-
-    var wanted_item_display = document.getElementById("wanted-item");
-    wanted_item_display.innerHTML = "<img src=\"items/texture/" + item_wanted.result.id.replace("minecraft:", "minecraft_") + ".png\" alt=\"" + item_wanted.result.id + "\"> ";
 }
 
 function start_countdown() {
@@ -65,4 +67,17 @@ function lose () {
     var game_div = document.getElementById("container");
     game_div.style.display = "none";
     alert("Game Over! You scored: " + count_good + " points.");
+}
+
+function display_found_items() {
+    var found_items_div = document.getElementById("found-items");
+    var html = "";
+    html += "<div class='btn_in_game'>" + "<img src=\"items/texture/" + item_wanted.result.id.replace('minecraft:' , 'minecraft_') + ".png\"><p>"+item_wanted.result.id.replace('minecraft:', '').replaceAll('_', ' ')+"</p></div>";
+
+    list_item_found = list_item_found.reverse(); 
+    list_item_found.forEach(function(item) {
+        var name_tag = item;
+        html += "<div class='btn_in_game shadow_btn'>" + "<img src=\"items/texture/" + name_tag + ".png\"><p>"+name_tag.replace('minecraft_', '').replaceAll('_', ' ')+"</p></div>";
+    });
+    found_items_div.innerHTML = html;
 }
