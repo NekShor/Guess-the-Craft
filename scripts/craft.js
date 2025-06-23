@@ -1,16 +1,21 @@
+var is_left_click = false;
+
+window.addEventListener("load", function() {
+    var crafting_places_obj = document.querySelectorAll(".grid-item");
+    crafting_places_obj.forEach(function(place) {
+      place.addEventListener("mouseover", function() {
+        if (is_left_click) {
+            place_item(place);
+        }
+      });
+    });
+});
+
 function place_item(case_place) {
     var item_selected_code = item_selected ? item_selected.code : null;
     case_place.setAttribute("data-item", item_selected_code);
 
-    
-    var html = "";
-    if (item_selected) {
-        html = "<img src=\"items/texture/" + item_selected.code + ".png\" alt=\"" + item_selected.name + "\">";
-    } else {
-        html = "";
-    }
-
-    case_place.innerHTML = html;
+    case_place.style.backgroundImage = item_selected ? "url('items/texture/" + item_selected.code + ".png')" : "none";
     formate_craft_item();
 }
 
@@ -20,7 +25,7 @@ function clear_table() {
     var crafting_places_obj = crafting_grid.querySelectorAll(".grid-item");
     crafting_places_obj.forEach(function(place) {
         place.setAttribute("data-item", 'null');
-        place.innerHTML = "";
+        place.style.backgroundImage = "none";
     });
     document.getElementById("craft-result").innerHTML = "";
 }
@@ -68,15 +73,31 @@ function formate_craft_item() {
 
 document.addEventListener("contextmenu", function(event) {
   var target = event.target;
-  console.log(target);
   if (target.classList.contains("grid-item") || target.tagName === "IMG") {
       event.preventDefault();
       var item = target.closest(".grid-item");
       item.setAttribute("data-item", 'null');
-      item.innerHTML = "";
+      item.style.backgroundImage = "none";
 
       formate_craft_item();
   }
+});
+
+document.addEventListener("mousedown", function(event) {
+    var place = event.target.closest(".grid-item");
+    if (event.button === 0) {
+        is_left_click = true;
+        place_item(place);
+    } else if (event.button === 2) {
+        is_left_click = false;
+    }
+});
+
+document.addEventListener("mouseup", function(event) {
+    console.log("mouseup");
+    if (event.button === 0) {
+        is_left_click = false;
+    }
 });
 
 

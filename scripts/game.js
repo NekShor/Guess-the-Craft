@@ -29,6 +29,14 @@ function stop_game() {
     clearInterval(countdown);
     var body = document.querySelector("body");
     body.classList.remove("game");
+    var end_game_div = document.getElementById("end-game");
+    end_game_div.style.display = "block";
+    var final_score = document.getElementById("final-score");
+    final_score.textContent = count_good;
+    var final_time = document.getElementById("final-time");
+    var minutes = Math.floor(timer_total / 60);
+    var seconds = timer_total % 60;
+    final_time.textContent = (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
     set_timer(0);
     count_good = 0;
     var score_display = document.getElementById("score-value");
@@ -40,16 +48,6 @@ function stop_game() {
     } catch (e) {
     }
     clear_table();
-
-    var end_game_div = document.getElementById("end-game");
-    end_game_div.style.display = "block";
-    var final_score = document.getElementById("final-score");
-    final_score.textContent = count_good;
-    var final_time = document.getElementById("final-time");
-    var minutes = Math.floor(timer_total / 60);
-    var seconds = timer_total % 60;
-    final_time.textContent = (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
-
 }
 
 function is_good_craft(item) {

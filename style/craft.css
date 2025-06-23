@@ -1,17 +1,5 @@
 .mcui {
-    display: inline-block;
-    position: relative;
-    background-color: #C6C6C6;
-    border: 4px solid;
-    border-color: #DBDBDB #5B5B5B #5B5B5B #DBDBDB;
-    padding: 12px;
-    text-align: left;
-    white-space: nowrap;
-    vertical-align: bottom;
-}
-
-.mcui {
-    display: inline-block;
+    display: flex;
     position: relative;
     background-color: #C6C6C6;
     border: 4px solid;
@@ -139,4 +127,38 @@ h1 {
     /* breakword */
     word-break: break-all;
     overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+    .mcui {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mcui-Crafting_Table > .mcui-arrow {
+        margin: 0;
+        display: none;
+    }
+
+    .mcui-Crafting_Table > .mcui-output {
+        margin-top: 0;
+    }
+
+    .btn_in_game {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mcui-Crafting_Table > .mcui-arrow {
+        margin: 10px;
+        transform: rotate(90deg);
+    }
+
+    .mcui-Crafting_Table > .mcui-output {
+        margin-top: 10px;
+    }
+
+    h1 {
+        margin: 0;
+    }
 }
