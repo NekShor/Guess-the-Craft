@@ -144,6 +144,12 @@ h1 {
     display: block;
 }
 
+.wanted_btn_{
+    background-color: #208305;
+    border-color: #22c70a #024e03 #024e03 #22c70a;
+    color: #ffffff;
+}
+
 @media (max-width: 600px) {
     .mcui {
         flex-direction: column;

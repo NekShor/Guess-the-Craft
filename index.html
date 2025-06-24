@@ -41,6 +41,7 @@
             <span id="score-value">0</span>
         </div>
     </div>
+    <br>
     <div id="container" style="display: flex;">
         <div id="select-item">
             <h1 class="no_mobile">Items</h1>
@@ -82,7 +83,7 @@
                 </div>
                 <input type="button" class="clear_btn white shadow" id="craft-btn" value="" onClick="clear_table()">
                 <div id="wanted" style="display: none;">
-                    <h1>Wanted Item</h1>
+                    <h1 class="no_mobile">Wanted Item</h1>
                     <div id="found-items">
         
                     </div>
@@ -90,9 +91,35 @@
             </span>
         </div>
     </div>
+    <div id="test">
+
+    </div>
     <script>
         display_item("")
-        set_item_selected("minecraft_sand")
+        set_item_selected("minecraft_oak_planks")
+
+        var number_test = 5000;
+        // for (let i = 0; i < number_test; i++) {
+        //     new_wanted_item()
+        //     try{
+        //         var found_items = document.getElementById("test");
+        //         var item = document.createElement("div");
+        //         item.className = "invslot";
+        //         item.id = "item-" + i;
+        //         item.setAttribute("data-item", item_wanted.result.id.replace(":", "_"));
+            
+    
+        //         var item_img = document.createElement("img");
+        //         item_img.src = "items/texture/" + item_wanted.result.id.replace(":", "_") + ".png";
+        //         item_img.alt = item_wanted.result.id;
+        //         item_img.className = "item-image";
+        //         item.appendChild(item_img);
+        //         found_items.appendChild(item);
+        //         console.log("Item " + i + " created: " + item_wanted.result.id);
+        //     } catch (error) {
+        //         console.error("Error creating item " + i + ": " + error);
+        //     }
+        // }
     </script>
 </body>
 </html>

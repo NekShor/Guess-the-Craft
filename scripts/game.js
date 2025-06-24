@@ -85,7 +85,50 @@ function good_item() {
 }
 
 function new_wanted_item() {
-    item_wanted = crafts[Math.floor(Math.random() * crafts.length)];
+    const totalWeight = crafts.reduce((sum, craft) => sum + (craft.ponderation || 1), 0);
+
+    const cumulativeWeights = [];
+    let cumulativeSum = 0;
+    for (let craft of crafts) {
+        if (!craft.result || !craft.result.id) {
+            continue; 
+        }
+        if (craft.result.id.includes('copper')) {
+            craft.ponderation = craft.ponderation / 4;
+            if (craft.result.id.includes('waxed')) {   
+                craft.ponderation = craft.ponderation / 2;
+            }
+        }
+
+        var minecraft_colors = ['red', 'green', 'blue', 'yellow', 'black', 'white', 'brown', 'gray', 'light_gray', 'cyan', 'purple', 'pink'];
+        if ((craft.result.id.includes('wool') || craft.result.id.includes('bed') || craft.result.id.includes('glass') || craft.result.id.includes('carpet') || craft.result.id.includes('concrete') || craft.result.id.includes('terracotta')) && minecraft_colors.some(color => craft.result.id.includes(color))) {
+            craft.ponderation = craft.ponderation / minecraft_colors.length;
+        }
+
+        var minecraft_woods = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'cherry', 'crimson', 'warped', 'pale'];
+        if ((craft.result.id.includes('planks') || craft.result.id.includes('log') || craft.result.id.includes('stripped') || craft.result.id.includes('slab') || craft.result.id.includes('stairs') || craft.result.id.includes('fence') || craft.result.id.includes('fence_gate') || craft.result.id.includes('hanging')) && minecraft_woods.some(wood => craft.result.id.includes(wood))) {
+            craft.ponderation = craft.ponderation / minecraft_woods.length;
+        }
+
+        var stones = ['stone', 'granite', 'diorite', 'andesite', 'cobblestone', 'mossy_cobblestone', 'deepslate', 'tuff', 'calcite', 'prismarine', 'blackstone', 'nether_brick', 'red_nether_brick', 'quartz', 'sandstone', 'red_sandstone', 'end_stone', 'purpur', 'basalt', 'polished_basalt', 'tuff', 'calcite'];
+        if ((craft.result.id.includes('slab'), craft.result.id.includes('stairs') || craft.result.id.includes('wall') || craft.result.id.includes('brick') || craft.result.id.includes('block')) && stones.some(stone => craft.result.id.includes(stone))) {
+            craft.ponderation = craft.ponderation / stones.length;
+        }
+
+        cumulativeSum += (craft.ponderation || 1);
+        cumulativeWeights.push(cumulativeSum);
+    }
+    const randomWeight = getSecureRandom() * totalWeight;
+
+    for (let i = 0; i < crafts.length; i++) {
+        if (randomWeight < cumulativeWeights[i]) {
+            if (!crafts[i].result || !crafts[i].result.id) {
+                return new_wanted_item(); 
+            }
+            item_wanted = crafts[i];
+            return;
+        }
+    }
 }
 
 function start_countdown() {
@@ -114,7 +157,8 @@ function lose () {
 function display_found_items() {
     var found_items_div = document.getElementById("found-items");
     var html = "";
-    html += "<div class='btn_in_game found_list'>" + "<img src=\"items/texture/" + item_wanted.result.id.replace('minecraft:' , 'minecraft_') + ".png\"><p>"+item_wanted.result.id.replace('minecraft:', '').replaceAll('_', ' ')+"</p></div>";
+    console.log("Item wanted:", item_wanted);
+    html += "<div class='btn_in_game found_list wanted_btn_'>" + "<img src=\"items/texture/" + item_wanted.result.id.replace('minecraft:' , 'minecraft_') + ".png\"><p>"+item_wanted.result.id.replace('minecraft:', '').replaceAll('_', ' ')+"</p></div>";
 
     list_item_found = list_item_found.reverse(); 
     list_item_found.forEach(function(item) {
@@ -123,3 +167,16 @@ function display_found_items() {
     });
     found_items_div.innerHTML = html;
 }
+
+function getSecureRandom() {
+    const array = new Uint32Array(1);
+    window.crypto.getRandomValues(array);
+    return array[0] / (0xFFFFFFFF + 1);
+}
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "R" || event.key === "r") {
+        stop_game();
+        start_game();
+    }
+});

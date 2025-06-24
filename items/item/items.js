@@ -5586,5 +5586,65 @@ var items = [
   {
     "code": "minecraft_zombified_piglin_spawn_egg",
     "name": "minecraft zombified piglin spawn egg"
+  },
+  {
+    "code": "minecraft_black_harness",
+    "name": "minecraft black harness"    
+  },
+  {
+    "code": "minecraft_blue_harness",
+    "name": "minecraft blue harness"    
+  },
+  {
+    "code": "minecraft_brown_harness",
+    "name": "minecraft brown harness"    
+  },
+  {
+    "code": "minecraft_cyan_harness",
+    "name": "minecraft cyan harness"    
+  },
+  {
+    "code": "minecraft_gray_harness",
+    "name": "minecraft gray harness"    
+  },
+  {
+    "code": "minecraft_light_blue_harness",
+    "name": "minecraft light blue harness"    
+  },
+  {
+    "code": "minecraft_light_gray_harness",
+    "name": "minecraft light gray harness"    
+  },
+  {
+    "code": "minecraft_lime_harness",
+    "name": "minecraft lime harness"    
+  },
+  {
+    "code": "minecraft_magenta_harness",
+    "name": "minecraft magenta harness"    
+  },
+  {
+    "code": "minecraft_orange_harness",
+    "name": "minecraft orange harness"    
+  },
+  {
+    "code": "minecraft_pink_harness",
+    "name": "minecraft pink harness"    
+  },
+  {
+    "code": "minecraft_purple_harness",
+    "name": "minecraft purple harness"    
+  },
+  {
+    "code": "minecraft_red_harness",
+    "name": "minecraft red harness"    
+  },
+  {
+    "code": "minecraft_yellow_harness",
+    "name": "minecraft yellow harness"    
+  },
+  {
+    "code": "minecraft_white_harness",
+    "name": "minecraft white harness"
   }
 ]

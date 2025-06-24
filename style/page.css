@@ -241,11 +241,10 @@ body::-webkit-scrollbar {
         text-align: center;
     }
 
-    .no_mobile {
-        display: none;
-    } 
-    
     #select-item {
         width: 100%; 
     }   
 }
+.no_mobile {
+    display: none;
+} 

@@ -54,10 +54,11 @@ function formate_craft_item() {
         array.slice(3, 6),
         array.slice(6, 9)
     ]
+    console.log(array_craft);
 
     var item_crafted = validateCraft(array_craft, crafts, tagMap);
-
     var result = document.getElementById("craft-result");
+    
     if (item_crafted) {
         var item_formated = item_crafted.id.replace('minecraft:', 'minecraft_');
         var obj = items.find(function(item) {
@@ -209,7 +210,6 @@ function validateCraft(inputGrid, recipes, tagMap = {}) {
     };
 
     for (const recipe of recipes) {
-        console.log('a');
         switch (recipe.type) {
             case "minecraft:crafting_shaped":
                 if (matchShaped(recipe, inputGrid, tagMap)) return recipe.result;
@@ -224,8 +224,17 @@ function validateCraft(inputGrid, recipes, tagMap = {}) {
                 if (matchSmelting(recipe, inputGrid, tagMap)) return recipe.result;
                 break;
             case "minecraft:crafting_transmute":
-                if (matchTransmute(recipe, inputGrid, tagMap)) return recipe.result;
+                try {
+                    if (matchTransmute(recipe, inputGrid, tagMap)) {
+                        return {
+                            id: recipe.result.id,
+                            material: recipe.material
+                        };
+                    }
+                } catch (error) {
+                }
                 break;
+            default:
         }
     }
 
