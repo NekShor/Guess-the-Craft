@@ -78,4 +78,10 @@ h2 {
         background: url('../images/cancel.webp') no-repeat center center / 24px 24px;
         border-color: #b0b0b0 #6a6a6a #6a6a6a #b0b0b0;
     }
+
+    #restart-game, #close {
+        /* les bouton ne doivent pas être sur la même ligne */
+        display: block;
+        width: 100%!important;
+    }
 }

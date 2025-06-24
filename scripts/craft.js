@@ -167,7 +167,18 @@ function matchShaped(recipe, inputGrid, tagMap) {
     return false;
 }
   
-  
+const matchTransmute = (recipe, inputGrid, tagMap) => {
+    const input = flatten(inputGrid);
+    if (input.length !== 1) return false;
+
+    const item = input[0];
+
+    const matchesInput = matchesIngredient(recipe.input, item, tagMap);
+
+    const matchesMaterial = matchesIngredient(recipe.material, item.material, tagMap);
+
+    return matchesInput && matchesMaterial;
+};
 
 function validateCraft(inputGrid, recipes, tagMap = {}) {
     const flatten = grid => grid.flat().filter(x => x);
@@ -198,6 +209,7 @@ function validateCraft(inputGrid, recipes, tagMap = {}) {
     };
 
     for (const recipe of recipes) {
+        console.log('a');
         switch (recipe.type) {
             case "minecraft:crafting_shaped":
                 if (matchShaped(recipe, inputGrid, tagMap)) return recipe.result;
@@ -210,6 +222,9 @@ function validateCraft(inputGrid, recipes, tagMap = {}) {
                 break;
             case "minecraft:smelting":
                 if (matchSmelting(recipe, inputGrid, tagMap)) return recipe.result;
+                break;
+            case "minecraft:crafting_transmute":
+                if (matchTransmute(recipe, inputGrid, tagMap)) return recipe.result;
                 break;
         }
     }
