@@ -88,6 +88,7 @@ function good_item() {
 function new_wanted_item() {
     const totalWeight = crafts.reduce((sum, craft) => sum + (craft.ponderation || 1), 0);
 
+    var old_item_wanted = item_wanted;
     const cumulativeWeights = [];
     let cumulativeSum = 0;
     for (let craft of crafts) {
@@ -128,6 +129,9 @@ function new_wanted_item() {
         if (randomWeight < cumulativeWeights[i]) {
             if (!crafts[i].result || !crafts[i].result.id) {
                 return new_wanted_item(); 
+            }
+            if (crafts[i] === old_item_wanted) {
+                return new_wanted_item();
             }
             item_wanted = crafts[i];
             return;
