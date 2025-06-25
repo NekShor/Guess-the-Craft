@@ -12348,7 +12348,7 @@ var crafts = [
       "id": "minecraft:netherite_axe"
     },
     "template": "minecraft:netherite_upgrade_smithing_template",
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12375,7 +12375,7 @@ var crafts = [
       "id": "minecraft:netherite_boots"
     },
     "template": "minecraft:netherite_upgrade_smithing_template",
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smithing_transform",
@@ -12385,7 +12385,7 @@ var crafts = [
       "id": "minecraft:netherite_chestplate"
     },
     "template": "minecraft:netherite_upgrade_smithing_template",
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smithing_transform",
@@ -12395,7 +12395,7 @@ var crafts = [
       "id": "minecraft:netherite_helmet"
     },
     "template": "minecraft:netherite_upgrade_smithing_template",
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smithing_transform",
@@ -12405,7 +12405,7 @@ var crafts = [
       "id": "minecraft:netherite_hoe"
     },
     "template": "minecraft:netherite_upgrade_smithing_template",
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -12448,7 +12448,7 @@ var crafts = [
       "id": "minecraft:netherite_leggings"
     },
     "template": "minecraft:netherite_upgrade_smithing_template",
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smithing_transform",
@@ -12458,7 +12458,7 @@ var crafts = [
       "id": "minecraft:netherite_pickaxe"
     },
     "template": "minecraft:netherite_upgrade_smithing_template",
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -12490,7 +12490,7 @@ var crafts = [
       "id": "minecraft:netherite_shovel"
     },
     "template": "minecraft:netherite_upgrade_smithing_template",
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smithing_transform",
@@ -12500,7 +12500,7 @@ var crafts = [
       "id": "minecraft:netherite_sword"
     },
     "template": "minecraft:netherite_upgrade_smithing_template",
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",

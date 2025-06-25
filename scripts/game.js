@@ -82,6 +82,7 @@ function good_item() {
     timer += time_win;
     timer_total += time_win;
     set_timer(timer);
+    timer_color_effect("+", time_win);
 }
 
 function new_wanted_item() {
@@ -144,14 +145,42 @@ function start_countdown() {
 }
 
 function set_timer (seconds) {
+    if( seconds < 0) {
+        seconds = 0;
+    }
     var timerDisplay = document.getElementById("time");
     var minutes = Math.floor(seconds / 60);
     var secs = seconds % 60;
     timerDisplay.textContent = (minutes < 10 ? "0" : "") + minutes + ":" + (secs < 10 ? "0" : "") + secs;
 }
 
+function timer_color_effect(type, time) {
+    var timerDisplay = document.getElementById("time");
+
+    timerDisplay.style.transition = "none"; 
+    timerDisplay.style.color = (type === "+" ? "#39d52f" : "#cf1515");
+
+    void timerDisplay.offsetWidth;
+
+    timerDisplay.style.transition = "color 2s";
+    timerDisplay.style.color = "white";
+}
+
 function lose () {
     stop_game();
+}
+
+function skip () {
+    if (!item_wanted) {
+        return;
+    }
+    var time_penalty = 10;
+    timer -= time_penalty;
+    timer_total -= time_penalty;
+    set_timer(timer);
+    timer_color_effect("-", time_penalty);
+    new_wanted_item();
+    display_found_items();
 }
 
 function display_found_items() {
