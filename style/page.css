@@ -191,6 +191,12 @@ body::-webkit-scrollbar {
     display: none!important;
 }
 
+.information_button {
+    width: 40px!important;
+    padding: 0!important;
+    text-align: center!important;
+}
+
 #select-item {
     display: flex;
     flex-direction: column;

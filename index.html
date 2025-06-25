@@ -12,6 +12,7 @@
     <script src="scripts/get_item.js"></script>
     <script src="scripts/craft.js"></script>
     <script src="scripts/game.js"></script>
+    <script src="scripts/interface.js"></script>
 
     <!-- style -->
     <link rel="stylesheet" href="style/page.css">
@@ -29,6 +30,12 @@
         <input type="button" class="interface_btn white shadow" id="restart-game" value="Restart Game" onclick="start_game()">
         <input type="button" class="interface_btn white shadow" id="close" value="Close" onClick="close_end_interface()">
     </div>
+    <div id="information" class="white shadow mcui" style="display: none;">
+        <h1>Information</h1>
+        <p>This game is a crafting simulation where you can create items using a crafting table. Search for items, place them in the crafting grid, and see what you can create!</p>
+        <p>Use the search bar to find specific items, and click on them to select them for crafting.</p>
+        <input type="button" class="interface_btn white shadow" id="close-info" value="Close" onClick="information()">
+    </div>
     <div id="header">
         <input type="button" class="interface_btn white shadow start_button" id="start-game" value="Start Game" onclick="start_game()">
         <input type="button" class="interface_btn white shadow stop_button" id="stop-game" value="Stop Game" onclick="stop_game()">
@@ -40,6 +47,7 @@
             <h2>Score</h2>
             <span id="score-value">0</span>
         </div>
+        <input type="button" class="interface_btn white shadow information_button" id="information_btn" value="I" data-open="false" onclick="information(this)">
     </div>
     <br>
     <div id="container" style="display: flex;">

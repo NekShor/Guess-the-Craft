@@ -157,7 +157,6 @@ function lose () {
 function display_found_items() {
     var found_items_div = document.getElementById("found-items");
     var html = "";
-    console.log("Item wanted:", item_wanted);
     html += "<div class='btn_in_game found_list wanted_btn_'>" + "<img src=\"items/texture/" + item_wanted.result.id.replace('minecraft:' , 'minecraft_') + ".png\"><p>"+item_wanted.result.id.replace('minecraft:', '').replaceAll('_', ' ')+"</p></div>";
 
     list_item_found = list_item_found.reverse(); 
@@ -173,10 +172,3 @@ function getSecureRandom() {
     window.crypto.getRandomValues(array);
     return array[0] / (0xFFFFFFFF + 1);
 }
-
-document.addEventListener("keydown", function(event) {
-    if (event.key === "R" || event.key === "r") {
-        stop_game();
-        start_game();
-    }
-});
