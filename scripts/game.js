@@ -116,7 +116,7 @@ function new_wanted_item() {
             craft.ponderation = craft.ponderation / stones.length;
         }
 
-        cumulativeSum += (craft.ponderation || 1);
+        cumulativeSum += (craft.ponderation || 0);
         cumulativeWeights.push(cumulativeSum);
     }
     const randomWeight = getSecureRandom() * totalWeight;
