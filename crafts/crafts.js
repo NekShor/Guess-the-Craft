@@ -1,9 +1,3 @@
-var ponderation_for_color         = 1 / 15;
-var ponderation_for_stair         = 1 / 58;
-var ponderation_for_slab          = 1 / 62;
-var ponderation_for_fence         = 1 / 15;
-var ponderation_for_fence_gate    = 1 / 14;
-
 var crafts = [
   {
     "type": "minecraft:crafting_shaped",
@@ -308,7 +302,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:andesite_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -334,7 +328,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:andesite_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -359,7 +353,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:andesite_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -425,7 +419,7 @@ var crafts = [
     "result": {
       "id": "minecraft:baked_potato"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -436,7 +430,7 @@ var crafts = [
     "result": {
       "id": "minecraft:baked_potato"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smoking",
@@ -447,7 +441,7 @@ var crafts = [
     "result": {
       "id": "minecraft:baked_potato"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -1061,7 +1055,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:blackstone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1087,7 +1081,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:blackstone_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1112,7 +1106,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:blackstone_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1248,7 +1242,7 @@ var crafts = [
     "result": {
       "id": "minecraft:black_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1519,7 +1513,7 @@ var crafts = [
     "result": {
       "id": "minecraft:blue_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1831,7 +1825,7 @@ var crafts = [
     "result": {
       "id": "minecraft:brick"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1871,7 +1865,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1897,7 +1891,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1922,7 +1916,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2045,7 +2039,7 @@ var crafts = [
     "result": {
       "id": "minecraft:brown_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2355,7 +2349,7 @@ var crafts = [
     "result": {
       "id": "minecraft:charcoal"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2661,7 +2655,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -2670,7 +2664,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2695,7 +2689,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_deepslate"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2720,7 +2714,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_nether_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2745,7 +2739,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_polished_blackstone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -2754,7 +2748,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_polished_blackstone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2779,7 +2773,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_quartz_block"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2804,7 +2798,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_red_sandstone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2829,7 +2823,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_resin_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2854,7 +2848,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_sandstone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2879,7 +2873,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_stone_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -2888,7 +2882,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_stone_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2929,7 +2923,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_tuff_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -2938,7 +2932,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_tuff_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -2947,7 +2941,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_tuff_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -2956,7 +2950,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:chiseled_tuff"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -3031,7 +3025,7 @@ var crafts = [
     "result": {
       "id": "minecraft:coal"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -3043,7 +3037,7 @@ var crafts = [
     "result": {
       "id": "minecraft:coal"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3055,7 +3049,7 @@ var crafts = [
     "result": {
       "id": "minecraft:coal"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3067,7 +3061,7 @@ var crafts = [
     "result": {
       "id": "minecraft:coal"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -3127,7 +3121,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:cobbled_deepslate_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -3153,7 +3147,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:cobbled_deepslate_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -3178,7 +3172,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:cobbled_deepslate_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -3202,7 +3196,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:cobblestone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -3228,7 +3222,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:cobblestone_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -3253,7 +3247,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:cobblestone_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -3336,7 +3330,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_beef"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3347,7 +3341,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_beef"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smoking",
@@ -3358,7 +3352,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_beef"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3369,7 +3363,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_chicken"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3380,7 +3374,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_chicken"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smoking",
@@ -3391,7 +3385,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_chicken"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3402,7 +3396,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_cod"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3413,7 +3407,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_cod"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smoking",
@@ -3424,7 +3418,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_cod"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3435,7 +3429,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_mutton"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3446,7 +3440,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_mutton"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smoking",
@@ -3457,7 +3451,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_mutton"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3468,7 +3462,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_porkchop"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3479,7 +3473,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_porkchop"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smoking",
@@ -3490,7 +3484,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_porkchop"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3501,7 +3495,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_rabbit"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3512,7 +3506,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_rabbit"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smoking",
@@ -3523,7 +3517,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_rabbit"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3534,7 +3528,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_salmon"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3545,7 +3539,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_salmon"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smoking",
@@ -3556,7 +3550,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_salmon"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -3651,7 +3645,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:copper_grate"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -3676,7 +3670,7 @@ var crafts = [
     "result": {
       "id": "minecraft:copper_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -3688,7 +3682,7 @@ var crafts = [
     "result": {
       "id": "minecraft:copper_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -3700,7 +3694,7 @@ var crafts = [
     "result": {
       "id": "minecraft:copper_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3712,7 +3706,7 @@ var crafts = [
     "result": {
       "id": "minecraft:copper_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3724,7 +3718,7 @@ var crafts = [
     "result": {
       "id": "minecraft:copper_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3736,7 +3730,7 @@ var crafts = [
     "result": {
       "id": "minecraft:copper_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -3776,7 +3770,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cracked_deepslate_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3787,7 +3781,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cracked_deepslate_tiles"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3798,7 +3792,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cracked_nether_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3809,7 +3803,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cracked_polished_blackstone_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -3820,7 +3814,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cracked_stone_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4135,7 +4129,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:cut_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4159,7 +4153,7 @@ var crafts = [
       "count": 8,
       "id": "minecraft:cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -4168,7 +4162,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4194,7 +4188,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -4203,7 +4197,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4228,7 +4222,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:cut_red_sandstone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4252,7 +4246,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:cut_red_sandstone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -4261,7 +4255,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:cut_red_sandstone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4286,7 +4280,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:cut_sandstone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4310,7 +4304,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:cut_sandstone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -4319,7 +4313,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:cut_sandstone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4456,7 +4450,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cyan_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4835,7 +4829,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:dark_prismarine_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4861,7 +4855,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:dark_prismarine_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4908,7 +4902,7 @@ var crafts = [
     "result": {
       "id": "minecraft:deepslate"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4933,7 +4927,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -4942,7 +4936,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4966,7 +4960,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:deepslate_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -4975,7 +4969,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:deepslate_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -4984,7 +4978,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:deepslate_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -5010,7 +5004,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5019,7 +5013,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5028,7 +5022,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -5053,7 +5047,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5062,7 +5056,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5071,7 +5065,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -5096,7 +5090,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_tiles"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5105,7 +5099,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_tiles"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5114,7 +5108,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_tiles"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -5138,7 +5132,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:deepslate_tile_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5147,7 +5141,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:deepslate_tile_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5156,7 +5150,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:deepslate_tile_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5165,7 +5159,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:deepslate_tile_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -5191,7 +5185,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_tile_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5200,7 +5194,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_tile_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5209,7 +5203,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_tile_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5218,7 +5212,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_tile_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -5243,7 +5237,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_tile_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5252,7 +5246,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_tile_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5261,7 +5255,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_tile_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -5270,7 +5264,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:deepslate_tile_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -5381,7 +5375,7 @@ var crafts = [
     "result": {
       "id": "minecraft:diamond"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -5393,7 +5387,7 @@ var crafts = [
     "result": {
       "id": "minecraft:diamond"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -5405,7 +5399,7 @@ var crafts = [
     "result": {
       "id": "minecraft:diamond"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -5417,7 +5411,7 @@ var crafts = [
     "result": {
       "id": "minecraft:diamond"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -5563,7 +5557,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:diorite_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -5589,7 +5583,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:diorite_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -5614,7 +5608,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:diorite_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -5692,7 +5686,7 @@ var crafts = [
     "result": {
       "id": "minecraft:dried_kelp"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -5703,7 +5697,7 @@ var crafts = [
     "result": {
       "id": "minecraft:dried_kelp"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smoking",
@@ -5714,7 +5708,7 @@ var crafts = [
     "result": {
       "id": "minecraft:dried_kelp"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -7728,7 +7722,7 @@ var crafts = [
     "result": {
       "id": "minecraft:emerald"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -7740,7 +7734,7 @@ var crafts = [
     "result": {
       "id": "minecraft:emerald"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -7752,7 +7746,7 @@ var crafts = [
     "result": {
       "id": "minecraft:emerald"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -7764,7 +7758,7 @@ var crafts = [
     "result": {
       "id": "minecraft:emerald"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -7875,7 +7869,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:end_stone_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -7899,7 +7893,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:end_stone_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -7908,7 +7902,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:end_stone_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -7934,7 +7928,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:end_stone_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -7943,7 +7937,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:end_stone_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -7968,7 +7962,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:end_stone_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -7977,7 +7971,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:end_stone_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -8002,7 +7996,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:exposed_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -8011,7 +8005,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:exposed_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -8056,7 +8050,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:exposed_copper_grate"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -8081,7 +8075,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:exposed_cut_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -8105,7 +8099,7 @@ var crafts = [
       "count": 8,
       "id": "minecraft:exposed_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -8114,7 +8108,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:exposed_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -8140,7 +8134,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:exposed_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -8149,7 +8143,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:exposed_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -8378,7 +8372,7 @@ var crafts = [
     "result": {
       "id": "minecraft:glass"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -8678,7 +8672,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -8690,7 +8684,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -8702,7 +8696,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -8714,7 +8708,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -8757,7 +8751,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -8769,7 +8763,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -8781,7 +8775,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -8793,7 +8787,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -8827,7 +8821,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_nugget"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -8849,7 +8843,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_nugget"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -8886,7 +8880,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:granite_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -8912,7 +8906,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:granite_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -8937,7 +8931,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:granite_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -9074,7 +9068,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gray_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -9288,7 +9282,7 @@ var crafts = [
     "result": {
       "id": "minecraft:green_dye"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -9299,7 +9293,7 @@ var crafts = [
     "result": {
       "id": "minecraft:green_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -9701,7 +9695,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -9713,7 +9707,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -9725,7 +9719,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -9768,7 +9762,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -9780,7 +9774,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -9792,7 +9786,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_ingot"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -9847,7 +9841,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_nugget"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -9873,7 +9867,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_nugget"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -10305,7 +10299,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lapis_lazuli"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -10317,7 +10311,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lapis_lazuli"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -10329,7 +10323,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lapis_lazuli"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -10341,7 +10335,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lapis_lazuli"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -10369,7 +10363,7 @@ var crafts = [
     "result": {
       "id": "minecraft:leaf_litter"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -10657,7 +10651,7 @@ var crafts = [
     "result": {
       "id": "minecraft:light_blue_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -10939,7 +10933,7 @@ var crafts = [
     "result": {
       "id": "minecraft:light_gray_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -11181,7 +11175,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lime_dye"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -11192,7 +11186,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lime_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -11529,7 +11523,7 @@ var crafts = [
     "result": {
       "id": "minecraft:magenta_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12036,7 +12030,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:mossy_cobblestone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12062,7 +12056,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:mossy_cobblestone_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12087,7 +12081,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:mossy_cobblestone_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -12139,7 +12133,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:mossy_stone_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12165,7 +12159,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:mossy_stone_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12190,7 +12184,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:mossy_stone_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12259,7 +12253,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:mud_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12285,7 +12279,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:mud_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12310,7 +12304,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:mud_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -12475,7 +12469,7 @@ var crafts = [
     "result": {
       "id": "minecraft:netherite_scrap"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -12486,7 +12480,7 @@ var crafts = [
     "result": {
       "id": "minecraft:netherite_scrap"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smithing_transform",
@@ -12536,7 +12530,7 @@ var crafts = [
     "result": {
       "id": "minecraft:nether_brick"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12593,7 +12587,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:nether_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12619,7 +12613,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:nether_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12644,7 +12638,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:nether_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -13097,7 +13091,7 @@ var crafts = [
     "result": {
       "id": "minecraft:orange_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -13226,7 +13220,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:oxidized_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -13235,7 +13229,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:oxidized_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -13280,7 +13274,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:oxidized_copper_grate"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -13305,7 +13299,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:oxidized_cut_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -13329,7 +13323,7 @@ var crafts = [
       "count": 8,
       "id": "minecraft:oxidized_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -13338,7 +13332,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:oxidized_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -13364,7 +13358,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:oxidized_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -13373,7 +13367,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:oxidized_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -13864,7 +13858,7 @@ var crafts = [
     "result": {
       "id": "minecraft:pink_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14013,7 +14007,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_andesite"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14037,7 +14031,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_andesite_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14046,7 +14040,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_andesite_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14072,7 +14066,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_andesite_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14081,7 +14075,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_andesite_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14106,7 +14100,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_basalt"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14147,7 +14141,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_blackstone_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14156,7 +14150,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_blackstone_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14180,7 +14174,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_blackstone_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14189,7 +14183,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_blackstone_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14198,7 +14192,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_blackstone_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14224,7 +14218,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_blackstone_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14233,7 +14227,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_blackstone_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14242,7 +14236,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_blackstone_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14267,7 +14261,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_blackstone_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14276,7 +14270,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_blackstone_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14285,7 +14279,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_blackstone_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -14306,7 +14300,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_blackstone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14345,7 +14339,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_blackstone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14354,7 +14348,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_blackstone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14380,7 +14374,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_blackstone_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14389,7 +14383,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_blackstone_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14414,7 +14408,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_blackstone_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14423,7 +14417,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_blackstone_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14448,7 +14442,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_deepslate"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14472,7 +14466,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_deepslate_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14481,7 +14475,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_deepslate_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14507,7 +14501,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_deepslate_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14516,7 +14510,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_deepslate_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14541,7 +14535,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_deepslate_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14550,7 +14544,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_deepslate_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14575,7 +14569,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_diorite"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14599,7 +14593,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_diorite_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14608,7 +14602,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_diorite_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14634,7 +14628,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_diorite_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14643,7 +14637,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_diorite_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14668,7 +14662,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_granite"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14692,7 +14686,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_granite_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14701,7 +14695,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_granite_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14727,7 +14721,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_granite_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14736,7 +14730,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_granite_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14761,7 +14755,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_tuff"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14785,7 +14779,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_tuff_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14794,7 +14788,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:polished_tuff_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14820,7 +14814,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_tuff_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14829,7 +14823,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_tuff_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14854,7 +14848,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_tuff_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -14863,7 +14857,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:polished_tuff_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -14874,7 +14868,7 @@ var crafts = [
     "result": {
       "id": "minecraft:popped_chorus_fruit"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14953,7 +14947,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:prismarine_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14979,7 +14973,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:prismarine_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15003,7 +14997,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:prismarine_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15029,7 +15023,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:prismarine_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15054,7 +15048,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:prismarine_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -15203,7 +15197,7 @@ var crafts = [
     "result": {
       "id": "minecraft:purple_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15348,7 +15342,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:purpur_pillar"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15375,7 +15369,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:purpur_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15404,7 +15398,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:purpur_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -15415,7 +15409,7 @@ var crafts = [
     "result": {
       "id": "minecraft:quartz"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15456,7 +15450,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:quartz_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -15467,7 +15461,7 @@ var crafts = [
     "result": {
       "id": "minecraft:quartz"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15492,7 +15486,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:quartz_pillar"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15520,7 +15514,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:quartz_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15550,7 +15544,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:quartz_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -15767,7 +15761,7 @@ var crafts = [
     "result": {
       "id": "minecraft:redstone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:blasting",
@@ -15779,7 +15773,7 @@ var crafts = [
     "result": {
       "id": "minecraft:redstone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -15791,7 +15785,7 @@ var crafts = [
     "result": {
       "id": "minecraft:redstone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -15803,7 +15797,7 @@ var crafts = [
     "result": {
       "id": "minecraft:redstone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16000,7 +15994,7 @@ var crafts = [
     "result": {
       "id": "minecraft:red_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16060,7 +16054,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:red_nether_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16086,7 +16080,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:red_nether_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16111,7 +16105,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:red_nether_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16154,7 +16148,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:red_sandstone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16184,7 +16178,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:red_sandstone_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16209,7 +16203,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:red_sandstone_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_transmute",
@@ -16345,7 +16339,7 @@ var crafts = [
     "result": {
       "id": "minecraft:resin_brick"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16385,7 +16379,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:resin_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16411,7 +16405,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:resin_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16436,7 +16430,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:resin_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -16545,7 +16539,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:sandstone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16575,7 +16569,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:sandstone_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16600,7 +16594,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:sandstone_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16839,7 +16833,7 @@ var crafts = [
     "result": {
       "id": "minecraft:smooth_basalt"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -16850,7 +16844,7 @@ var crafts = [
     "result": {
       "id": "minecraft:smooth_quartz"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16874,7 +16868,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:smooth_quartz_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16900,7 +16894,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:smooth_quartz_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -16911,7 +16905,7 @@ var crafts = [
     "result": {
       "id": "minecraft:smooth_red_sandstone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16935,7 +16929,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:smooth_red_sandstone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16961,7 +16955,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:smooth_red_sandstone_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -16972,7 +16966,7 @@ var crafts = [
     "result": {
       "id": "minecraft:smooth_sandstone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16996,7 +16990,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:smooth_sandstone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -17022,7 +17016,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:smooth_sandstone_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:smelting",
@@ -17033,7 +17027,7 @@ var crafts = [
     "result": {
       "id": "minecraft:smooth_stone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -17057,7 +17051,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:smooth_stone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -17214,7 +17208,7 @@ var crafts = [
     "result": {
       "id": "minecraft:sponge"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -17527,7 +17521,7 @@ var crafts = [
     "result": {
       "id": "minecraft:stone"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -17587,7 +17581,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:stone_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -17611,7 +17605,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:stone_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -17620,7 +17614,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:stone_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -17646,7 +17640,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:stone_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -17655,7 +17649,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:stone_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -17680,7 +17674,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:stone_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -17689,7 +17683,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:stone_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -17794,7 +17788,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:stone_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -17820,7 +17814,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:stone_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -18464,7 +18458,7 @@ var crafts = [
     "result": {
       "id": "minecraft:terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -18617,7 +18611,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:tuff_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -18626,7 +18620,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:tuff_bricks"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -18650,7 +18644,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:tuff_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -18659,7 +18653,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:tuff_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -18668,7 +18662,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:tuff_brick_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -18694,7 +18688,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:tuff_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -18703,7 +18697,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:tuff_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -18712,7 +18706,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:tuff_brick_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -18737,7 +18731,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:tuff_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -18746,7 +18740,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:tuff_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -18755,7 +18749,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:tuff_brick_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -18779,7 +18773,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:tuff_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -18805,7 +18799,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:tuff_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -18830,7 +18824,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:tuff_wall"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -19143,7 +19137,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -19152,7 +19146,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:waxed_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -19253,7 +19247,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_copper_grate"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -19307,7 +19301,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_cut_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -19346,7 +19340,7 @@ var crafts = [
       "count": 8,
       "id": "minecraft:waxed_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -19355,7 +19349,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:waxed_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -19396,7 +19390,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -19405,7 +19399,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:waxed_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -19445,7 +19439,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_exposed_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -19454,7 +19448,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:waxed_exposed_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -19555,7 +19549,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_exposed_copper_grate"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -19609,7 +19603,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_exposed_cut_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -19648,7 +19642,7 @@ var crafts = [
       "count": 8,
       "id": "minecraft:waxed_exposed_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -19657,7 +19651,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:waxed_exposed_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -19698,7 +19692,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_exposed_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -19707,7 +19701,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:waxed_exposed_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -19747,7 +19741,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_oxidized_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -19756,7 +19750,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:waxed_oxidized_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -19857,7 +19851,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_oxidized_copper_grate"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -19911,7 +19905,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_oxidized_cut_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -19950,7 +19944,7 @@ var crafts = [
       "count": 8,
       "id": "minecraft:waxed_oxidized_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -19959,7 +19953,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:waxed_oxidized_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20000,7 +19994,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_oxidized_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -20009,7 +20003,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:waxed_oxidized_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20049,7 +20043,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_weathered_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -20058,7 +20052,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:waxed_weathered_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20159,7 +20153,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_weathered_copper_grate"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -20213,7 +20207,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_weathered_cut_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20252,7 +20246,7 @@ var crafts = [
       "count": 8,
       "id": "minecraft:waxed_weathered_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -20261,7 +20255,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:waxed_weathered_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20302,7 +20296,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:waxed_weathered_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -20311,7 +20305,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:waxed_weathered_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20355,7 +20349,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:weathered_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -20364,7 +20358,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:weathered_chiseled_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20409,7 +20403,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:weathered_copper_grate"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20434,7 +20428,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:weathered_cut_copper"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20458,7 +20452,7 @@ var crafts = [
       "count": 8,
       "id": "minecraft:weathered_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -20467,7 +20461,7 @@ var crafts = [
       "count": 2,
       "id": "minecraft:weathered_cut_copper_slab"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20493,7 +20487,7 @@ var crafts = [
       "count": 4,
       "id": "minecraft:weathered_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:stonecutting",
@@ -20502,7 +20496,7 @@ var crafts = [
       "count": 1,
       "id": "minecraft:weathered_cut_copper_stairs"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -20650,7 +20644,7 @@ var crafts = [
     "result": {
       "id": "minecraft:white_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -21071,7 +21065,7 @@ var crafts = [
     "result": {
       "id": "minecraft:yellow_glazed_terracotta"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
