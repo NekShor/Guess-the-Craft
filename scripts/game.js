@@ -94,6 +94,10 @@ function new_wanted_item() {
         if (!craft.result || !craft.result.id) {
             continue; 
         }
+        if (!craft.ponderation) {
+            continue;
+        }
+
         if (craft.result.id.includes('copper')) {
             craft.ponderation = craft.ponderation / 4;
             if (craft.result.id.includes('waxed')) {   
@@ -115,8 +119,7 @@ function new_wanted_item() {
         if ((craft.result.id.includes('slab'), craft.result.id.includes('stairs') || craft.result.id.includes('wall') || craft.result.id.includes('brick') || craft.result.id.includes('block')) && stones.some(stone => craft.result.id.includes(stone))) {
             craft.ponderation = craft.ponderation / stones.length;
         }
-
-        cumulativeSum += (craft.ponderation || 0);
+        cumulativeSum += (craft.ponderation || 1);
         cumulativeWeights.push(cumulativeSum);
     }
     const randomWeight = getSecureRandom() * totalWeight;
