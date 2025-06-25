@@ -63,9 +63,9 @@ function formate_craft_item() {
         var obj = items.find(function(item) {
             return item.code === item_formated;
         });
-        is_good_craft(obj);
-
+        
         result.innerHTML = "<img src=\"items/texture/" + obj.code + ".png\" alt=\"" + obj.name + "\"> ";
+        is_good_craft(obj);
     } else {
         result.innerHTML = "";
     }

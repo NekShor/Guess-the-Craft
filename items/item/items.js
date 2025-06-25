@@ -5646,5 +5646,9 @@ var items = [
   {
     "code": "minecraft_white_harness",
     "name": "minecraft white harness"
+  },
+  {
+    "code": "minecraft_dried_ghast",
+    "name": "minecraft dried ghast"
   }
 ]

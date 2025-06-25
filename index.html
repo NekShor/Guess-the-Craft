@@ -25,7 +25,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div id="end-game" class="white shadow mcui" style="display: none;">
+    <div id="end-game" class="white mcui" style="display: none;">
         <h1>Game Over</h1>
         <p id="end-message">You have finished the game!</p>
         <p id="end-score">Your score: <span id="final-score">0</span></p>
@@ -33,11 +33,12 @@
         <input type="button" class="interface_btn white shadow" id="restart-game" value="Restart Game" onclick="start_game()">
         <input type="button" class="interface_btn white shadow" id="close" value="Close" onClick="close_end_interface()">
     </div>
-    <div id="information" class="white shadow mcui" style="display: none;">
+    <div id="information" class="white mcui" style="display: none;">
         <h1>Information</h1>
-        <p>Le but du jeu est de tester votre connaissance des crafts sur Minecraft !</p>
-        <p>Vous avez 60 secondes pour trouver le plus de crafts, sachant que à chaque item trouvé 10 secondes sont rajoutée au compteur.</p>
-        <p>Vous pouvez skip un item mais cela vous donne une pénalité de 10 secondes.</p>
+        <p>The goal of the game is to test your knowledge of Minecraft crafting recipes!</p>
+        <p>You have 60 seconds to find as many crafts as possible, with 10 seconds added to the timer for each item found.</p>
+        <p>You can skip an item, but it will cost you a 10-second penalty.</p>
+        <p>Try to achieve the highest score possible!</p>
         <!-- <p>La table de craft agit à la fois comme une table de craft, comme un four, ou un stonecutter.</p>
         <p>Par exemple, mettez un minerai de fer n'importe ou dans la table de craft et vous "craftez" un lingot.</p> -->
         <input type="button" class="interface_btn white shadow" id="close-info" value="Close" onClick="information()">
