@@ -60,7 +60,7 @@
         <div id="select-item">
             <h1 class="no_mobile">Items</h1>
             <div id="search_bar_div">
-                <input type="text" class="invslot search_bar white shadow" id="search" placeholder="Search for items..." oninput="display_item(this.value)" onclick="this.value = ''; display_item('')">
+                <input type="text" class="invslot search_bar white shadow" id="search" placeholder="Search for items..." oninput="display_item(this.value)" onclick="this.value = '';">
                 <div id="item_selected" class="btn_in_game"></div>
             </div>
             <div id="items_list">
@@ -95,8 +95,10 @@
                         </span>
                     </span>
                 </div>
-                <input type="button" class="clear_btn white shadow" id="craft-btn" value="" onClick="clear_table()">
-                <input type="button" class="skip_btn white shadow" id="skip-btn" value="Skip" onClick="skip()">
+                <div class="game_btn">
+                    <input type="button" class="clear_btn white shadow" id="craft-btn" value="" onClick="clear_table()">
+                    <input type="button" class="skip_btn white shadow" id="skip-btn" value="Skip" onClick="skip()">
+                </div>
                 <div id="wanted" style="display: none;">
                     <h1 class="no_mobile">Wanted Item</h1>
                     <div id="found-items">

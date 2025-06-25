@@ -59,6 +59,10 @@ h2 {
     display: none;
 }
 
+.game_btn{
+    display: flex;
+}
+
 .game .skip_btn {
     display: block;
     border: 4px solid;
