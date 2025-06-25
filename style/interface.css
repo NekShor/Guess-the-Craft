@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
+    height: 100px;
 }
 
 .infos {
@@ -140,5 +140,9 @@ h2 {
         /* les bouton ne doivent pas être sur la même ligne */
         display: block;
         width: 100%!important;
+    }
+
+    #header {
+        height: 60px;
     }
 }

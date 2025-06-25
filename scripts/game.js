@@ -41,6 +41,9 @@ function stop_game() {
     final_time.textContent = (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
     set_timer(0);
     count_good = 0;
+    var best_score_display = document.getElementById("final-best-score");
+    var best_score = localStorage.getItem("best_score") || 0;
+    best_score_display.textContent = best_score;
     var score_display = document.getElementById("score-value");
     score_display.textContent = count_good;
     list_item_found = [];
@@ -191,6 +194,12 @@ function timer_color_effect(type, time) {
 
 function lose () {
     stop_game();
+    var score = count_good;
+    var best_score = localStorage.getItem("best_score") || 0;
+    if (score > best_score) {
+        localStorage.setItem("best_score", score);
+        best_score = score;
+    }
 }
 
 function skip () {

@@ -5652,3 +5652,5 @@ var items = [
     "name": "minecraft dried ghast"
   }
 ]
+
+var items_restrain = items;

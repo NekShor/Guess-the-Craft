@@ -12,14 +12,14 @@ function display_item(text) {
 }
 
 function initialise_items(text) {
-  var items = get_items(text);
+  var items_get = get_items(text);
   var div = document.getElementById("items_list");
-  if (items.length === 0) {
+  if (items_get.length === 0) {
       div.innerHTML = "<p>Aucun item trouvé</p>";
       return;
   }
   var html = "";
-  items.forEach(function(item) {
+  items_get.forEach(function(item) {
       var name_tag = item.code;
       html += "<div class='invslot items_inv' data-id='"+item.code+"' onClick=\"set_item_selected('"+item.code+"')\">" + "<img src=\"items/texture/"+name_tag+".png\"></div>";
   });
@@ -27,7 +27,7 @@ function initialise_items(text) {
 }
 
 function set_item_selected (item) {
-    var itemObject = items.find(function(i) { return i.code === item; });
+    var itemObject = items_restrain.find(function(i) { return i.code === item; });
     item_selected = itemObject;
     document.getElementById("item_selected").innerHTML = "<img src=\"items/texture/"+item_selected.code+".png\"><p>" + item_selected.name.replace('minecraft ', '').trim() + "</p>";
     
@@ -39,8 +39,8 @@ function set_item_selected (item) {
     select_item.style.cursor = "url('items/texture/"+item_selected.code+".png') 32 32, auto";
 }
 
-function get_items (text) {
-    var itemsList = items || [];
+function get_items (text = "") {
+    var itemsList = items_restrain || [];
     var filteredItems = itemsList
     .filter(function(item) {
       if (item.name.replace('minecraft', '').toLowerCase().includes(text.toLowerCase()) || item.code.replace('minecraft', '').toLowerCase().includes(text.toLowerCase())) {

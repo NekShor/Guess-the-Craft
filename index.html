@@ -11,7 +11,6 @@
     <script src="crafts/tagMap.js"></script>
     <script src="scripts/get_item.js"></script>
     <script src="scripts/craft.js"></script>
-    <script src="scripts/game.js"></script>
     <script src="scripts/interface.js"></script>
 
     <!-- style -->
@@ -29,6 +28,7 @@
         <h1>Game Over</h1>
         <p id="end-message">You have finished the game!</p>
         <p id="end-score">Your score: <span id="final-score">0</span></p>
+        <p id="end-bestscore">Best score: <span id="final-best-score">0</span></p>
         <p id="end-time">Time taken: <span id="final-time">00:00</span></p>
         <input type="button" class="interface_btn white shadow" id="restart-game" value="Restart Game" onclick="start_game()">
         <input type="button" class="interface_btn white shadow" id="close" value="Close" onClick="close_end_interface()">
@@ -39,8 +39,6 @@
         <p>You have 60 seconds to find as many crafts as possible, with 10 seconds added to the timer for each item found.</p>
         <p>You can skip an item, but it will cost you a 10-second penalty.</p>
         <p>Try to achieve the highest score possible!</p>
-        <!-- <p>La table de craft agit à la fois comme une table de craft, comme un four, ou un stonecutter.</p>
-        <p>Par exemple, mettez un minerai de fer n'importe ou dans la table de craft et vous "craftez" un lingot.</p> -->
         <input type="button" class="interface_btn white shadow" id="close-info" value="Close" onClick="information()">
     </div>
     <div id="header">
@@ -56,7 +54,6 @@
         </div>
         <input type="button" class="interface_btn white shadow information_button" id="information_btn" value="I" data-open="false" onclick="information(this)">
     </div>
-    <br>
     <div id="container" style="display: flex;">
         <div id="select-item">
             <h1 class="no_mobile">Items</h1>
@@ -100,7 +97,7 @@
                     <input type="button" class="clear_btn white shadow" id="craft-btn" value="" onClick="clear_table()">
                     <input type="button" class="skip_btn white shadow" id="skip-btn" value="Skip" onClick="skip()">
                 </div>
-                <div id="wanted" style="display: none;">
+                <div id="wanted" style="">
                     <h1 class="no_mobile">Wanted Item</h1>
                     <div id="found-items">
         
@@ -113,31 +110,37 @@
 
     </div>
     <script>
-        initialise_items("")
-        set_item_selected("minecraft_oak_planks")
+        const urlParams = new URLSearchParams(window.location.search);
+        const gameMode = urlParams.get('mode') || 'timer';
 
-        // var number_test = 500;
-        // for (let i = 0; i < number_test; i++) {
-        //     new_wanted_item()
-        //     try{
-        //         var found_items = document.getElementById("test");
-        //         var item = document.createElement("div");
-        //         item.className = "invslot";
-        //         item.id = "item-" + i;
-        //         item.setAttribute("data-item", item_wanted.result.id.replace(":", "_"));
-            
-    
-        //         var item_img = document.createElement("img");
-        //         item_img.src = "items/texture/" + item_wanted.result.id.replace(":", "_") + ".png";
-        //         item_img.alt = item_wanted.result.id;
-        //         item_img.className = "item-image";
-        //         item.appendChild(item_img);
-        //         found_items.appendChild(item);
-        //         console.log("Item " + i + " created: " + item_wanted.result.id);
-        //     } catch (error) {
-        //         console.error("Error creating item " + i + ": " + error);
-        //     }
-        // }
+        if (gameMode === 'crafting') {
+            document.body.classList.add('crafting-mode');
+            initialise_items("")
+            set_item_selected("minecraft_oak_planks")
+        } else if (gameMode === 'timer') {
+            const script = document.createElement('script');
+            script.src = 'scripts/game.js';
+            document.head.appendChild(script);
+
+            document.body.classList.add('timer-mode');
+            initialise_items("")
+            set_item_selected("minecraft_oak_planks")
+        } else if (gameMode === 'items-set') {
+            const script = document.createElement('script');
+            script.src = 'scripts/items_set.js';
+            document.head.appendChild(script);
+
+            document.body.classList.add('items-set-mode');
+
+            setTimeout(() => {
+                filter_items_list(select_set_items());
+                display_good_items();
+            }, 500);
+        } else {
+            console.error('Invalid game mode specified in URL parameters.');
+        }
+
+
     </script>
 </body>
 </html>

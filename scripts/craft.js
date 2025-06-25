@@ -57,7 +57,6 @@ function formate_craft_item() {
 
     var item_crafted = validateCraft(array_craft, crafts, tagMap);
     var result = document.getElementById("craft-result");
-
     if (item_crafted) {
         var item_formated = item_crafted.id.replace('minecraft:', 'minecraft_');
         var obj = items.find(function(item) {
