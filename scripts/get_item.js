@@ -1,18 +1,29 @@
 var item_selected = null;
 
 function display_item(text) {
-    var items = get_items(text);
-    var div = document.getElementById("items_list");
-    if (items.length === 0) {
-        div.innerHTML = "<p>Aucun item trouvé</p>";
-        return;
-    }
-    var html = "";
-    items.forEach(function(item) {
-        var name_tag = item.code;
-        html += "<div class='invslot' onClick=\"set_item_selected('"+item.code+"')\">" + "<img src=\"items/texture/"+name_tag+".png\"></div>";
+    var items_inv = document.querySelectorAll(".items_inv");
+    items_inv.forEach(function(item) {
+      if (item.getAttribute("data-id").toLowerCase().includes(text.toLowerCase())) {
+        item.style.display = "inline-block";
+      } else {
+        item.style.display = "none";
+      }
     });
-    div.innerHTML = html;
+}
+
+function initialise_items(text) {
+  var items = get_items(text);
+  var div = document.getElementById("items_list");
+  if (items.length === 0) {
+      div.innerHTML = "<p>Aucun item trouvé</p>";
+      return;
+  }
+  var html = "";
+  items.forEach(function(item) {
+      var name_tag = item.code;
+      html += "<div class='invslot items_inv' data-id='"+item.code+"' onClick=\"set_item_selected('"+item.code+"')\">" + "<img src=\"items/texture/"+name_tag+".png\"></div>";
+  });
+  div.innerHTML = html;
 }
 
 function set_item_selected (item) {
