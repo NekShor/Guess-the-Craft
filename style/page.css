@@ -249,7 +249,13 @@ body::-webkit-scrollbar {
 
     #select-item {
         width: 100%; 
-    }   
+    }
+
+    .information_button {
+      width: 40px!important;
+      padding: 0!important;
+      text-align: center!important;
+  }
 }
 .no_mobile {
     display: none;

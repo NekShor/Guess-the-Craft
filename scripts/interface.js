@@ -1,8 +1,9 @@
-function information (elem) {
-    if (elem.getAttribute('data-open') === 'true') {
-        elem.setAttribute('data-open', 'false');
+function information () {
+    var btn_info = document.querySelector('#information_btn');
+    if (btn_info.getAttribute('data-open') === 'true') {
+        btn_info.setAttribute('data-open', 'false');
     } else {
-        elem.setAttribute('data-open', 'true');
+        btn_info.setAttribute('data-open', 'true');
     }
 
     var info = document.querySelector('#information');
