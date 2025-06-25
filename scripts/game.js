@@ -86,16 +86,30 @@ function good_item() {
 }
 
 function new_wanted_item() {
-    const validCrafts = crafts.filter(craft => craft.result && craft.result.id);
+    var craft_temp = crafts;
 
+    var validCrafts = [];
+    craft_temp.forEach(craft => {
+        if (craft.result && craft.result.id) {
+            validCrafts.push(craft);
+        }
+    });
+
+    var filteredCrafts = [];
+    validCrafts.forEach(craft => {
+        craft.ponderation = craft.ponderation;
+        if (craft.ponderation > 0) {
+            filteredCrafts.push(craft);
+        }
+    });
+    validCrafts = filteredCrafts;
     if (validCrafts.length === 0) {
-        console.error("Aucun craft valide disponible !");
         return;
     }
 
     for (let craft of validCrafts) {
         if (craft.result.id.includes('copper')) {
-            craft.ponderation = (craft.ponderation || 1) / 4;
+            craft.ponderation = (craft.ponderation) / 4;
             if (craft.result.id.includes('waxed')) {
                 craft.ponderation = craft.ponderation / 2;
             }
@@ -104,28 +118,28 @@ function new_wanted_item() {
         const minecraft_colors = ['red', 'green', 'blue', 'yellow', 'black', 'white', 'brown', 'gray', 'light_gray', 'cyan', 'purple', 'pink'];
         if ((craft.result.id.includes('wool') || craft.result.id.includes('bed') || craft.result.id.includes('glass') || craft.result.id.includes('carpet') || craft.result.id.includes('concrete') || craft.result.id.includes('terracotta')) &&
             minecraft_colors.some(color => craft.result.id.includes(color))) {
-            craft.ponderation = (craft.ponderation || 1) / minecraft_colors.length;
+            craft.ponderation = (craft.ponderation) / minecraft_colors.length;
         }
 
         const minecraft_woods = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'cherry', 'crimson', 'warped', 'pale'];
         if ((craft.result.id.includes('planks') || craft.result.id.includes('log') || craft.result.id.includes('stripped') || craft.result.id.includes('slab') || craft.result.id.includes('stairs') || craft.result.id.includes('fence') || craft.result.id.includes('fence_gate') || craft.result.id.includes('hanging')) &&
             minecraft_woods.some(wood => craft.result.id.includes(wood))) {
-            craft.ponderation = (craft.ponderation || 1) / minecraft_woods.length;
+            craft.ponderation = (craft.ponderation) / minecraft_woods.length;
         }
 
         const stones = ['stone', 'granite', 'diorite', 'andesite', 'cobblestone', 'mossy_cobblestone', 'deepslate', 'tuff', 'calcite', 'prismarine', 'blackstone', 'nether_brick', 'red_nether_brick', 'quartz', 'sandstone', 'red_sandstone', 'end_stone', 'purpur', 'basalt', 'polished_basalt'];
         if ((craft.result.id.includes('slab') || craft.result.id.includes('stairs') || craft.result.id.includes('wall') || craft.result.id.includes('brick') || craft.result.id.includes('block')) &&
             stones.some(stone => craft.result.id.includes(stone))) {
-            craft.ponderation = (craft.ponderation || 1) / stones.length;
+            craft.ponderation = (craft.ponderation) / stones.length;
         }
     }
 
-    const totalWeight = validCrafts.reduce((sum, craft) => sum + (craft.ponderation || 1), 0);
+    const totalWeight = validCrafts.reduce((sum, craft) => sum + (craft.ponderation), 0);
 
     const cumulativeWeights = [];
     let cumulativeSum = 0;
     for (let craft of validCrafts) {
-        cumulativeSum += (craft.ponderation || 1);
+        cumulativeSum += (craft.ponderation);
         cumulativeWeights.push(cumulativeSum);
     }
 
@@ -138,7 +152,6 @@ function new_wanted_item() {
         }
     }
 
-    console.error("Aucun item sélectionné, relance de la fonction...");
     return new_wanted_item();
 }
 
