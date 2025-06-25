@@ -216,23 +216,23 @@ function validateCraft(inputGrid, recipes, tagMap = {}) {
             case "minecraft:crafting_shapeless":
                 if (matchShapeless(recipe, inputGrid, tagMap)) return recipe.result;
                 break;
-            case "minecraft:stonecutting":
-                if (matchStonecutting(recipe, inputGrid, tagMap)) return recipe.result;
-                break;
-            case "minecraft:smelting":
-                if (matchSmelting(recipe, inputGrid, tagMap)) return recipe.result;
-                break;
-            case "minecraft:crafting_transmute":
-                try {
-                    if (matchTransmute(recipe, inputGrid, tagMap)) {
-                        return {
-                            id: recipe.result.id,
-                            material: recipe.material
-                        };
-                    }
-                } catch (error) {
-                }
-                break;
+            // case "minecraft:stonecutting":
+            //     if (matchStonecutting(recipe, inputGrid, tagMap)) return recipe.result;
+            //     break;
+            // case "minecraft:smelting":
+            //     if (matchSmelting(recipe, inputGrid, tagMap)) return recipe.result;
+            //     break;
+            // case "minecraft:crafting_transmute":
+            //     try {
+            //         if (matchTransmute(recipe, inputGrid, tagMap)) {
+            //             return {
+            //                 id: recipe.result.id,
+            //                 material: recipe.material
+            //             };
+            //         }
+            //     } catch (error) {
+            //     }
+            //     break;
             default:
         }
     }
