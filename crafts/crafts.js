@@ -1154,7 +1154,7 @@ var crafts = [
     "result": {
       "id": "minecraft:black_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -1272,7 +1272,7 @@ var crafts = [
     "result": {
       "id": "minecraft:black_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1425,7 +1425,7 @@ var crafts = [
     "result": {
       "id": "minecraft:blue_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -1563,7 +1563,7 @@ var crafts = [
     "result": {
       "id": "minecraft:blue_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1964,7 +1964,7 @@ var crafts = [
     "result": {
       "id": "minecraft:brown_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -2069,7 +2069,7 @@ var crafts = [
     "result": {
       "id": "minecraft:brown_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4361,7 +4361,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cyan_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -4480,7 +4480,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cyan_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -8979,7 +8979,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gray_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -9098,7 +9098,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gray_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -9220,7 +9220,7 @@ var crafts = [
     "result": {
       "id": "minecraft:green_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -9323,7 +9323,7 @@ var crafts = [
     "result": {
       "id": "minecraft:green_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -10562,7 +10562,7 @@ var crafts = [
     "result": {
       "id": "minecraft:light_blue_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -10681,7 +10681,7 @@ var crafts = [
     "result": {
       "id": "minecraft:light_blue_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -10803,7 +10803,7 @@ var crafts = [
     "result": {
       "id": "minecraft:light_gray_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -10963,7 +10963,7 @@ var crafts = [
     "result": {
       "id": "minecraft:light_gray_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -11100,7 +11100,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lime_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -11216,7 +11216,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lime_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -11390,7 +11390,7 @@ var crafts = [
     "result": {
       "id": "minecraft:magenta_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -11553,7 +11553,7 @@ var crafts = [
     "result": {
       "id": "minecraft:magenta_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12976,7 +12976,7 @@ var crafts = [
     "result": {
       "id": "minecraft:orange_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -13121,7 +13121,7 @@ var crafts = [
     "result": {
       "id": "minecraft:orange_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -13730,7 +13730,7 @@ var crafts = [
     "result": {
       "id": "minecraft:pink_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -13888,7 +13888,7 @@ var crafts = [
     "result": {
       "id": "minecraft:pink_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15122,7 +15122,7 @@ var crafts = [
     "result": {
       "id": "minecraft:purple_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -15227,7 +15227,7 @@ var crafts = [
     "result": {
       "id": "minecraft:purple_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15880,7 +15880,7 @@ var crafts = [
     "result": {
       "id": "minecraft:red_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -16214,7 +16214,7 @@ var crafts = [
     "result": {
       "id": "minecraft:red_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20556,7 +20556,7 @@ var crafts = [
     "result": {
       "id": "minecraft:white_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -20674,7 +20674,7 @@ var crafts = [
     "result": {
       "id": "minecraft:white_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20964,7 +20964,7 @@ var crafts = [
     "result": {
       "id": "minecraft:yellow_bundle"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -21095,7 +21095,7 @@ var crafts = [
     "result": {
       "id": "minecraft:yellow_shulker_box"
     },
-    "ponderation": 1
+    "ponderation": 0
   },
   {
     "type": "minecraft:crafting_shaped",
