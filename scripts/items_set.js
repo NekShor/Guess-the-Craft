@@ -69,7 +69,6 @@ function display_good_items () {
         });
         max_craft = filterCraftableRecipes(items_restrain_codes, crafts, tagMap);
     }
-    console.log(items_restrain.length, max_craft.length);
     if( items_restrain.length >= max_craft.length) {
         document.getElementById("end-game").style.display = "block";
         document.getElementById("end-game").innerHTML = "<p>Well done, you have found all the crafts !</p><br><a class='interface_btn' href='index.html' style='text-align: center;display: block;'>Home</a>";

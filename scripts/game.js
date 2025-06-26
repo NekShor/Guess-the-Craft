@@ -200,7 +200,6 @@ function lose () {
     var score = count_good;
     var best_score = localStorage.getItem("best_score") || 0;
     if (score > best_score) {
-        console.log("New best score: " + score);
         localStorage.setItem("best_score", score);
         best_score = score;
     }

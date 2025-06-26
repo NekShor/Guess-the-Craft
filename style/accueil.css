@@ -40,13 +40,14 @@
 }
 
 #contact-list {
-    width: 100%;
+    width: 70%;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin: 30px 0px;
+    margin: 30px auto;
+    flex-wrap: wrap;
 }
 
 #contact-list a {
@@ -76,6 +77,11 @@
 p{
     margin: 0;
 }
+.contact {
+    word-break: keep-all;
+    width: 35%;
+    margin: 10px;
+}
 
 @media (max-width: 768px) {
     .game-mode-div {
@@ -100,5 +106,8 @@ p{
     #footer {
         width: 90%;
         margin: 0 auto;
+    }
+    .contact {
+        width: 100%;
     }
 }
