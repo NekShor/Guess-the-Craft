@@ -1,4 +1,5 @@
 var nb_items_set = 25;
+
 var items_crafted = localStorage.getItem("items_crafted") ? JSON.parse(localStorage.getItem("items_crafted")) : [];
 function select_set_items (min = []){
     if (min.length >= nb_items_set) {
@@ -41,9 +42,8 @@ function is_good_craft (item) {
         items_crafted.push(item);
         localStorage.setItem("items_crafted", JSON.stringify(items_crafted));
         display_good_items();
-        if(urlParams.get('cumulative') === 'true') {
-            add_found_item_to_list()
-        }
+        add_found_item_to_list()
+        display_score_value();
     }
 }
 
@@ -61,13 +61,16 @@ function display_good_items () {
 }
 
 function add_found_item_to_list () {
-    items_restrain = [...items_restrain, ...items_crafted];
-    items_restrain = items_restrain.filter((item, index, self) =>
-        index === self.findIndex((t) => (
-            t.code === item.code
-        ))
-    );
-    initialise_items();
+    if(urlParams.get('cumulative') === 'true') {
+        items_restrain = [...items_restrain, ...items_crafted];
+        items_restrain = items_restrain.filter((item, index, self) =>
+            index === self.findIndex((t) => (
+                t.code === item.code
+            ))
+        );
+        initialise_items();
+    }
+
 }
 
 function get_random(discriminant) {
@@ -86,4 +89,9 @@ function get_random(discriminant) {
 function seededRandom(seed) {
     var x = Math.sin(seed) * 10000;
     return x - Math.floor(x);
+}
+
+function display_score_value() {
+    var score_value_div = document.getElementById("score-value");
+    score_value_div.innerHTML = items_crafted.length;
 }

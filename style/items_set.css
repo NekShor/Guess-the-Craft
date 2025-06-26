@@ -1,3 +1,7 @@
+.items-set-mode .info-items-set {
+    display: block!important;
+}
+
 .items-set-mode #start-game {
     display: none;
 }

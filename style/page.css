@@ -213,6 +213,7 @@ body::-webkit-scrollbar {
 
 #item_selected {
     width: 30%;
+    min-height: 48px;
 }
 
 #item_selected img {

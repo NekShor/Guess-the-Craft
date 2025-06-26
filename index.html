@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="style/interface.css">
     <link rel="stylesheet" href="style/end_game.css">
     <link rel="stylesheet" href="style/items_set.css">
+    <link rel="stylesheet" href="style/timer.css">
 
     <!-- favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -35,12 +36,21 @@
         <input type="button" class="interface_btn white shadow" id="close" value="Close" onClick="close_end_interface()">
     </div>
     <div id="information" class="white mcui" style="display: none;">
-        <h1>Information</h1>
-        <p>The goal of the game is to test your knowledge of Minecraft crafting recipes!</p>
-        <p>You have 60 seconds to find as many crafts as possible, with 10 seconds added to the timer for each item found.</p>
-        <p>You can skip an item, but it will cost you a 10-second penalty.</p>
-        <p>Try to achieve the highest score possible!</p>
-        <input type="button" class="interface_btn white shadow" id="close-info" value="Close" onClick="information()">
+        <div class="info-timer" style="display: none;">
+            <h1>Information</h1>
+            <p>The goal of the game is to test your knowledge of Minecraft crafting recipes!</p>
+            <p>You have 60 seconds to find as many crafts as possible, with 10 seconds added to the timer for each item found.</p>
+            <p>You can skip an item, but it will cost you a 10-second penalty.</p>
+            <p>Try to achieve the highest score possible!</p>
+            <input type="button" class="interface_btn white shadow" id="close-info" value="Close" onClick="information()">
+        </div>
+        <div class="info-items-set" style="display: none;">
+            <h1>Items Set</h1>
+            <p>This mode allows you to play with a specific set of items.</p>
+            <p>You can select the items you want to include in the game.</p>
+            <p>Use the search bar to find items and add them to your set.</p>
+            <input type="button" class="interface_btn white shadow" id="close-info-set" value="Close" onClick="information()">
+        </div>
     </div>
     <div id="header">
         <input type="button" class="interface_btn white shadow start_button" id="start-game" value="Start Game" onclick="start_game()">
@@ -138,6 +148,7 @@
             setTimeout(() => {
                 filter_items_list(select_set_items());
                 display_good_items();
+                display_score_value();
             }, 500);
         } else {
             console.error('Invalid game mode specified in URL parameters.');
