@@ -72,7 +72,7 @@ function display_good_items () {
     console.log(items_restrain.length, max_craft.length);
     if( items_restrain.length >= max_craft.length) {
         document.getElementById("end-game").style.display = "block";
-        document.getElementById("end-game").innerHTML = "<p>Vous avez terminé la partie !</p><a class='btn_in_game' href='index.html'>Home</a>";
+        document.getElementById("end-game").innerHTML = "<p>Well done, you have found all the crafts !</p><br><a class='interface_btn' href='index.html' style='text-align: center;display: block;'>Home</a>";
     }
 }
 

@@ -5,6 +5,9 @@
     box-shadow: 0 0 0 4px #151515;
     font-size: 1.5rem;
     padding: 0.1rem 4rem;
+    color: #ffffff;
+    text-decoration: none;
+    
 }
 
 .interface_btn:hover {
