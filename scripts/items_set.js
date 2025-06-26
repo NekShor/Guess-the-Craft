@@ -137,7 +137,7 @@ function display_prevent_day() {
     var html = "";
     list_set_prevent_day.forEach(function(item) {
         var name_tag = item.code;
-        html += "<div class='mini_icon' title='"+name_tag.replace('minecraft_', 'minecraft:')+"'" + "<img src=\"items/texture/" + name_tag + ".png\"></div>";
+        html += "<div class='mini_icon' title='"+name_tag.replace('minecraft_', 'minecraft:')+"'>" + "<img src=\"items/texture/" + name_tag + ".png\"></div>";
     });
     list_set_prevent_day_div.innerHTML = html;
 
@@ -145,7 +145,7 @@ function display_prevent_day() {
     html = "";
     list_possible_items.forEach(function(item) {
         var name_tag = item;
-        html += "<div class='mini_icon' title='"+name_tag.replace('minecraft_', 'minecraft:')+"'" + "<img src=\"items/texture/" + name_tag + ".png\"></div>";
+        html += "<div class='mini_icon' title='"+name_tag.replace('minecraft_', 'minecraft:')+"'>" + "<img src=\"items/texture/" + name_tag + ".png\"></div>";
     });
     list_possible_items_div.innerHTML = html;
 }
