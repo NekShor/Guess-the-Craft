@@ -6,7 +6,7 @@ if(localStorage.getItem("today") !== new Date().toISOString().split('T')[0]) {
 }
 var items_crafted = localStorage.getItem("items_crafted") ? JSON.parse(localStorage.getItem("items_crafted")) : [];
 
-function select_set_items (min = []){
+function select_set_items (min = [], prevent = 0){
     if (min.length >= nb_items_set) {
         min = min.slice(0, nb_items_set);
     }
@@ -14,7 +14,7 @@ function select_set_items (min = []){
     var items_set = min;
     var nb_restant = nb_items_set - items_set.length;
     for (var i = 0; i < nb_restant; i++) {
-        var random_item = items[Math.floor(get_random(i) * items.length)];
+        var random_item = items[Math.floor(get_random(i, prevent) * items.length)];
         if (!items_set.includes(random_item)) {
             items_set.push(random_item);
         }
@@ -94,13 +94,15 @@ function add_found_item_to_list () {
     }
 }
 
-function get_random(discriminant) {
+function get_random(discriminant, prevent = 0) {
     var now = new Date();
     var utcOffset = now.getTimezoneOffset() * 60000; 
     var franceOffset = 2 * 60 * 60 * 1000;
     
     var noonFrance = new Date(now.getTime() + utcOffset + franceOffset);
     noonFrance.setHours(12, 0, 0, 0);
+    
+    noonFrance.setDate(noonFrance.getDate() - prevent);
     
     var today_string = noonFrance.toISOString().split('T')[0];
     var str = "xcbfvgwdsv";
@@ -127,3 +129,23 @@ function display_score_value() {
     score_value_div.innerHTML = items_restrain.length + " / " + max_craft.length;
 }
 
+function display_prevent_day() {
+    var list_set_prevent_day = select_set_items([], 1);
+    var list_possible_items = filterCraftableRecipes(list_set_prevent_day.map(item => item.code), crafts, tagMap);
+    
+    var list_set_prevent_day_div = document.getElementById("list_set_prevent");
+    var html = "";
+    list_set_prevent_day.forEach(function(item) {
+        var name_tag = item.code;
+        html += "<div class='mini_icon' title='"+name_tag.replace('minecraft_', 'minecraft:')+"' onclick='is_good_craft(items.find(i => i.code === \"" + name_tag + "\"))'>" + "<img src=\"items/texture/" + name_tag + ".png\"></div>";
+    });
+    list_set_prevent_day_div.innerHTML = html;
+
+    var list_possible_items_div = document.getElementById("list_possible_prevent");
+    html = "";
+    list_possible_items.forEach(function(item) {
+        var name_tag = item;
+        html += "<div class='mini_icon' title='"+name_tag.replace('minecraft_', 'minecraft:')+"' onclick='is_good_craft(items.find(i => i.code === \"" + name_tag + "\"))'>" + "<img src=\"items/texture/" + name_tag + ".png\"></div>";
+    });
+    list_possible_items_div.innerHTML = html;
+}

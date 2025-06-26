@@ -9,3 +9,40 @@
 .items-set-mode #score {
     display: flex!important;
 }
+
+.items-set-mode #prevent-day {
+    display: block!important;
+    width: 300px;
+}
+
+#prevent-day {
+    height: 100%;
+}
+
+#prevent-day h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.mini_icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.mini_icon img {
+    width: 100%;
+    height: 100%;
+}
+
+#list_set_prevent, #list_possible_prevent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+@media (max-width: 800px) {
+    .items-set-mode #prevent-day {
+        width: 100%;
+    }
+}

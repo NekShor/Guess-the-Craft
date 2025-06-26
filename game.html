@@ -77,55 +77,66 @@
         </a>
     </div>
     <div id="container" style="display: flex;">
-        <div id="select-item">
-            <h1 class="no_mobile">Items</h1>
-            <div id="search_bar_div">
-                <input type="text" class="invslot search_bar white shadow" id="search" placeholder="Search for items..." oninput="display_item(this.value)" onclick="this.value = '';">
-                <div id="item_selected" class="btn_in_game"></div>
+        <div id="prevent-day" class="mcui " style="display: none">
+            <h1 >Prevent Day</h1>
+            <p>Set :</p>
+            <div id="list_set_prevent">
             </div>
-            <div id="items_list">
+            <p>Crafts possibles :</p>
+            <div id="list_possible_prevent">
             </div>
         </div>
-        <div id="craft-table">
-            <h1 class="no_mobile">Crafting Table</h1>
-            <span class="mcui pixel-image" id="crafting-grid">
-                <div class="mcui-Crafting_Table">
-                    <span class="mcui-input">
-                        <span class="mcui-row">
-                            <div class="invslot grid-item" id="place-1" data-item="null" onmousedown=""></div>
-                            <div class="invslot grid-item" id="place-2" data-item="null" onmousedown=""></div>
-                            <div class="invslot grid-item" id="place-3" data-item="null" onmousedown=""></div>
-                        </span>
-                        <span class="mcui-row">
-                            <div class="invslot grid-item" id="place-4" data-item="null" onmousedown=""></div>
-                            <div class="invslot grid-item" id="place-5" data-item="null" onmousedown=""></div>
-                            <div class="invslot grid-item" id="place-6" data-item="null" onmousedown=""></div>
-                        </span>
-                        <span class="mcui-row">
-                            <div class="invslot grid-item" id="place-7" data-item="null" onmousedown=""></div>
-                            <div class="invslot grid-item" id="place-8" data-item="null" onmousedown=""></div>
-                            <div class="invslot grid-item" id="place-9" data-item="null" onmousedown=""></div>
-                        </span>
-                    </span>
-                    <span class="mcui-arrow">
-                    </span>
-                    <span class="mcui-output">
-                        <span class="invslot invslot-large" id="craft-result">
-                            
-                        </span>
-                    </span>
+        <div id="game-container">
+            <div id="select-item">
+                <h1 class="no_mobile">Items</h1>
+                <div id="search_bar_div">
+                    <input type="text" class="invslot search_bar white shadow" id="search" placeholder="Search for items..." oninput="display_item(this.value)" onclick="this.value = '';">
+                    <div id="item_selected" class="btn_in_game"></div>
                 </div>
-                <div class="game_btn">
-                    <input type="button" class="clear_btn white shadow" id="craft-btn" value="" onClick="clear_table()">
-                    <input type="button" class="skip_btn white shadow" id="skip-btn" value="Skip" onClick="skip()">
+                <div id="items_list">
                 </div>
-                <div id="wanted">
-                    <h1 class="no_mobile">Wanted Item</h1>
-                    <div id="found-items">
-        
+            </div>
+            <div id="craft-table">
+                <h1 class="no_mobile">Crafting Table</h1>
+                <span class="mcui pixel-image" id="crafting-grid">
+                    <div class="mcui-Crafting_Table">
+                        <span class="mcui-input">
+                            <span class="mcui-row">
+                                <div class="invslot grid-item" id="place-1" data-item="null" onmousedown=""></div>
+                                <div class="invslot grid-item" id="place-2" data-item="null" onmousedown=""></div>
+                                <div class="invslot grid-item" id="place-3" data-item="null" onmousedown=""></div>
+                            </span>
+                            <span class="mcui-row">
+                                <div class="invslot grid-item" id="place-4" data-item="null" onmousedown=""></div>
+                                <div class="invslot grid-item" id="place-5" data-item="null" onmousedown=""></div>
+                                <div class="invslot grid-item" id="place-6" data-item="null" onmousedown=""></div>
+                            </span>
+                            <span class="mcui-row">
+                                <div class="invslot grid-item" id="place-7" data-item="null" onmousedown=""></div>
+                                <div class="invslot grid-item" id="place-8" data-item="null" onmousedown=""></div>
+                                <div class="invslot grid-item" id="place-9" data-item="null" onmousedown=""></div>
+                            </span>
+                        </span>
+                        <span class="mcui-arrow">
+                        </span>
+                        <span class="mcui-output">
+                            <span class="invslot invslot-large" id="craft-result">
+                                
+                            </span>
+                        </span>
                     </div>
-                </div>
-            </span>
+                    <div class="game_btn">
+                        <input type="button" class="clear_btn white shadow" id="craft-btn" value="" onClick="clear_table()">
+                        <input type="button" class="skip_btn white shadow" id="skip-btn" value="Skip" onClick="skip()">
+                    </div>
+                    <div id="wanted">
+                        <h1 class="no_mobile">Wanted Item</h1>
+                        <div id="found-items">
+            
+                        </div>
+                    </div>
+                </span>
+            </div>
         </div>
     </div>
     <div id="alert">
@@ -160,6 +171,7 @@
                 filter_items_list(select_set_items());
                 display_good_items();
                 display_score_value();
+                display_prevent_day();
             }, 500);
         } else {
             console.error('Invalid game mode specified in URL parameters.');
