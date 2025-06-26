@@ -56,6 +56,14 @@ function formate_craft_item() {
     ]
 
     var item_crafted = validateCraft(array_craft, crafts, tagMap);
+    if(!item_crafted) {
+        var array_craft_flip_horizontal = [
+            array.slice(0, 3).reverse(),
+            array.slice(3, 6).reverse(),
+            array.slice(6, 9).reverse()
+        ];
+        item_crafted = validateCraft(array_craft_flip_horizontal, crafts, tagMap);
+    }
     var result = document.getElementById("craft-result");
     if (item_crafted) {
         var item_formated = item_crafted.id.replace('minecraft:', 'minecraft_');
