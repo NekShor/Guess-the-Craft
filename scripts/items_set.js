@@ -103,7 +103,8 @@ function get_random(discriminant) {
     noonFrance.setHours(12, 0, 0, 0);
     
     var today_string = noonFrance.toISOString().split('T')[0];
-    var seed = discriminant + today_string;
+    var str = "xcbfvgwdsvt";
+    var seed = discriminant + today_string + str;
     return seededRandom(seed);
 }
 
