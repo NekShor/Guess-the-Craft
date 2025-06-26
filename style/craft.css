@@ -135,7 +135,6 @@ h1 {
 
 .found_list {
     width: 400px;
-    /* breakword */
     word-break: break-all;
     overflow-wrap: break-word;
 }

@@ -3,159 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- script -->
-    <script src="items/item/items.js"></script>
-    <script src="crafts/crafts.js"></script>
-    <script src="crafts/tagMap.js"></script>
-    <script src="scripts/get_item.js"></script>
-    <script src="scripts/craft.js"></script>
-    <script src="scripts/interface.js"></script>
-
-    <!-- style -->
+    <title>Recipedia</title>
     <link rel="stylesheet" href="style/page.css">
     <link rel="stylesheet" href="style/craft.css">
     <link rel="stylesheet" href="style/get_item.css">
     <link rel="stylesheet" href="style/interface.css">
-    <link rel="stylesheet" href="style/end_game.css">
-    <link rel="stylesheet" href="style/items_set.css">
-    <link rel="stylesheet" href="style/timer.css">
-
-    <!-- favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/accueil.css">
 </head>
 <body>
-    <div id="end-game" class="white mcui" style="display: none;">
-        <h1>Game Over</h1>
-        <p id="end-message">You have finished the game!</p>
-        <p id="end-score">Your score: <span id="final-score">0</span></p>
-        <p id="end-bestscore">Best score: <span id="final-best-score">0</span></p>
-        <p id="end-time">Time taken: <span id="final-time">00:00</span></p>
-        <input type="button" class="interface_btn white shadow" id="restart-game" value="Restart Game" onclick="start_game()">
-        <input type="button" class="interface_btn white shadow" id="close" value="Close" onClick="close_end_interface()">
+    <h1>Recipedia</h1>
+    <div id="header-text">
+        <p>Welcome to the Recipedia! This is a simple HTML page.</p>
+        <p>Feel free to explore and learn more about Minecraft crafting recipes.</p>
+        <p>For more information, visit the <a href="https://minecraft.fandom.com/wiki/Crafting">Minecraft Wiki</a>.</p>
+        <p>Enjoy your crafting journey!</p>
     </div>
-    <div id="information" class="white mcui" style="display: none;">
-        <div class="info-timer" style="display: none;">
-            <h1>Information</h1>
-            <p>The goal of the game is to test your knowledge of Minecraft crafting recipes!</p>
-            <p>You have 60 seconds to find as many crafts as possible, with 10 seconds added to the timer for each item found.</p>
-            <p>You can skip an item, but it will cost you a 10-second penalty.</p>
-            <p>Try to achieve the highest score possible!</p>
-            <input type="button" class="interface_btn white shadow" id="close-info" value="Close" onClick="information()">
+    <div class="game-mode-div">
+        <div class="game-div" id="SpeedCraft">
+            <h2>Speed Craft</h2>
+            <p>Test your speed in finding crafting recipes !</p>
+            <a href="game.html" class="btn_in_game">
+                <img src="items/texture/minecraft_crafter.png" alt="Speed Craft" class="game-icon">
+                Speed Craft
+            </a>
         </div>
-        <div class="info-items-set" style="display: none;">
-            <h1>Items Set</h1>
-            <p>In this game mode, you start with a set of 25 initial items.</p>
-            <p>Find as many crafts as possible using only these items.</p>
-            <p>The crafted items are added to the list, allowing you to create even more crafts!</p>
-            <p>The item set updates every day at noon, French time.</p>
-            <input type="button" class="interface_btn white shadow" id="close-info-set" value="Close" onClick="information()">
+        <div class="game-div" id="RecursiveCraft">
+            <h2>Recursive Craft</h2>
+            <p>Craft items recursively to create complex recipes !</p>
+            <a href="game.html?mode=items-set&cumulative=true" class="btn_in_game">
+                <img src="items/texture/minecraft_chest.png" alt="Recursive Craft" class="game-icon">
+                Recursive Craft
+            </a>
         </div>
     </div>
-    <div id="header">
-        <input type="button" class="interface_btn white shadow start_button" id="start-game" value="Start Game" onclick="start_game()">
-        <input type="button" class="interface_btn white shadow stop_button" id="stop-game" value="Stop Game" onclick="stop_game()">
-        <div id="timer" class="infos white" style="display: none;"> 
-            <h2>Timer</h2>
-            <span id="time">00:00</span>
-        </div>
-        <div id="score" class="infos white" style="display: none;">
-            <h2>Score</h2>
-            <span id="score-value">0</span>
-        </div>
-        <input type="button" class="interface_btn white shadow information_button" id="information_btn" value="I" data-open="false" onclick="information(this)">
-    </div>
-    <div id="container" style="display: flex;">
-        <div id="select-item">
-            <h1 class="no_mobile">Items</h1>
-            <div id="search_bar_div">
-                <input type="text" class="invslot search_bar white shadow" id="search" placeholder="Search for items..." oninput="display_item(this.value)" onclick="this.value = '';">
-                <div id="item_selected" class="btn_in_game"></div>
+    <div id="footer">
+        <p>&copy; 2025 Recipedia. All rights reserved.</p>
+        <p>Created by NekShor.</p>
+        <p>For any questions or feedback, feel free to reach out!</p>
+        <div id="contact-list">
+            <div id="twitter" class="contact">
+                <a href="https://x.com/NekShor" class="btn_in_game" target="_blank">
+                    <img src="images/twitter.webp" alt="Twitter" class="contact-icon">
+                    <p>@lord_ant1</p>
+                </a>
             </div>
-            <div id="items_list">
+            <div id="github" class="contact">
+                <a href="https://github.com/NekShor" class="btn_in_game" target="_blank">
+                    <img src="images/github.png" alt="GitHub" class="contact-icon">
+                    <p>Github : NekShor</p>
+                </a>
+            </div>
+            <div id="mail" class="contact">
+                <a href="mailto:antoine27bigot@gmail.com" class="btn_in_game" target="_blank">
+                    <img src="images/email.png" alt="Email" class="contact-icon">
+                    <p>antoine27bigot@gmail.com</p>
+                </a>
+            </div>
+            <div id="portfolio" class="contact">
+                <a href="https://nekshor.fr" class="btn_in_game" target="_blank">
+                    <img src="images/portfolio.png" alt="Portfolio" class="contact-icon">
+                    <p>https://nekshor.fr</p>
+                </a>
             </div>
         </div>
-        <div id="craft-table">
-            <h1 class="no_mobile">Crafting Table</h1>
-            <span class="mcui pixel-image" id="crafting-grid">
-                <div class="mcui-Crafting_Table">
-                    <span class="mcui-input">
-                        <span class="mcui-row">
-                            <div class="invslot grid-item" id="place-1" data-item="null" onClick="place_item(this)"></div>
-                            <div class="invslot grid-item" id="place-2" data-item="null" onClick="place_item(this)"></div>
-                            <div class="invslot grid-item" id="place-3" data-item="null" onClick="place_item(this)"></div>
-                        </span>
-                        <span class="mcui-row">
-                            <div class="invslot grid-item" id="place-4" data-item="null" onClick="place_item(this)"></div>
-                            <div class="invslot grid-item" id="place-5" data-item="null" onClick="place_item(this)"></div>
-                            <div class="invslot grid-item" id="place-6" data-item="null" onClick="place_item(this)"></div>
-                        </span>
-                        <span class="mcui-row">
-                            <div class="invslot grid-item" id="place-7" data-item="null" onClick="place_item(this)"></div>
-                            <div class="invslot grid-item" id="place-8" data-item="null" onClick="place_item(this)"></div>
-                            <div class="invslot grid-item" id="place-9" data-item="null" onClick="place_item(this)"></div>
-                        </span>
-                    </span>
-                    <span class="mcui-arrow">
-                    </span>
-                    <span class="mcui-output">
-                        <span class="invslot invslot-large" id="craft-result">
-                            
-                        </span>
-                    </span>
-                </div>
-                <div class="game_btn">
-                    <input type="button" class="clear_btn white shadow" id="craft-btn" value="" onClick="clear_table()">
-                    <input type="button" class="skip_btn white shadow" id="skip-btn" value="Skip" onClick="skip()">
-                </div>
-                <div id="wanted" style="">
-                    <h1 class="no_mobile">Wanted Item</h1>
-                    <div id="found-items">
-        
-                    </div>
-                </div>
-            </span>
-        </div>
     </div>
-    <div id="test">
-
-    </div>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const gameMode = urlParams.get('mode') || 'timer';
-
-        document.body.classList.add(gameMode + '-mode');
-
-        if (gameMode === 'crafting') {
-            document.body.classList.add('crafting-mode');
-            initialise_items("")
-            set_item_selected("minecraft_oak_planks")
-        } else if (gameMode === 'timer') {
-            const script = document.createElement('script');
-            script.src = 'scripts/game.js';
-            document.head.appendChild(script);
-
-            document.body.classList.add('timer-mode');
-            initialise_items("")
-            set_item_selected("minecraft_oak_planks")
-        } else if (gameMode === 'items-set') {
-            const script = document.createElement('script');
-            script.src = 'scripts/items_set.js';
-            document.head.appendChild(script);
-
-            document.body.classList.add('items-set-mode');
-
-            setTimeout(() => {
-                filter_items_list(select_set_items());
-                display_good_items();
-                display_score_value();
-            }, 500);
-        } else {
-            console.error('Invalid game mode specified in URL parameters.');
-        }
-
-
-    </script>
 </body>
 </html>
