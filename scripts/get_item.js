@@ -12,18 +12,19 @@ function display_item(text) {
 }
 
 function initialise_items(text) {
-  var items_get = get_items(text);
-  var div = document.getElementById("items_list");
-  if (items_get.length === 0) {
-      div.innerHTML = "<p>Aucun item trouvé</p>";
-      return;
-  }
-  var html = "";
-  items_get.forEach(function(item) {
-      var name_tag = item.code;
-      html += "<div class='invslot items_inv' data-id='"+item.code+"' onClick=\"set_item_selected('"+item.code+"')\">" + "<img src=\"items/texture/"+name_tag+".png\"></div>";
-  });
-  div.innerHTML = html;
+    var items_get = get_items(text);
+    var div = document.getElementById("items_list");
+    if (items_get.length === 0) {
+        div.innerHTML = "<p>Aucun item trouvé</p>";
+        return;
+    }
+    var html = "";
+    items_get.forEach(function(item) {
+        var name_tag = item.code;
+        var classname = item.spec ? " spec" : "";
+        html += "<div class='invslot items_inv"+classname+"' data-id='"+item.code+"' onClick=\"set_item_selected('"+item.code+"')\">" + "<img src=\"items/texture/"+name_tag+".png\"></div>";
+    });
+    div.innerHTML = html;
 }
 
 function set_item_selected (item) {

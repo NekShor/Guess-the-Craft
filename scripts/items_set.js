@@ -62,6 +62,13 @@ function display_good_items () {
 
 function add_found_item_to_list () {
     if(urlParams.get('cumulative') === 'true') {
+        items_crafted = items_crafted.map(function(item) {
+            return {
+                code: item.code,
+                name: item.name,
+                spec: true
+            };
+        });
         items_restrain = [...items_restrain, ...items_crafted];
         items_restrain = items_restrain.filter((item, index, self) =>
             index === self.findIndex((t) => (
