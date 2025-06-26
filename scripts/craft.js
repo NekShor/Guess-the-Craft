@@ -260,10 +260,23 @@ function filterCraftableRecipes(availableItems, recipes, tagMap = {}) {
                     var found = false;
                     for (var i = 0; i < items_requierd[key].length; i++) {
                         var item = items_requierd[key][i];
-                        if (availableItems.includes(item.replace('minecraft:', 'minecraft_'))) {
+                        var normalizedItem = item.replace('minecraft:', 'minecraft_');
+
+                        if (availableItems.includes(normalizedItem)) {
                             found = true;
                             break;
                         }
+
+                        if (tagMap[item]) {
+                            for (var taggedItem of tagMap[item]) {
+                                if (availableItems.includes(taggedItem.replace('minecraft:', 'minecraft_'))) {
+                                    found = true;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (found) break;
                     }
                     if (!found) {
                         possible = false;
@@ -285,10 +298,23 @@ function filterCraftableRecipes(availableItems, recipes, tagMap = {}) {
                     var found = false;
                     for (var j = 0; j < items_requierd[i].length; j++) {
                         var item = items_requierd[i][j];
-                        if (availableItems.includes(item.replace('minecraft:', 'minecraft_'))) {
+                        var normalizedItem = item.replace('minecraft:', 'minecraft_');
+
+                        if (availableItems.includes(normalizedItem)) {
                             found = true;
                             break;
                         }
+
+                        if (tagMap[item]) {
+                            for (var taggedItem of tagMap[item]) {
+                                if (availableItems.includes(taggedItem.replace('minecraft:', 'minecraft_'))) {
+                                    found = true;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (found) break;
                     }
                     if (!found) {
                         possible = false;
@@ -321,6 +347,7 @@ function filterCraftableRecipes(availableItems, recipes, tagMap = {}) {
     var new_availableItems = [...availableItems, ...crafts_possible.map(recipe => recipe.result.id.replace('minecraft:', 'minecraft_'))];
     new_availableItems = [...new Set(new_availableItems)];
 
+    console.log(new_availableItems)
     if (new_availableItems.length > availableItems.length) {
         new_availableItems = filterCraftableRecipes(new_availableItems, recipes, tagMap);
     }
