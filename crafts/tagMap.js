@@ -566,7 +566,20 @@ var tagMap = {
   "#minecraft:llama_tempt_items": [
     "minecraft:hay_block"
   ],
-  "#minecraft:logs": [],
+  "#minecraft:logs": [
+    "minecraft:oak_log",
+    "minecraft:spruce_log",
+    "minecraft:birch_log",
+    "minecraft:jungle_log",
+    "minecraft:acacia_log",
+    "minecraft:dark_oak_log",
+    "minecraft:pale_oak_log",
+    "minecraft:crimson_stem",
+    "minecraft:warped_stem",
+    "minecraft:mangrove_log",
+    "minecraft:bamboo_block",
+    "minecraft:cherry_log"
+  ],
   "#minecraft:logs_that_burn": [],
   "#minecraft:mangrove_logs": [
     "minecraft:mangrove_log",

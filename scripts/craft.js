@@ -12,6 +12,7 @@ window.addEventListener("load", function() {
 });
 
 function place_item(case_place) {
+    console.log("Placing item ");
     try{
         var item_selected_code = item_selected ? item_selected.code : null;
         case_place.setAttribute("data-item", item_selected_code);
@@ -23,6 +24,7 @@ function place_item(case_place) {
 }
 
 function clear_table() {
+    console.log("Crafting table cleared.");
     var crafting_grid = document.getElementById("crafting-grid");
     var crafting_places_obj = crafting_grid.querySelectorAll(".grid-item");
     crafting_places_obj.forEach(function(place) {

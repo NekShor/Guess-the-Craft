@@ -79,13 +79,13 @@ function good_item() {
     new_wanted_item();
 
     display_found_items();
-    clear_table();
-
+    
     var time_win = 10;
     timer += time_win;
     timer_total += time_win;
     set_timer(timer);
     timer_color_effect("+", time_win);
+    clear_table();
 }
 
 function new_wanted_item() {
