@@ -95,13 +95,15 @@ document.addEventListener("contextmenu", function(event) {
 });
 
 document.addEventListener("mousedown", function(event) {
-    event.preventDefault(); 
-    var place = event.target.closest(".grid-item");
-    if (event.button === 0) {
-        is_left_click = true;
-        place_item(place);
-    } else if (event.button === 2) {
-        is_left_click = false;
+    if(event.target.classList.contains("grid-item")) {
+        event.preventDefault(); 
+        var place = event.target.closest(".grid-item");
+        if (event.button === 0) {
+            is_left_click = true;
+            place_item(place);
+        } else if (event.button === 2) {
+            is_left_click = false;
+        }
     }
 });
 
