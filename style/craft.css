@@ -121,6 +121,13 @@
     box-sizing: border-box;
 }
 
+.btn_in_game:hover {
+    background: #d6d6d6 no-repeat center center / 64px 64px;
+    border-color: #fdfbfc #646e76 #606065 #fdfbfc;
+    box-shadow: 0 0 0 4px #151515;
+    color: #000000;
+}
+
 .btn_in_game img {
     width: 64px;
     height: 64px;
