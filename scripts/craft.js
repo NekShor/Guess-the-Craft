@@ -15,6 +15,7 @@ function place_item(case_place) {
     try{
         var item_selected_code = item_selected ? item_selected.code : null;
         case_place.setAttribute("data-item", item_selected_code);
+        case_place.setAttribute("data-id", item_selected_code);
         case_place.style.backgroundImage = item_selected ? "url('items/texture/" + item_selected.code + ".png')" : "none";
         formate_craft_item();
     } catch (error) {
@@ -26,6 +27,7 @@ function clear_table() {
     var crafting_places_obj = crafting_grid.querySelectorAll(".grid-item");
     crafting_places_obj.forEach(function(place) {
         place.setAttribute("data-item", 'null');
+        place.setAttribute("data-id", 'null');
         place.style.backgroundImage = "none";
     });
     document.getElementById("craft-result").innerHTML = "";
@@ -85,6 +87,7 @@ document.addEventListener("contextmenu", function(event) {
         event.preventDefault();
         var item = target.closest(".grid-item");
         item.setAttribute("data-item", 'null');
+        item.setAttribute("data-id", 'null');
         item.style.backgroundImage = "none";
 
         formate_craft_item();

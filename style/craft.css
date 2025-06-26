@@ -41,6 +41,23 @@
     vertical-align: bottom;
 }
 
+.invslot[data-id]:not([data-id=""]):not([data-id="null"]):hover::after {
+    content: attr(data-id); /* Utilise l'attribut data-name pour afficher le texte */
+    position: absolute;
+    top: 0; /* Positionne le tooltip au-dessus de l'élément */
+    left: -50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    transform: translateY(-100%); /* Positionne au-dessus de l'élément */
+    margin-top: -5px;
+    pointer-events: none; /* Empêche l'interaction avec le tooltip */
+}
+
 .invslot:hover {
     background: #A9A9A9 no-repeat center center / 64px 64px;
     border-color: #373737 #FFF #FFF #373737;

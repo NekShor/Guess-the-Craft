@@ -1,9 +1,10 @@
 var item_selected = null;
 
 function display_item(text) {
+    text = text.toLowerCase();
     var items_inv = document.querySelectorAll(".items_inv");
     items_inv.forEach(function(item) {
-      if (item.getAttribute("data-id").replace('minecraft', '').toLowerCase().includes(text.toLowerCase())) {
+      if (item.getAttribute("data-id").replace('minecraft', '').toLowerCase().includes(text) || item.getAttribute("data-id").replace('minecraft', '').toLowerCase().includes(text.replace(' ', '_'))) {
         item.style.display = "inline-block";
       } else {
         item.style.display = "none";

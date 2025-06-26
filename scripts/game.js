@@ -151,6 +151,10 @@ function new_wanted_item() {
     for (let i = 0; i < validCrafts.length; i++) {
         if (randomWeight < cumulativeWeights[i]) {
             item_wanted = validCrafts[i];
+            
+            if(item_wanted.result.id.replace(':', '_') in list_item_found) {
+                return new_wanted_item();
+            }
             return;
         }
     }
@@ -193,13 +197,14 @@ function timer_color_effect(type, time) {
 }
 
 function lose () {
-    stop_game();
     var score = count_good;
     var best_score = localStorage.getItem("best_score") || 0;
     if (score > best_score) {
+        console.log("New best score: " + score);
         localStorage.setItem("best_score", score);
         best_score = score;
     }
+    stop_game();
 }
 
 function skip () {

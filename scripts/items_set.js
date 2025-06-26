@@ -1,5 +1,5 @@
 var nb_items_set = 25;
-
+var max_craft = 0;
 if(localStorage.getItem("today") !== new Date().toISOString().split('T')[0]) {
     localStorage.setItem("items_crafted", JSON.stringify([]));
     localStorage.setItem("today", new Date().toISOString().split('T')[0]);
@@ -45,14 +45,14 @@ function is_good_craft (item) {
     if (!item_crafted_code.includes(item.code)) {
         items_crafted.push(item);
         localStorage.setItem("items_crafted", JSON.stringify(items_crafted));
-        display_good_items();
         add_found_item_to_list()
+        display_good_items();
         display_score_value();
     }
 }
 
 function display_good_items () {
-    var found_items_div = document.getElementById("found-items");
+        var found_items_div = document.getElementById("found-items");
     var html = "";
 
     var items_crafted_temp = items_crafted.reverse(); 
@@ -62,6 +62,18 @@ function display_good_items () {
         html += "<div class='btn_in_game found_list shadow_btn'>" + "<img src=\"items/texture/" + name_tag + ".png\"><p>"+name_tag.replace('minecraft_', '').replaceAll('_', ' ')+"</p></div>";
     });
     found_items_div.innerHTML = html;
+
+    if(!max_craft) {
+        var items_restrain_codes = items_restrain.map(function(item) {
+            return item.code;
+        });
+        max_craft = filterCraftableRecipes(items_restrain_codes, crafts, tagMap);
+    }
+    console.log(items_restrain.length, max_craft.length);
+    if( items_restrain.length >= max_craft.length) {
+        document.getElementById("end-game").style.display = "block";
+        document.getElementById("end-game").innerHTML = "<p>Vous avez terminé la partie !</p><a class='btn_in_game' href='index.html'>Home</a>";
+    }
 }
 
 function add_found_item_to_list () {
@@ -81,7 +93,6 @@ function add_found_item_to_list () {
         );
         initialise_items();
     }
-
 }
 
 function get_random(discriminant) {
@@ -111,8 +122,7 @@ function display_score_value() {
     var items_restrain_codes = items_restrain.map(function(item) {
         return item.code;
     });
-    var max_craft = filterCraftableRecipes(items_restrain_codes, crafts, tagMap);
-    console.log(max_craft);
+    max_craft = filterCraftableRecipes(items_restrain_codes, crafts, tagMap);
     var score_value_div = document.getElementById("score-value");
     score_value_div.innerHTML = items_restrain.length + " / " + max_craft.length;
 }

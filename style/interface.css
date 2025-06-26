@@ -110,6 +110,15 @@ h2 {
     width: 30px!important;
 }
 
+#home_btn {
+    width: 30px!important;
+    display: flex;
+    padding: 0px!important;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+}
+
 @media (max-width: 600px) {
     .interface_btn {
         width: 40%!important;
