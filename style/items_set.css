@@ -1,0 +1,7 @@
+.items-set-mode #start-game {
+    display: none;
+}
+
+.items-set-mode #score {
+    display: flex!important;
+}

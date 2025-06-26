@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="style/get_item.css">
     <link rel="stylesheet" href="style/interface.css">
     <link rel="stylesheet" href="style/end_game.css">
+    <link rel="stylesheet" href="style/items_set.css">
 
     <!-- favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -112,6 +113,8 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const gameMode = urlParams.get('mode') || 'timer';
+
+        document.body.classList.add(gameMode + '-mode');
 
         if (gameMode === 'crafting') {
             document.body.classList.add('crafting-mode');
