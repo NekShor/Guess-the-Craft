@@ -1,0 +1,7 @@
+.crafting-mode #start-game {
+    display: none!important;
+}
+
+.crafting-mode .info-crafting {
+    display: block!important;
+}

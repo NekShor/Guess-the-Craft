@@ -165,17 +165,19 @@ function matchShaped(recipe, inputGrid, tagMap) {
     }
     return false;
 }
+
+const flatten = grid => grid.flat().filter(x => x);
   
 const matchTransmute = (recipe, inputGrid, tagMap) => {
     const input = flatten(inputGrid);
-    if (input.length !== 1) return false;
+    if (input.length !== 2) return false;
 
     const item = input[0];
-
-    const matchesInput = matchesIngredient(recipe.input, item, tagMap);
-
-    const matchesMaterial = matchesIngredient(recipe.material, item.material, tagMap);
-
+    const item2 = input[1];
+    const matchesInput = matchesIngredient(recipe.input, item, tagMap) ||
+                         matchesIngredient(recipe.input, item2, tagMap);
+    const matchesMaterial = matchesIngredient(recipe.material, item, tagMap) ||
+                            matchesIngredient(recipe.material, item2, tagMap);
     return matchesInput && matchesMaterial;
 };
 
@@ -221,17 +223,9 @@ function validateCraft(inputGrid, recipes, tagMap = {}) {
             // case "minecraft:smelting":
             //     if (matchSmelting(recipe, inputGrid, tagMap)) return recipe.result;
             //     break;
-            // case "minecraft:crafting_transmute":
-            //     try {
-            //         if (matchTransmute(recipe, inputGrid, tagMap)) {
-            //             return {
-            //                 id: recipe.result.id,
-            //                 material: recipe.material
-            //             };
-            //         }
-            //     } catch (error) {
-            //     }
-            //     break;
+            case "minecraft:crafting_transmute":
+                if (matchTransmute(recipe, inputGrid, tagMap)) return recipe.result;
+                break;
             default:
         }
     }
