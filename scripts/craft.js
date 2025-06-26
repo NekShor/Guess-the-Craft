@@ -95,6 +95,7 @@ document.addEventListener("contextmenu", function(event) {
 });
 
 document.addEventListener("mousedown", function(event) {
+    event.preventDefault(); 
     var place = event.target.closest(".grid-item");
     if (event.button === 0) {
         is_left_click = true;
@@ -105,6 +106,7 @@ document.addEventListener("mousedown", function(event) {
 });
 
 document.addEventListener("mouseup", function(event) {
+    console.log("Mouse up event:", event);
     if (event.button === 0) {
         is_left_click = false;
     }
@@ -320,7 +322,7 @@ function filterCraftableRecipes(availableItems, recipes, tagMap = {}) {
     new_availableItems = [...new Set(new_availableItems)];
 
     if (new_availableItems.length > availableItems.length) {
-        filterCraftableRecipes(new_availableItems, recipes, tagMap);
+        new_availableItems = filterCraftableRecipes(new_availableItems, recipes, tagMap);
     }
 
     return new_availableItems;
