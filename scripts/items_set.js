@@ -1,8 +1,10 @@
 var nb_items_set = 25;
 var max_craft = 0;
-if(localStorage.getItem("today") !== new Date().toISOString().split('T')[0]) {
+
+var get_date_str = get_date();
+if(localStorage.getItem("today") !== get_date_str) {
     localStorage.setItem("items_crafted", JSON.stringify([]));
-    localStorage.setItem("today", new Date().toISOString().split('T')[0]);
+    localStorage.setItem("today", get_date_str);
 }
 var items_crafted = localStorage.getItem("items_crafted") ? JSON.parse(localStorage.getItem("items_crafted")) : [];
 
@@ -95,19 +97,20 @@ function add_found_item_to_list () {
 }
 
 function get_random(discriminant, prevent = 0) {
+    var today_string = get_date();
+    var str = "xcbfvgwdsv";
+    var seed = discriminant + today_string + str;
+    return seededRandom(seed);
+}
+
+function get_date() {
     var now = new Date();
     var utcOffset = now.getTimezoneOffset() * 60000; 
     var franceOffset = 2 * 60 * 60 * 1000;
     
     var noonFrance = new Date(now.getTime() + utcOffset + franceOffset);
-    noonFrance.setHours(12, 0, 0, 0);
     
-    noonFrance.setDate(noonFrance.getDate() - prevent);
-    
-    var today_string = noonFrance.toISOString().split('T')[0];
-    var str = "xcbfvgwdsv";
-    var seed = discriminant + today_string + str;
-    return seededRandom(seed);
+    return noonFrance.toISOString().split('T')[0];
 }
 
 function seededRandom(seed = '') {
