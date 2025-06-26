@@ -1,6 +1,11 @@
 var nb_items_set = 25;
 
+if(localStorage.getItem("today") !== new Date().toISOString().split('T')[0]) {
+    localStorage.setItem("items_crafted", JSON.stringify([]));
+    localStorage.setItem("today", new Date().toISOString().split('T')[0]);
+}
 var items_crafted = localStorage.getItem("items_crafted") ? JSON.parse(localStorage.getItem("items_crafted")) : [];
+
 function select_set_items (min = []){
     if (min.length >= nb_items_set) {
         min = min.slice(0, nb_items_set);
@@ -14,7 +19,6 @@ function select_set_items (min = []){
             items_set.push(random_item);
         }
     }
-    
     return items_set;
 }
 
@@ -84,21 +88,32 @@ function get_random(discriminant) {
     var now = new Date();
     var utcOffset = now.getTimezoneOffset() * 60000; 
     var franceOffset = 2 * 60 * 60 * 1000;
-
+    
     var noonFrance = new Date(now.getTime() + utcOffset + franceOffset);
     noonFrance.setHours(12, 0, 0, 0);
-
-    var seed = noonFrance.getDate() + noonFrance.getMonth() * 31 + noonFrance.getFullYear() * 365;
-
-    return seededRandom(discriminant + seed);
+    
+    var today_string = noonFrance.toISOString().split('T')[0];
+    var seed = discriminant + today_string;
+    return seededRandom(seed);
 }
 
-function seededRandom(seed) {
-    var x = Math.sin(seed) * 10000;
-    return x - Math.floor(x);
+function seededRandom(seed = '') {
+    let hash = 0;
+    for (let i = 0; i < seed.length; i++) {
+        hash = seed.charCodeAt(i) + ((hash << 5) - hash);
+        hash = hash & hash;
+    }
+    hash = Math.abs(hash);
+    return (hash % 10000) / 10000;
 }
 
 function display_score_value() {
+    var items_restrain_codes = items_restrain.map(function(item) {
+        return item.code;
+    });
+    var max_craft = filterCraftableRecipes(items_restrain_codes, crafts, tagMap);
+    console.log(max_craft);
     var score_value_div = document.getElementById("score-value");
-    score_value_div.innerHTML = items_crafted.length;
+    score_value_div.innerHTML = items_restrain.length + " / " + max_craft.length;
 }
+

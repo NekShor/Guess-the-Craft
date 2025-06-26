@@ -181,33 +181,33 @@ const matchTransmute = (recipe, inputGrid, tagMap) => {
     return matchesInput && matchesMaterial;
 };
 
+const matchShapeless = (recipe, inputGrid) => {
+    const input = flatten(inputGrid);
+    const required = [...recipe.ingredients];
+
+    for (const item of input) {
+        const index = required.findIndex(ing => matchesIngredient(ing, item, tagMap));
+        if (index === -1) return false;
+        required.splice(index, 1);
+    }
+
+    return required.length === 0;
+};
+
+const matchStonecutting = (recipe, inputGrid) => {
+    const input = flatten(inputGrid);
+    return input.length === 1 &&
+        matchesIngredient(recipe.ingredient, input[0], tagMap);
+};
+
+const matchSmelting = (recipe, inputGrid) => {
+    const input = flatten(inputGrid);
+    return input.length === 1 &&
+        matchesIngredient(recipe.ingredient, input[0], tagMap);
+};
 function validateCraft(inputGrid, recipes, tagMap = {}) {
     const flatten = grid => grid.flat().filter(x => x);
 
-    const matchShapeless = (recipe, inputGrid) => {
-        const input = flatten(inputGrid);
-        const required = [...recipe.ingredients];
-    
-        for (const item of input) {
-            const index = required.findIndex(ing => matchesIngredient(ing, item, tagMap));
-            if (index === -1) return false;
-            required.splice(index, 1);
-        }
-    
-        return required.length === 0;
-    };
-
-    const matchStonecutting = (recipe, inputGrid) => {
-        const input = flatten(inputGrid);
-        return input.length === 1 &&
-            matchesIngredient(recipe.ingredient, input[0], tagMap);
-    };
-
-    const matchSmelting = (recipe, inputGrid) => {
-        const input = flatten(inputGrid);
-        return input.length === 1 &&
-            matchesIngredient(recipe.ingredient, input[0], tagMap);
-    };
 
     for (const recipe of recipes) {
         switch (recipe.type) {
@@ -231,4 +231,86 @@ function validateCraft(inputGrid, recipes, tagMap = {}) {
     }
 
     return null;
+}
+
+function filterCraftableRecipes(availableItems, recipes, tagMap = {}) {
+    var crafts_possible = [];
+    recipes.forEach(function(recipe) {
+        var possible = false;
+        switch (recipe.type) {
+            case "minecraft:crafting_shaped":
+                var items_requierd = recipe.key;
+                for (var key in items_requierd) {
+                    if (typeof items_requierd[key] === 'string') {
+                        items_requierd[key] = [items_requierd[key]];
+                    }
+                    var found = false;
+                    for (var i = 0; i < items_requierd[key].length; i++) {
+                        var item = items_requierd[key][i];
+                        if (availableItems.includes(item.replace('minecraft:', 'minecraft_'))) {
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) {
+                        possible = false;
+                        break;
+                    } else {
+                        possible = true;
+                    }
+                }
+                if (possible) {
+                    crafts_possible.push(recipe);
+                }
+                break;
+            case "minecraft:crafting_shapeless":
+                var items_requierd = recipe.ingredients;
+                for (var i = 0; i < items_requierd.length; i++) {
+                    if (typeof items_requierd[i] === 'string') {
+                        items_requierd[i] = [items_requierd[i]];
+                    }
+                    var found = false;
+                    for (var j = 0; j < items_requierd[i].length; j++) {
+                        var item = items_requierd[i][j];
+                        if (availableItems.includes(item.replace('minecraft:', 'minecraft_'))) {
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) {
+                        possible = false;
+                        break;
+                    } else {
+                        possible = true;
+                    }
+                }
+                if (possible) {
+                    crafts_possible.push(recipe);
+                }
+                break;
+            // case "minecraft:stonecutting":
+            //     is_possible = matchStonecutting(recipe, availableItems, tagMap);
+            //     break;
+            // case "minecraft:smelting":
+            //     is_possible = matchSmelting(recipe, availableItems, tagMap);
+            //     break;
+            case "minecraft:crafting_transmute":
+                var input = flatten(availableItems);
+                if (input.length !== 2) return;
+                if (matchesIngredient(recipe.input, input[0], tagMap) ||
+                    matchesIngredient(recipe.input, input[1], tagMap)) {
+                    crafts_possible.push(recipe);
+                }
+                break;
+            default:
+        }
+    });
+    var new_availableItems = [...availableItems, ...crafts_possible.map(recipe => recipe.result.id.replace('minecraft:', 'minecraft_'))];
+    new_availableItems = [...new Set(new_availableItems)];
+
+    if (new_availableItems.length > availableItems.length) {
+        filterCraftableRecipes(new_availableItems, recipes, tagMap);
+    }
+
+    return new_availableItems;
 }
