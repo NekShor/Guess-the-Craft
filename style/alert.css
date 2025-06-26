@@ -1,0 +1,19 @@
+#alert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f44336; /* Red */
+    color: white;
+    text-align: center;
+    padding: 5px 0px;
+    font-size: 12px;
+}
+
+#alert p {
+    margin: 0;
+}
+
+body {
+    padding-bottom: 50px;
+}
