@@ -97,18 +97,22 @@ function add_found_item_to_list () {
 }
 
 function get_random(discriminant, prevent = 0) {
-    var today_string = get_date();
+    var today_string = get_date(prevent);
     var str = "xcbfvgwdsv";
     var seed = discriminant + today_string + str;
     return seededRandom(seed);
 }
 
-function get_date() {
+function get_date(prevent = 0) {
     var now = new Date();
     var utcOffset = now.getTimezoneOffset() * 60000; 
-    var franceOffset = 2 * 60 * 60 * 1000;
+    var franceOffset = 16 * 60 * 60 * 1000;
     
     var noonFrance = new Date(now.getTime() + utcOffset + franceOffset);
+    
+    noonFrance.setDate(noonFrance.getDate() - prevent);
+    
+    console.log(noonFrance.toISOString().split('T')[0]);
     
     return noonFrance.toISOString().split('T')[0];
 }
