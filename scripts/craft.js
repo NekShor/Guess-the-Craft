@@ -108,7 +108,6 @@ document.addEventListener("mousedown", function(event) {
 });
 
 document.addEventListener("mouseup", function(event) {
-    console.log("Mouse up event:", event);
     if (event.button === 0) {
         is_left_click = false;
     }
@@ -349,7 +348,6 @@ function filterCraftableRecipes(availableItems, recipes, tagMap = {}) {
     var new_availableItems = [...availableItems, ...crafts_possible.map(recipe => recipe.result.id.replace('minecraft:', 'minecraft_'))];
     new_availableItems = [...new Set(new_availableItems)];
 
-    console.log(new_availableItems)
     if (new_availableItems.length > availableItems.length) {
         new_availableItems = filterCraftableRecipes(new_availableItems, recipes, tagMap);
     }
