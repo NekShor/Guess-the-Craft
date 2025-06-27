@@ -15,15 +15,23 @@ function select_set_items (min = [], prevent = 0){
         min = min.slice(0, nb_items_set);
     }
 
+    var items_ingredients = items.filter(function(item) {
+        return item.isIngredient === true;
+    });
+
     var items_set = min;
     var nb_restant = nb_items_set - items_set.length;
     for (var i = 0; i < nb_restant; i++) {
-        var random_item = items[Math.floor(get_random(i, prevent) * items.length)];
+        var random_item = get_random_items_set(i, items_ingredients, prevent);
         if (!items_set.includes(random_item)) {
             items_set.push(random_item);
         }
     }
     return items_set;
+}
+
+function get_random_items_set (seed, items_ingredients, prevent = 0) {
+    return items_ingredients[Math.floor(get_random(seed, prevent) * items_ingredients.length)]
 }
 
 function filter_items_list (list_selected){
@@ -126,9 +134,7 @@ function get_date(prevent = 0) {
     var noonFrance = new Date(now.getTime() + utcOffset + franceOffset);
     
     noonFrance.setDate(noonFrance.getDate() - prevent);
-    
-    console.log(noonFrance.toISOString().split('T')[0]);
-    
+        
     return noonFrance.toISOString().split('T')[0];
 }
 
