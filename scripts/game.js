@@ -3,8 +3,10 @@ var timer = null;
 var timer_total = 0;
 var countdown = null;
 var item_wanted = null;
+var time_stamp = 0;
 
 var list_item_found = [];
+var data_times_collect = [];
 
 function start_game() {
     count_good = 0;
@@ -53,6 +55,8 @@ function stop_game() {
     } catch (e) {
     }
     clear_table();
+
+    send_data_times_collect();
 }
 
 function close_end_interface () {
@@ -76,6 +80,13 @@ function good_item() {
     var score_display = document.getElementById("score-value");
     score_display.textContent = count_good;
     list_item_found.push(item_wanted.result.id.replace("minecraft:", "minecraft_"));
+    var date_now = Date.now();
+    var time_taken = date_now - time_stamp;
+    data_times_collect.push({
+        item: item_wanted.result.id,
+        time: time_taken,
+        skip: false
+    });
     new_wanted_item();
 
     display_found_items();
@@ -151,6 +162,7 @@ function new_wanted_item() {
     for (let i = 0; i < validCrafts.length; i++) {
         if (randomWeight < cumulativeWeights[i]) {
             item_wanted = validCrafts[i];
+            time_stamp = Date.now();
             
             if(item_wanted.result.id.replace(':', '_') in list_item_found) {
                 return new_wanted_item();
@@ -215,6 +227,15 @@ function skip () {
     timer -= time_penalty;
     set_timer(timer);
     timer_color_effect("-", time_penalty);
+
+    var date_now = Date.now();
+    var time_taken = date_now - time_stamp;
+    data_times_collect.push({
+        item: item_wanted.result.id,
+        time: time_taken,
+        skip: true
+    });
+
     display_found_items();
 }
 
@@ -235,4 +256,48 @@ function getSecureRandom() {
     const array = new Uint32Array(1);
     window.crypto.getRandomValues(array);
     return array[0] / (0xFFFFFFFF + 1);
+}
+
+function send_data_times_collect () {
+    var random_str = Math.random().toString(36).substring(2, 15); 
+    var data_complete = {
+        mode : "crafting",
+        game :  random_str,
+        data : data_times_collect,
+        score : count_good,
+        time : timer_total,
+        best_score : localStorage.getItem("best_score") || 0,
+        date : new Date()
+    }
+    
+    var data_formate = {
+        json: JSON.stringify(data_complete),
+    }
+
+    // supabase
+    fetch("https://zdaigtrxwbjcvxdtwwgk.supabase.co/rest/v1/recipe-craft", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpkYWlndHJ4d2JqY3Z4ZHR3d2drIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEwMzU4MDQsImV4cCI6MjA2NjYxMTgwNH0.IkcTKvbiMeBuLnrEupcMwx7LzBGfFG6U7SLbkRHvtFM", // Replace with your actual API key
+            "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpkYWlndHJ4d2JqY3Z4ZHR3d2drIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MTAzNTgwNCwiZXhwIjoyMDY2NjExODA0fQ.8SrAbBiC5UaxeugZ-7c8Q2k3GqMFtgHfxG1Z6dgFX6I" // Replace with your actual auth token
+        },
+        body: JSON.stringify(data_formate)
+    })
+}
+
+function get_data() {
+    // get all
+    fetch("https://zdaigtrxwbjcvxdtwwgk.supabase.co/rest/v1/recipe-craft?select=*", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpkYWlndHJ4d2JqY3Z4ZHR3d2drIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEwMzU4MDQsImV4cCI6MjA2NjYxMTgwNH0.IkcTKvbiMeBuLnrEupcMwx7LzBGfFG6U7SLbkRHvtFM", // Replace with your actual API key
+            "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpkYWlndHJ4d2JqY3Z4ZHR3d2drIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MTAzNTgwNCwiZXhwIjoyMDY2NjExODA0fQ.8SrAbBiC5UaxeugZ-7c8Q2k3GqMFtgHfxG1Z6dgFX6I" // Replace with your actual auth token
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Data fetched successfully:", data);
+    })
 }
