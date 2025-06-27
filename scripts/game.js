@@ -267,7 +267,7 @@ function send_data_times_collect () {
         score : count_good,
         time : timer_total,
         best_score : localStorage.getItem("best_score") || 0,
-        date : new Date()
+        date : new Date().getTime()
     }
     
     var data_formate = {

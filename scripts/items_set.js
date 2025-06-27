@@ -1,5 +1,7 @@
 var nb_items_set = 25;
 var max_craft = 0;
+var time_stamp = new Date().getTime();
+var data_collect = [];
 
 var get_date_str = get_date();
 if(localStorage.getItem("today") !== get_date_str) {
@@ -50,6 +52,18 @@ function is_good_craft (item) {
         add_found_item_to_list()
         display_good_items();
         display_score_value();
+
+        var date_now = new Date().getTime();
+        var time_diff = date_now - time_stamp;
+        data_collect.push({
+            item: item.code,
+            time: time_diff
+        });
+
+        console.log(items_crafted.length % 5)
+        if(items_crafted.length % 5 === 0) {
+            send_data_collect();
+        }
     }
 }
 
@@ -72,6 +86,7 @@ function display_good_items () {
         max_craft = filterCraftableRecipes(items_restrain_codes, crafts, tagMap);
     }
     if( items_restrain.length >= max_craft.length) {
+        send_data_collect();
         document.getElementById("end-game").style.display = "block";
         document.getElementById("end-game").innerHTML = "<p>Well done, you have found all the crafts !</p><br><a class='interface_btn' href='index.html' style='text-align: center;display: block;'>Home</a>";
     }
@@ -155,4 +170,44 @@ function display_prevent_day() {
         html += "<div class='mini_icon' title='"+name_tag.replace('minecraft_', 'minecraft:')+"'>" + "<img src=\"items/texture/" + name_tag + ".png\"></div>";
     });
     list_possible_items_div.innerHTML = html;
+}
+
+function send_data_collect() {
+    console.log("Sending data collect...");
+    var count_good = items_crafted.length;
+
+    if( localStorage.getItem("random_str") === null || localStorage.getItem("random_str") === undefined) {
+        var random_str = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        localStorage.setItem("random_str", random_str);
+    } else {
+        var random_str = localStorage.getItem("random_str");
+    }
+
+    var data_complete = {
+        mode : "items-set",
+        game :  random_str,
+        data : data_collect,
+        score : count_good,
+        date : new Date().getTime(),
+        items_possible : filterCraftableRecipes(items_restrain.map(item => item.code), crafts, tagMap).length,
+    }
+
+    var data_formate = {
+        json: JSON.stringify(data_complete),
+    }
+
+    fetch("https://zdaigtrxwbjcvxdtwwgk.supabase.co/rest/v1/recipe-craft", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpkYWlndHJ4d2JqY3Z4ZHR3d2drIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEwMzU4MDQsImV4cCI6MjA2NjYxMTgwNH0.IkcTKvbiMeBuLnrEupcMwx7LzBGfFG6U7SLbkRHvtFM", // Replace with your actual API key
+            "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpkYWlndHJ4d2JqY3Z4ZHR3d2drIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MTAzNTgwNCwiZXhwIjoyMDY2NjExODA0fQ.8SrAbBiC5UaxeugZ-7c8Q2k3GqMFtgHfxG1Z6dgFX6I" // Replace with your actual auth token
+        },
+        body: JSON.stringify(data_formate)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+    })
 }
