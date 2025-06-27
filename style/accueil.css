@@ -116,3 +116,36 @@ p{
         margin: 10px auto;
     }
 }
+
+body {
+    overflow: hidden;
+}
+
+h1, h2, p {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+.back-items {
+    position: absolute;
+    top: 0%;
+    left: -5%;
+    z-index: 1;
+    transition-duration: 20s;
+    transition-timing-function: linear;
+    transition: left 20s linear; /* Transition uniquement sur 'left' */
+}
+
+.back-items:hover {
+    background: #A9A9A9 no-repeat center center / 64px 64px;
+    border-color: #373737 #FFF #FFF #373737;
+    left: 20px; /* Exemple de modification de 'left' */
+}
+
+@media screen and (max-width: 800px) {
+    .back-items {
+        transition-duration: 5s;
+        left: -20%;
+    }
+    
+}

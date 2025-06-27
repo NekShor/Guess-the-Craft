@@ -52,8 +52,8 @@ h2 {
     text-align: left;
     flex-direction: row;
     align-items: center;
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     margin: 4px;
     box-sizing: border-box;
 }
@@ -77,9 +77,10 @@ h2 {
     text-align: left;
     flex-direction: row;
     align-items: center;
-    height: 32px;
+    height: 48px;
     margin: 4px;
     box-sizing: border-box;
+    padding: 0 20px;
 }
 
 .skip_btn:hover {
@@ -143,9 +144,18 @@ h2 {
         margin: 0px 0px;
     }
 
+    .clear_btn {
+        width: 32px;
+        height: 32px;
+    }
+
     .clear_btn:hover {
         background: url('../images/bin.webp') no-repeat center center / 24px 24px;
         border-color: #b0b0b0 #6a6a6a #6a6a6a #b0b0b0;
+    }
+
+    .skip_btn {
+        height: 32px!important;
     }
 
     #restart-game, #close {
