@@ -16,6 +16,7 @@ var get_date_str = get_date();
 if(localStorage.getItem("today") !== get_date_str) {
     localStorage.setItem("items_crafted", JSON.stringify([]));
     localStorage.setItem("today", get_date_str);
+    localStorage.setItem("time_stamp", new Date().getTime());
 }
 var items_crafted = localStorage.getItem("items_crafted") ? JSON.parse(localStorage.getItem("items_crafted")) : [];
 
@@ -80,6 +81,8 @@ function is_good_craft (item) {
         if(items_crafted.length % 5 === 0) {
             send_data_collect();
         }
+
+        do_sound('drop');
     }
 }
 

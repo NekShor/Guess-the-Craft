@@ -76,6 +76,7 @@ function is_good_craft(item) {
 }
     
 function good_item() {
+    do_sound('drop');
     count_good++;
     var score_display = document.getElementById("score-value");
     score_display.textContent = count_good;
