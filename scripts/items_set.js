@@ -1,7 +1,16 @@
 var nb_items_set = 25;
 var max_craft = 0;
-var time_stamp = new Date().getTime();
+var time_stamp = localStorage.getItem("time_stamp") ? parseInt(localStorage.getItem("time_stamp")) : new Date().getTime();
+if (localStorage.getItem("time_stamp") === null || localStorage.getItem("time_stamp") === undefined) {
+    localStorage.setItem("time_stamp", time_stamp);
+} else {
+    time_stamp = parseInt(localStorage.getItem("time_stamp"));
+}
 var data_collect = [];
+
+var interval = setInterval(function () {
+    display_timer();
+}, 1000);
 
 var get_date_str = get_date();
 if(localStorage.getItem("today") !== get_date_str) {
@@ -96,7 +105,9 @@ function display_good_items () {
     if( items_restrain.length >= max_craft.length) {
         send_data_collect();
         document.getElementById("end-game").style.display = "block";
-        document.getElementById("end-game").innerHTML = "<p>Well done, you have found all the crafts !</p><br><a class='interface_btn' href='index.html' style='text-align: center;display: block;'>Home</a>";
+        localStorage.setItem("time_end", new Date().getTime());
+        document.getElementById("end-game").innerHTML = "<p>Well done, you have found all the crafts in "+get_timer_str()+" !</p><br><div class='buttons'><a class='interface_btn go_home' href='index.html' style='text-align: center;display: block;'>Home</a><button class='interface_btn close' onClick='this.parentElement.parentElement.remove()'>Close</button></div>";
+        clearInterval(interval);
     }
 }
 
@@ -151,6 +162,9 @@ function seededRandom(seed = '') {
 function display_score_value() {
     var items_restrain_codes = items_restrain.map(function(item) {
         return item.code;
+    });
+    filterCraftableRecipes(items_restrain_codes, crafts, tagMap).forEach(function(item) {
+        console.log(item);
     });
     max_craft = filterCraftableRecipes(items_restrain_codes, crafts, tagMap);
     var score_value_div = document.getElementById("score-value");
@@ -216,4 +230,24 @@ function send_data_collect() {
             throw new Error("Network response was not ok");
         }
     })
+}
+
+function display_timer() {
+    var timer_div = document.getElementById("time");
+    var timer_str = get_timer_str();
+    timer_div.innerHTML = timer_str;
+}
+
+function get_timer_str() {
+    if (localStorage.getItem("time_end") !== null && localStorage.getItem("time_end") !== undefined) {
+        var time_stamp_now = parseInt(localStorage.getItem("time_end"));
+    } else {
+        var time_stamp_now = new Date().getTime();
+    }
+    
+    var time_diff = time_stamp_now - time_stamp;
+    var seconds = Math.floor((time_diff / 1000) % 60);
+    var minutes = Math.floor((time_diff / (1000 * 60)) % 60);
+    var hours = Math.floor((time_diff / (1000 * 60 * 60)) % 24);
+    return (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
 }
