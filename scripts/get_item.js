@@ -53,12 +53,12 @@ function get_items (text = "") {
       return item;
     });
 
-    var sortMode = document.getElementById("btn_sort") ? document.getElementById("btn_sort").getAttribute("data-sort") : "levenshtein";
+    var sortMode = document.getElementById("btn_sort") ? document.getElementById("btn_sort").getAttribute("data-sort") : "alphabetical";
     if (sortMode === "alphabetical") {
         filteredItems.sort(function(a, b) {
             return a.name.localeCompare(b.name);
         });
-    } else {
+    } else if (sortMode === "levenshtein") {
         filteredItems.sort(function(a, b) {
             const distanceA = levenshteinDistance(text.toLowerCase(), a.name.replace('minecraft', '').toLowerCase());
             const distanceB = levenshteinDistance(text.toLowerCase(), b.name.replace('minecraft', '').toLowerCase());
