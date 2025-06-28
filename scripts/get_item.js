@@ -53,13 +53,34 @@ function get_items (text = "") {
       return item;
     });
 
-    filteredItems.sort(function(a, b) {
-		const distanceA = levenshteinDistance(text.toLowerCase(), a.name.replace('minecraft', '').toLowerCase());
-		const distanceB = levenshteinDistance(text.toLowerCase(), b.name.replace('minecraft', '').toLowerCase());
-		return distanceA - distanceB;
-    });
+    var sortMode = document.getElementById("btn_sort") ? document.getElementById("btn_sort").getAttribute("data-sort") : "levenshtein";
+    if (sortMode === "alphabetical") {
+        filteredItems.sort(function(a, b) {
+            return a.name.localeCompare(b.name);
+        });
+    } else {
+        filteredItems.sort(function(a, b) {
+            const distanceA = levenshteinDistance(text.toLowerCase(), a.name.replace('minecraft', '').toLowerCase());
+            const distanceB = levenshteinDistance(text.toLowerCase(), b.name.replace('minecraft', '').toLowerCase());
+            return distanceA - distanceB;
+        });
+    }
 
     return filteredItems;
+}
+
+function change_sort(btn) {
+    var sort_mode = [
+        "levenshtein",
+        "alphabetical"
+    ]
+
+    var current_mode = btn.getAttribute("data-sort");
+    var next_mode = sort_mode[(sort_mode.indexOf(current_mode) + 1) % sort_mode.length];
+    btn.setAttribute("data-sort", next_mode);
+
+    var search_text = document.getElementById("search").value;
+    initialise_items(search_text)
 }
 
 function levenshteinDistance (str1, str2) {

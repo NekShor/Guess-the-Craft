@@ -77,7 +77,6 @@ function is_good_craft (item) {
             time: time_diff
         });
 
-        console.log(items_crafted.length % 5)
         if(items_crafted.length % 5 === 0) {
             send_data_collect();
         }
@@ -164,7 +163,6 @@ function display_score_value() {
         return item.code;
     });
     filterCraftableRecipes(items_restrain_codes, crafts, tagMap).forEach(function(item) {
-        console.log(item);
     });
     max_craft = filterCraftableRecipes(items_restrain_codes, crafts, tagMap);
     var score_value_div = document.getElementById("score-value");

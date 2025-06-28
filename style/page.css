@@ -225,6 +225,11 @@ body::-webkit-scrollbar {
     min-height: 48px;
 }
 
+#btn_sort {
+  width: 48px;
+  height: 48px;
+}
+
 #item_selected img {
     width: 48px;
     height: 48px;
