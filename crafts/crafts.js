@@ -419,7 +419,7 @@ var crafts = [
     "result": {
       "id": "minecraft:baked_potato"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -430,7 +430,7 @@ var crafts = [
     "result": {
       "id": "minecraft:baked_potato"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smoking",
@@ -441,7 +441,7 @@ var crafts = [
     "result": {
       "id": "minecraft:baked_potato"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -1154,7 +1154,7 @@ var crafts = [
     "result": {
       "id": "minecraft:black_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -1242,7 +1242,7 @@ var crafts = [
     "result": {
       "id": "minecraft:black_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1272,7 +1272,7 @@ var crafts = [
     "result": {
       "id": "minecraft:black_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1425,7 +1425,7 @@ var crafts = [
     "result": {
       "id": "minecraft:blue_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -1513,7 +1513,7 @@ var crafts = [
     "result": {
       "id": "minecraft:blue_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1563,7 +1563,7 @@ var crafts = [
     "result": {
       "id": "minecraft:blue_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1825,7 +1825,7 @@ var crafts = [
     "result": {
       "id": "minecraft:brick"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -1964,7 +1964,7 @@ var crafts = [
     "result": {
       "id": "minecraft:brown_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -2039,7 +2039,7 @@ var crafts = [
     "result": {
       "id": "minecraft:brown_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2069,7 +2069,7 @@ var crafts = [
     "result": {
       "id": "minecraft:brown_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -2349,7 +2349,7 @@ var crafts = [
     "result": {
       "id": "minecraft:charcoal"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -3025,7 +3025,7 @@ var crafts = [
     "result": {
       "id": "minecraft:coal"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:blasting",
@@ -3037,7 +3037,7 @@ var crafts = [
     "result": {
       "id": "minecraft:coal"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3049,7 +3049,7 @@ var crafts = [
     "result": {
       "id": "minecraft:coal"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3061,7 +3061,7 @@ var crafts = [
     "result": {
       "id": "minecraft:coal"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -3330,7 +3330,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_beef"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3341,7 +3341,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_beef"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smoking",
@@ -3352,7 +3352,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_beef"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3363,7 +3363,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_chicken"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3374,7 +3374,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_chicken"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smoking",
@@ -3385,7 +3385,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_chicken"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3396,7 +3396,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_cod"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3407,7 +3407,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_cod"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smoking",
@@ -3418,7 +3418,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_cod"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3429,7 +3429,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_mutton"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3440,7 +3440,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_mutton"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smoking",
@@ -3451,7 +3451,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_mutton"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3462,7 +3462,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_porkchop"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3473,7 +3473,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_porkchop"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smoking",
@@ -3484,7 +3484,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_porkchop"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3495,7 +3495,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_rabbit"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3506,7 +3506,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_rabbit"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smoking",
@@ -3517,7 +3517,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_rabbit"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3528,7 +3528,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_salmon"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:campfire_cooking",
@@ -3539,7 +3539,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_salmon"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smoking",
@@ -3550,7 +3550,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cooked_salmon"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -3670,7 +3670,7 @@ var crafts = [
     "result": {
       "id": "minecraft:copper_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:blasting",
@@ -3682,7 +3682,7 @@ var crafts = [
     "result": {
       "id": "minecraft:copper_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:blasting",
@@ -3694,7 +3694,7 @@ var crafts = [
     "result": {
       "id": "minecraft:copper_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3706,7 +3706,7 @@ var crafts = [
     "result": {
       "id": "minecraft:copper_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3718,7 +3718,7 @@ var crafts = [
     "result": {
       "id": "minecraft:copper_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3730,7 +3730,7 @@ var crafts = [
     "result": {
       "id": "minecraft:copper_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -3770,7 +3770,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cracked_deepslate_bricks"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3781,7 +3781,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cracked_deepslate_tiles"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3792,7 +3792,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cracked_nether_bricks"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3803,7 +3803,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cracked_polished_blackstone_bricks"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -3814,7 +3814,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cracked_stone_bricks"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4361,7 +4361,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cyan_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -4450,7 +4450,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cyan_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4480,7 +4480,7 @@ var crafts = [
     "result": {
       "id": "minecraft:cyan_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -4902,7 +4902,7 @@ var crafts = [
     "result": {
       "id": "minecraft:deepslate"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -5375,7 +5375,7 @@ var crafts = [
     "result": {
       "id": "minecraft:diamond"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:blasting",
@@ -5387,7 +5387,7 @@ var crafts = [
     "result": {
       "id": "minecraft:diamond"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -5399,7 +5399,7 @@ var crafts = [
     "result": {
       "id": "minecraft:diamond"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -5411,7 +5411,7 @@ var crafts = [
     "result": {
       "id": "minecraft:diamond"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -5686,7 +5686,7 @@ var crafts = [
     "result": {
       "id": "minecraft:dried_kelp"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -5697,7 +5697,7 @@ var crafts = [
     "result": {
       "id": "minecraft:dried_kelp"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smoking",
@@ -5708,7 +5708,7 @@ var crafts = [
     "result": {
       "id": "minecraft:dried_kelp"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -7722,7 +7722,7 @@ var crafts = [
     "result": {
       "id": "minecraft:emerald"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:blasting",
@@ -7734,7 +7734,7 @@ var crafts = [
     "result": {
       "id": "minecraft:emerald"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -7746,7 +7746,7 @@ var crafts = [
     "result": {
       "id": "minecraft:emerald"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -7758,7 +7758,7 @@ var crafts = [
     "result": {
       "id": "minecraft:emerald"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -8372,7 +8372,7 @@ var crafts = [
     "result": {
       "id": "minecraft:glass"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -8672,7 +8672,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:blasting",
@@ -8684,7 +8684,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:blasting",
@@ -8696,7 +8696,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:blasting",
@@ -8708,7 +8708,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -8751,7 +8751,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -8763,7 +8763,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -8775,7 +8775,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -8787,7 +8787,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -8821,7 +8821,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_nugget"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -8843,7 +8843,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gold_nugget"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -8979,7 +8979,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gray_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -9068,7 +9068,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gray_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -9098,7 +9098,7 @@ var crafts = [
     "result": {
       "id": "minecraft:gray_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -9220,7 +9220,7 @@ var crafts = [
     "result": {
       "id": "minecraft:green_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -9282,7 +9282,7 @@ var crafts = [
     "result": {
       "id": "minecraft:green_dye"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -9293,7 +9293,7 @@ var crafts = [
     "result": {
       "id": "minecraft:green_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -9323,7 +9323,7 @@ var crafts = [
     "result": {
       "id": "minecraft:green_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -9695,7 +9695,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:blasting",
@@ -9707,7 +9707,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:blasting",
@@ -9719,7 +9719,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -9762,7 +9762,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -9774,7 +9774,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -9786,7 +9786,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_ingot"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -9841,7 +9841,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_nugget"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -9867,7 +9867,7 @@ var crafts = [
     "result": {
       "id": "minecraft:iron_nugget"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -10299,7 +10299,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lapis_lazuli"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:blasting",
@@ -10311,7 +10311,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lapis_lazuli"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -10323,7 +10323,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lapis_lazuli"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -10335,7 +10335,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lapis_lazuli"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -10363,7 +10363,7 @@ var crafts = [
     "result": {
       "id": "minecraft:leaf_litter"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -10562,7 +10562,7 @@ var crafts = [
     "result": {
       "id": "minecraft:light_blue_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -10651,7 +10651,7 @@ var crafts = [
     "result": {
       "id": "minecraft:light_blue_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -10681,7 +10681,7 @@ var crafts = [
     "result": {
       "id": "minecraft:light_blue_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -10803,7 +10803,7 @@ var crafts = [
     "result": {
       "id": "minecraft:light_gray_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -10933,7 +10933,7 @@ var crafts = [
     "result": {
       "id": "minecraft:light_gray_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -10963,7 +10963,7 @@ var crafts = [
     "result": {
       "id": "minecraft:light_gray_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -11100,7 +11100,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lime_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -11175,7 +11175,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lime_dye"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -11186,7 +11186,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lime_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -11216,7 +11216,7 @@ var crafts = [
     "result": {
       "id": "minecraft:lime_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -11390,7 +11390,7 @@ var crafts = [
     "result": {
       "id": "minecraft:magenta_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -11523,7 +11523,7 @@ var crafts = [
     "result": {
       "id": "minecraft:magenta_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -11553,7 +11553,7 @@ var crafts = [
     "result": {
       "id": "minecraft:magenta_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12469,7 +12469,7 @@ var crafts = [
     "result": {
       "id": "minecraft:netherite_scrap"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:blasting",
@@ -12480,7 +12480,7 @@ var crafts = [
     "result": {
       "id": "minecraft:netherite_scrap"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smithing_transform",
@@ -12530,7 +12530,7 @@ var crafts = [
     "result": {
       "id": "minecraft:nether_brick"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -12976,7 +12976,7 @@ var crafts = [
     "result": {
       "id": "minecraft:orange_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -13091,7 +13091,7 @@ var crafts = [
     "result": {
       "id": "minecraft:orange_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -13121,7 +13121,7 @@ var crafts = [
     "result": {
       "id": "minecraft:orange_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -13730,7 +13730,7 @@ var crafts = [
     "result": {
       "id": "minecraft:pink_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -13858,7 +13858,7 @@ var crafts = [
     "result": {
       "id": "minecraft:pink_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -13888,7 +13888,7 @@ var crafts = [
     "result": {
       "id": "minecraft:pink_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -14868,7 +14868,7 @@ var crafts = [
     "result": {
       "id": "minecraft:popped_chorus_fruit"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15122,7 +15122,7 @@ var crafts = [
     "result": {
       "id": "minecraft:purple_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -15197,7 +15197,7 @@ var crafts = [
     "result": {
       "id": "minecraft:purple_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15227,7 +15227,7 @@ var crafts = [
     "result": {
       "id": "minecraft:purple_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15409,7 +15409,7 @@ var crafts = [
     "result": {
       "id": "minecraft:quartz"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15461,7 +15461,7 @@ var crafts = [
     "result": {
       "id": "minecraft:quartz"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15761,7 +15761,7 @@ var crafts = [
     "result": {
       "id": "minecraft:redstone"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:blasting",
@@ -15773,7 +15773,7 @@ var crafts = [
     "result": {
       "id": "minecraft:redstone"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -15785,7 +15785,7 @@ var crafts = [
     "result": {
       "id": "minecraft:redstone"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -15797,7 +15797,7 @@ var crafts = [
     "result": {
       "id": "minecraft:redstone"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -15880,7 +15880,7 @@ var crafts = [
     "result": {
       "id": "minecraft:red_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -15994,7 +15994,7 @@ var crafts = [
     "result": {
       "id": "minecraft:red_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16214,7 +16214,7 @@ var crafts = [
     "result": {
       "id": "minecraft:red_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16339,7 +16339,7 @@ var crafts = [
     "result": {
       "id": "minecraft:resin_brick"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16833,7 +16833,7 @@ var crafts = [
     "result": {
       "id": "minecraft:smooth_basalt"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:smelting",
@@ -16844,7 +16844,7 @@ var crafts = [
     "result": {
       "id": "minecraft:smooth_quartz"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16905,7 +16905,7 @@ var crafts = [
     "result": {
       "id": "minecraft:smooth_red_sandstone"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -16966,7 +16966,7 @@ var crafts = [
     "result": {
       "id": "minecraft:smooth_sandstone"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -17027,7 +17027,7 @@ var crafts = [
     "result": {
       "id": "minecraft:smooth_stone"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -17208,7 +17208,7 @@ var crafts = [
     "result": {
       "id": "minecraft:sponge"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -17521,7 +17521,7 @@ var crafts = [
     "result": {
       "id": "minecraft:stone"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -18458,7 +18458,7 @@ var crafts = [
     "result": {
       "id": "minecraft:terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20556,7 +20556,7 @@ var crafts = [
     "result": {
       "id": "minecraft:white_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -20644,7 +20644,7 @@ var crafts = [
     "result": {
       "id": "minecraft:white_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20674,7 +20674,7 @@ var crafts = [
     "result": {
       "id": "minecraft:white_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -20964,7 +20964,7 @@ var crafts = [
     "result": {
       "id": "minecraft:yellow_bundle"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shapeless",
@@ -21065,7 +21065,7 @@ var crafts = [
     "result": {
       "id": "minecraft:yellow_glazed_terracotta"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
@@ -21095,7 +21095,7 @@ var crafts = [
     "result": {
       "id": "minecraft:yellow_shulker_box"
     },
-    "ponderation": 0
+    "ponderation": 1
   },
   {
     "type": "minecraft:crafting_shaped",
