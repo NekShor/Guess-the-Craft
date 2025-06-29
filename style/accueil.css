@@ -118,7 +118,7 @@ p{
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 h1, h2, p {
