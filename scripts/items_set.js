@@ -14,6 +14,7 @@ var interval = setInterval(function () {
 
 var get_date_str = get_date();
 if(localStorage.getItem("today") !== get_date_str) {
+    console.log("New day detected, resetting items_crafted and time_stamp.");
     localStorage.setItem("items_crafted", JSON.stringify([]));
     localStorage.setItem("today", get_date_str);
     localStorage.setItem("time_stamp", new Date().getTime());
@@ -241,13 +242,16 @@ function display_timer() {
 }
 
 function get_timer_str() {
-    if (localStorage.getItem("time_end") !== null && localStorage.getItem("time_end") !== undefined) {
+    if (localStorage.getItem("time_end") !== null && localStorage.getItem("time_end") !== undefined && localStorage.getItem("time_end") !== "null") {
         var time_stamp_now = parseInt(localStorage.getItem("time_end"));
     } else {
         var time_stamp_now = new Date().getTime();
     }
     
     var time_diff = time_stamp_now - time_stamp;
+    if (time_diff < 0) {
+        time_diff = 0;
+    }
     var seconds = Math.floor((time_diff / 1000) % 60);
     var minutes = Math.floor((time_diff / (1000 * 60)) % 60);
     var hours = Math.floor((time_diff / (1000 * 60 * 60)) % 24);
