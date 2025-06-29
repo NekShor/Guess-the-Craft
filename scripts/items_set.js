@@ -17,6 +17,7 @@ if(localStorage.getItem("today") !== get_date_str) {
     localStorage.setItem("items_crafted", JSON.stringify([]));
     localStorage.setItem("today", get_date_str);
     localStorage.setItem("time_stamp", new Date().getTime());
+    localStorage.setItem("time_end", null);
 }
 var items_crafted = localStorage.getItem("items_crafted") ? JSON.parse(localStorage.getItem("items_crafted")) : [];
 
