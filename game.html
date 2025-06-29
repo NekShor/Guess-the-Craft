@@ -102,9 +102,17 @@
             </div>
             <div id="craft-table">
                 <h1 class="no_mobile">Crafting Table</h1>
+                <div id="list-tab">
+                    <div id="tab-craft" class="tab mcui pixel-image tab-active" onClick="change_tab(this)">
+                        <img src="items/texture/minecraft_crafting_table.png" alt="Crafting Table" class="tab-icon">
+                    </div>
+                    <div id="tab-furnace" class="tab mcui pixel-image" onClick="change_tab(this)">
+                        <img src="items/texture/minecraft_furnace.png" alt="Furnace" class="tab-icon">
+                    </div>
+                </div>
                 <span class="mcui pixel-image" id="crafting-grid">
                     <div class="mcui-Crafting_Table">
-                        <span class="mcui-input">
+                        <span class="mcui-input mcui-active">
                             <span class="mcui-row">
                                 <div class="invslot grid-item" id="place-1" data-item="null" onmousedown=""></div>
                                 <div class="invslot grid-item" id="place-2" data-item="null" onmousedown=""></div>
@@ -120,6 +128,20 @@
                                 <div class="invslot grid-item" id="place-8" data-item="null" onmousedown=""></div>
                                 <div class="invslot grid-item" id="place-9" data-item="null" onmousedown=""></div>
                             </span>
+                        </span>
+                        <span class="mcui-furnace">
+                            <span class="mcui-row">
+                                <div class="invslot grid-item" id="place-top" data-item="null" onmousedown=""></div>
+                            </span>
+                            <span class="furnace-burn">
+                                <img src="images/Grid_layout_Fire.webp" alt="Furnace Arrow" class="furnace-arrow">
+                            </span>
+                            <span class="mcui-row">
+                                <div class="invslot grid-item" id="place-bottom" data-item="null" onmousedown="">
+                                    <img src="items/texture/minecraft_coal.png" alt="Furnace Arrow" class="furnace-arrow">
+                                </div>
+                            </span>
+                            
                         </span>
                         <span class="mcui-arrow">
                         </span>

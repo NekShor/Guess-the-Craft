@@ -132,13 +132,13 @@ h1, h2, p {
     z-index: 1;
     transition-duration: 20s;
     transition-timing-function: linear;
-    transition: left 20s linear; /* Transition uniquement sur 'left' */
+    transition: left 20s linear;
 }
 
 .back-items:hover {
     background: #A9A9A9 no-repeat center center / 64px 64px;
     border-color: #373737 #FFF #FFF #373737;
-    left: 20px; /* Exemple de modification de 'left' */
+    left: 20px;
 }
 
 @media screen and (max-width: 800px) {

@@ -173,6 +173,49 @@ h1 {
     color: #ffffff;
 }
 
+#list-tab {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: 100%;
+}
+
+#list-tab .tab {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-bottom: 0px solid transparent;
+    transform: translate(0px, 4px);
+}
+
+#list-tab .tab-active {
+    z-index: 1;
+}
+
+.mcui-furnace, .mcui-input {
+    display: none;
+}
+
+.mcui-active {
+    display: block;
+}
+
+.furnace-burn {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.furnace-burn img {
+    width: 100%;
+    height: 100%;
+}
+
 @media (max-width: 800px) {
     .mcui {
         flex-direction: column;

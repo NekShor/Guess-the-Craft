@@ -17,7 +17,7 @@ function place_item(case_place) {
         case_place.setAttribute("data-item", item_selected_code);
         case_place.setAttribute("data-id", item_selected_code);
         case_place.style.backgroundImage = item_selected ? "url('items/texture/" + item_selected.code + ".png')" : "none";
-        formate_craft_item();
+        craft_item();
     } catch (error) {
     }
 }
@@ -33,8 +33,56 @@ function clear_table() {
     document.getElementById("craft-result").innerHTML = "";
 }
 
+function craft_item() {
+    var array_craft = formate_craft_item();
+    
+    var item_crafted = validateCraft(array_craft.array_craft, crafts, tagMap, array_craft.type_craft);
+    if(!item_crafted) {
+        var array_craft_flip_horizontal = [
+            array_craft.array_craft[0].reverse(),
+            array_craft.array_craft[1].reverse(),
+            array_craft.array_craft[2].reverse()
+        ];
+        item_crafted = validateCraft(array_craft_flip_horizontal, crafts, tagMap, array_craft.type_craft);
+    }
+    var result = document.getElementById("craft-result");
+    if (item_crafted) {
+        var item_formated = item_crafted.id.replace('minecraft:', 'minecraft_');
+        var obj = items.find(function(item) {
+            return item.code === item_formated;
+        });
+        
+        result.innerHTML = "<img src=\"items/texture/" + obj.code + ".png\" alt=\"" + obj.name + "\"> ";
+        is_good_craft(obj);
+    } else {
+        result.innerHTML = "";
+    }
+}
+
+function get_type_craftinf () {
+    var tab_active = document.querySelector(".tab-active");
+    if (tab_active.getAttribute('id') === "tab-craft") {
+        return "craft";
+    } else if (tab_active.getAttribute('id') === "tab-furnace") {
+        return "furnace";
+    }
+    return "craft";
+}
+
 function formate_craft_item() {
-    var crafting_grid = document.getElementById("crafting-grid");
+    var type_craft = get_type_craftinf();
+
+    if( type_craft === "craft") {
+        var array_craft = formate_craft_table();
+    } else if (type_craft === "furnace") {
+        var array_craft = formate_furnace_table();
+    }
+
+   return {array_craft: array_craft, type_craft: type_craft};
+}
+
+function formate_craft_table() {
+    var crafting_grid = document.querySelector("#crafting-grid .mcui-input");
 
     var crafting_places_obj = crafting_grid.querySelectorAll(".grid-item");
     var array = [];
@@ -57,27 +105,19 @@ function formate_craft_item() {
         array.slice(6, 9)
     ]
 
-    var item_crafted = validateCraft(array_craft, crafts, tagMap);
-    if(!item_crafted) {
-        var array_craft_flip_horizontal = [
-            array.slice(0, 3).reverse(),
-            array.slice(3, 6).reverse(),
-            array.slice(6, 9).reverse()
-        ];
-        item_crafted = validateCraft(array_craft_flip_horizontal, crafts, tagMap);
-    }
-    var result = document.getElementById("craft-result");
-    if (item_crafted) {
-        var item_formated = item_crafted.id.replace('minecraft:', 'minecraft_');
-        var obj = items.find(function(item) {
-            return item.code === item_formated;
-        });
-        
-        result.innerHTML = "<img src=\"items/texture/" + obj.code + ".png\" alt=\"" + obj.name + "\"> ";
-        is_good_craft(obj);
-    } else {
-        result.innerHTML = "";
-    }
+   return array_craft;
+}
+
+function formate_furnace_table() {
+    var furnace_grid = document.querySelector("#crafting-grid .mcui-furnace");
+    
+    var furnace_places_obj = furnace_grid.querySelector(".grid-item");
+    var array = [
+        [null, null, null],
+        [null, furnace_places_obj.getAttribute("data-item").replace('minecraft_', 'minecraft:') || null, null],
+        [null, null, null]
+    ];
+    return array;
 }
 
 
@@ -90,7 +130,7 @@ document.addEventListener("contextmenu", function(event) {
         item.setAttribute("data-id", 'null');
         item.style.backgroundImage = "none";
 
-        formate_craft_item();
+        craft_item();
     }
 });
 
@@ -219,28 +259,45 @@ const matchSmelting = (recipe, inputGrid) => {
     return input.length === 1 &&
         matchesIngredient(recipe.ingredient, input[0], tagMap);
 };
-function validateCraft(inputGrid, recipes, tagMap = {}) {
+function validateCraft(inputGrid, recipes, tagMap = {}, type_craft = "craft") {
     const flatten = grid => grid.flat().filter(x => x);
 
-
     for (const recipe of recipes) {
-        switch (recipe.type) {
-            case "minecraft:crafting_shaped":
-                if (matchShaped(recipe, inputGrid, tagMap)) return recipe.result;
-                break;
-            case "minecraft:crafting_shapeless":
-                if (matchShapeless(recipe, inputGrid, tagMap)) return recipe.result;
-                break;
-            // case "minecraft:stonecutting":
-            //     if (matchStonecutting(recipe, inputGrid, tagMap)) return recipe.result;
-            //     break;
-            // case "minecraft:smelting":
-            //     if (matchSmelting(recipe, inputGrid, tagMap)) return recipe.result;
-            //     break;
-            case "minecraft:crafting_transmute":
-                if (matchTransmute(recipe, inputGrid, tagMap)) return recipe.result;
-                break;
-            default:
+        if (type_craft === "craft") {
+            switch (recipe.type) {
+                case "minecraft:crafting_shaped":
+                    if (matchShaped(recipe, inputGrid, tagMap)) return recipe.result;
+                    break;
+                case "minecraft:crafting_shapeless":
+                    if (matchShapeless(recipe, inputGrid, tagMap)) return recipe.result;
+                    break;
+                // case "minecraft:stonecutting":
+                //     if (matchStonecutting(recipe, inputGrid, tagMap)) return recipe.result;
+                //     break;
+                // case "minecraft:smelting":
+                //     if (matchSmelting(recipe, inputGrid, tagMap)) return recipe.result;
+                //     break;
+                case "minecraft:crafting_transmute":
+                    if (matchTransmute(recipe, inputGrid, tagMap)) return recipe.result;
+                    break;
+                default:
+            }
+        } else if (type_craft === "furnace") {
+            switch (recipe.type) {
+                case "minecraft:smelting":
+                    if (matchSmelting(recipe, inputGrid, tagMap)) return recipe.result;
+                    break;
+                case "minecraft:blasting":
+                    if (matchSmelting(recipe, inputGrid, tagMap)) return recipe.result;
+                    break;
+                case "minecraft:smoking":
+                    if (matchSmelting(recipe, inputGrid, tagMap)) return recipe.result;
+                    break;
+                // case "minecraft:campfire_cooking":
+                //     if (matchSmelting(recipe, inputGrid, tagMap)) return recipe.result;
+                //     break;
+                default:
+            }
         }
     }
 
@@ -331,9 +388,111 @@ function filterCraftableRecipes(availableItems, recipes, tagMap = {}) {
             // case "minecraft:stonecutting":
             //     is_possible = matchStonecutting(recipe, availableItems, tagMap);
             //     break;
-            // case "minecraft:smelting":
-            //     is_possible = matchSmelting(recipe, availableItems, tagMap);
-            //     break;
+            case "minecraft:smelting":
+                var items_requierd = typeof recipe.ingredient === 'string' ? [recipe.ingredient] : recipe.ingredient;
+                for (var i = 0; i < items_requierd.length; i++) {
+                    var item = items_requierd[i];
+                    var normalizedItem = item.replace('minecraft:', 'minecraft_');
+
+                    if (availableItems.includes(normalizedItem)) {
+                        possible = true;
+                        break;
+                    }
+
+                    if (tagMap[item]) {
+                        for (var taggedItem of tagMap[item]) {
+                            if (availableItems.includes(taggedItem.replace('minecraft:', 'minecraft_'))) {
+                                possible = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (possible) break;
+                }
+                if (possible) {
+                    crafts_possible.push(recipe);
+                }
+                break;
+            case "minecraft:campfire_cooking":
+                var items_requierd = typeof recipe.ingredient === 'string' ? [recipe.ingredient] : recipe.ingredient;
+                for (var i = 0; i < items_requierd.length; i++) {
+                    var item = items_requierd[i];
+                    var normalizedItem = item.replace('minecraft:', 'minecraft_');
+
+                    if (availableItems.includes(normalizedItem)) {
+                        possible = true;
+                        break;
+                    }
+
+                    if (tagMap[item]) {
+                        for (var taggedItem of tagMap[item]) {
+                            if (availableItems.includes(taggedItem.replace('minecraft:', 'minecraft_'))) {
+                                possible = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (possible) break;
+                }
+                if (possible) {
+                    crafts_possible.push(recipe);
+                }
+                break;
+            case "minecraft:blasting":
+                var items_requierd = typeof recipe.ingredient === 'string' ? [recipe.ingredient] : recipe.ingredient;
+                for (var i = 0; i < items_requierd.length; i++) {
+                    var item = items_requierd[i];
+                    var normalizedItem = item.replace('minecraft:', 'minecraft_');
+
+                    if (availableItems.includes(normalizedItem)) {
+                        possible = true;
+                        break;
+                    }
+
+                    if (tagMap[item]) {
+                        for (var taggedItem of tagMap[item]) {
+                            if (availableItems.includes(taggedItem.replace('minecraft:', 'minecraft_'))) {
+                                possible = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (possible) break;
+                }
+                if (possible) {
+                    crafts_possible.push(recipe);
+                }
+                break;
+            case "minecraft:smoking":
+                var items_requierd = typeof recipe.ingredient === 'string' ? [recipe.ingredient] : recipe.ingredient;
+                for (var i = 0; i < items_requierd.length; i++) {
+                    var item = items_requierd[i];
+                    var normalizedItem = item.replace('minecraft:', 'minecraft_');
+
+                    if (availableItems.includes(normalizedItem)) {
+                        possible = true;
+                        break;
+                    }
+
+                    if (tagMap[item]) {
+                        for (var taggedItem of tagMap[item]) {
+                            if (availableItems.includes(taggedItem.replace('minecraft:', 'minecraft_'))) {
+                                possible = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (possible) break;
+                }
+                if (possible) {
+                    crafts_possible.push(recipe);
+                }
+                break;
+                
             case "minecraft:crafting_transmute":
                 var input = flatten(availableItems);
                 if (input.length !== 2) return;
@@ -353,4 +512,26 @@ function filterCraftableRecipes(availableItems, recipes, tagMap = {}) {
     }
 
     return new_availableItems;
+}
+
+function change_tab(elem){
+    var tabs = document.querySelectorAll(".tab");
+    tabs.forEach(function(tab) {
+        tab.classList.remove("tab-active");
+    });
+
+    elem.classList.add("tab-active");
+
+    var inputs = document.querySelectorAll(".mcui-active");
+    inputs.forEach(function(input) {
+        input.classList.remove("mcui-active");
+    });
+
+    if (elem.getAttribute('id') === "tab-craft") {
+        document.querySelector(".mcui-input").classList.add("mcui-active");
+    } else if (elem.getAttribute('id') === "tab-furnace") {
+        document.querySelector(".mcui-furnace").classList.add("mcui-active");
+    }
+
+    clear_table();
 }
