@@ -67,6 +67,7 @@ function is_good_craft (item) {
         return i.code;
     });
     if (!item_crafted_code.includes(item.code)) {
+        item.number = items_crafted ? items_crafted.length : 0;
         items_crafted.push(item);
         localStorage.setItem("items_crafted", JSON.stringify(items_crafted));
         add_found_item_to_list()
@@ -89,17 +90,20 @@ function is_good_craft (item) {
 }
 
 function display_good_items () {
-        var found_items_div = document.getElementById("found-items");
+    var found_items_div = document.getElementById("found-items");
     var html = "";
 
-    var items_crafted_temp = items_crafted.reverse(); 
-
-    items_crafted_temp.forEach(function(item) {
+    items_crafted = items_crafted.sort(function(a, b) {
+        if (a.number < b.number) return 1;
+        if (a.number > b.number) return -1;
+        return 0;
+    })
+    items_crafted.forEach(function(item) {
         var name_tag = item.code;
         html += "<div class='btn_in_game found_list shadow_btn'>" + "<img src=\"items/texture/" + name_tag + ".png\"><p>"+name_tag.replace('minecraft_', '').replaceAll('_', ' ')+"</p></div>";
     });
     found_items_div.innerHTML = html;
-
+    
     if(!max_craft) {
         var items_restrain_codes = items_restrain.map(function(item) {
             return item.code;
@@ -121,7 +125,8 @@ function add_found_item_to_list () {
             return {
                 code: item.code,
                 name: item.name,
-                spec: true
+                spec: true,
+                number: item.number
             };
         });
         items_restrain = [...items_restrain, ...items_crafted];
