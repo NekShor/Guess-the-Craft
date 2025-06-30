@@ -8,9 +8,12 @@ function get_one_item () {
 
 function lauch_items () {
     set_item_to_page();
-    setInterval(function() {
-        set_item_to_page();
-    }, 3000);
+    // random time between 1000 et 45000
+    var randomTime = Math.floor(Math.random() * (5000 - 1000 + 1));
+    console.log("Next item in: " + randomTime + " ms");
+    setTimeout(function() {
+        lauch_items();
+    }, randomTime);
 }
 
 function set_item_to_page(){
