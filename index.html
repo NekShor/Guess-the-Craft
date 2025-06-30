@@ -3,14 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Craft Master</title>
+    <title>Recipe Craft Master - Test Your Minecraft Crafting Knowledge</title>
+    <meta name="description" content="Master Minecraft crafting recipes with Recipe Craft Master! Test your knowledge with Speed Craft mode, discover recursive crafting, and challenge yourself with free crafting mode.">
+    <meta name="keywords" content="Minecraft, crafting, recipes, game, quiz, speed craft, recursive craft, Minecraft crafting table, gaming, online game">
+    <meta name="author" content="NekShor">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4CAF50">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://recipe-craft-master.com/">
+    <meta property="og:title" content="Recipe Craft Master - Test Your Minecraft Crafting Knowledge">
+    <meta property="og:description" content="Master Minecraft crafting recipes with Recipe Craft Master! Test your knowledge with Speed Craft mode, discover recursive crafting, and challenge yourself with free crafting mode.">
+    <meta property="og:image" content="items/texture/minecraft_crafting_table.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://recipe-craft-master.com/">
+    <meta property="twitter:title" content="Recipe Craft Master - Test Your Minecraft Crafting Knowledge">
+    <meta property="twitter:description" content="Master Minecraft crafting recipes with Recipe Craft Master! Test your knowledge with Speed Craft mode, discover recursive crafting, and challenge yourself with free crafting mode.">
+    <meta property="twitter:image" content="items/texture/minecraft_crafting_table.png">
+    <meta property="twitter:creator" content="@lord_ant1">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://recipe-craft-master.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="style/page.css">
     <link rel="stylesheet" href="style/craft.css">
     <link rel="stylesheet" href="style/get_item.css">
     <link rel="stylesheet" href="style/interface.css">
     <link rel="stylesheet" href="style/accueil.css">
     <link rel="stylesheet" href="style/alert.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Recipe Craft Master",
+      "url": "https://recipe-craft-master.com/",
+      "description": "Master Minecraft crafting recipes with Recipe Craft Master! Test your knowledge with Speed Craft mode, discover recursive crafting, and challenge yourself with free crafting mode.",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "author": {
+        "@type": "Person",
+        "name": "NekShor",
+        "url": "https://nekshor.fr",
+        "sameAs": [
+          "https://x.com/NekShor",
+          "https://github.com/NekShor"
+        ]
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Speed Craft mode",
+        "Recursive Craft mode", 
+        "Free Crafting mode",
+        "Minecraft recipe testing"
+      ]
+    }
+    </script>
 
     <script src="scripts/acceuil.js"></script>
     <script src="scripts/all.js"></script>
@@ -18,72 +79,86 @@
 
 </head>
 <body>
-    <h1>Recipe Craft Master</h1>
-    <div id="header-text">
-        <p>Welcome to the Recipe Craft Master !</p>
-        <p>This site is designed to test your knowledge of Minecraft crafts.</p>
-        <p>To your craft tables !</p>
-    </div>
-    <div class="game-mode-div">
-        <div class="game-div" id="SpeedCraft">
-            <h2>Speed Craft</h2>
-            <p>Test your speed in finding crafting recipes !</p>
-            <a href="game.html" class="btn_in_game">
-                <img src="items/texture/minecraft_crafter.png" alt="Speed Craft" class="game-icon">
-                Speed Craft
-            </a>
+    <header>
+        <h1>Recipe Craft Master</h1>
+        <div id="header-text">
+            <p>Welcome to the Recipe Craft Master !</p>
+            <p>This site is designed to test your knowledge of Minecraft crafts.</p>
+            <p>To your craft tables !</p>
         </div>
-        <div class="game-div" id="RecursiveCraft">
-            <h2>Recursive Craft</h2>
-            <p>Find as many crafts as possible from a defined set of items.</p>
-            <a href="game.html?mode=items-set&cumulative=true" class="btn_in_game">
-                <img src="items/texture/minecraft_chest.png" alt="Recursive Craft" class="game-icon">
-                Recursive Craft
-            </a>
+    </header>
+    
+    <main>
+        <section class="game-modes" aria-label="Game Modes">
+            <div class="game-mode-div">
+                <article class="game-div" id="SpeedCraft">
+                    <h2>Speed Craft</h2>
+                    <p>Test your speed in finding crafting recipes !</p>
+                    <a href="game.html" class="btn_in_game" aria-label="Play Speed Craft mode">
+                        <img src="items/texture/minecraft_crafter.png" alt="Speed Craft game mode icon" class="game-icon">
+                        Speed Craft
+                    </a>
+                </article>
+                <article class="game-div" id="RecursiveCraft">
+                    <h2>Recursive Craft</h2>
+                    <p>Find as many crafts as possible from a defined set of items.</p>
+                    <a href="game.html?mode=items-set&cumulative=true" class="btn_in_game" aria-label="Play Recursive Craft mode">
+                        <img src="items/texture/minecraft_chest.png" alt="Recursive Craft game mode icon" class="game-icon">
+                        Recursive Craft
+                    </a>
+                </article>
+            </div>
+            <div class="game-mode-div">
+                <article class="game-div" id="FreeCraft">
+                    <h2>Free Crafting</h2>
+                    <p>Practice crafting without time pressure or limitations.</p>
+                    <a href="game.html?mode=crafting" class="btn_in_game" aria-label="Play Free Crafting mode">
+                        <img src="items/texture/minecraft_crafting_table.png" alt="Free crafting game mode icon" class="game-icon">
+                        Crafting Free
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Recipe Craft Master. All rights reserved.</p>
+            <p>Created by <a href="https://nekshor.fr" target="_blank" rel="noopener">NekShor</a>.</p>
+            <p>For any questions or feedback, feel free to reach out!</p>
+            
+            <nav id="contact-list" aria-label="Contact Information">
+                <div id="twitter" class="contact">
+                    <a href="https://x.com/NekShor" class="btn_in_game" target="_blank" rel="noopener" aria-label="Follow on Twitter">
+                        <img src="images/twitter.webp" alt="Twitter logo" class="contact-icon">
+                        <span>@lord_ant1</span>
+                    </a>
+                </div>
+                <div id="github" class="contact">
+                    <a href="https://github.com/NekShor" class="btn_in_game" target="_blank" rel="noopener" aria-label="View GitHub profile">
+                        <img src="images/github.png" alt="GitHub logo" class="contact-icon">
+                        <span>Github : NekShor</span>
+                    </a>
+                </div>
+                <div id="mail" class="contact">
+                    <a href="mailto:antoine27bigot@gmail.com" class="btn_in_game" target="_blank" rel="noopener" aria-label="Send email">
+                        <img src="images/email.png" alt="Email icon" class="contact-icon">
+                        <span>antoine27bigot@gmail.com</span>
+                    </a>
+                </div>
+                <div id="portfolio" class="contact">
+                    <a href="https://nekshor.fr" class="btn_in_game" target="_blank" rel="noopener" aria-label="Visit portfolio website">
+                        <img src="images/portfolio.png" alt="Portfolio icon" class="contact-icon">
+                        <span>https://nekshor.fr</span>
+                    </a>
+                </div>
+            </nav>
         </div>
-    </div>
-    <div class="game-mode-div">
-        <div class="game-div" id="SpeedCraft">
-            <a href="game.html?mode=crafting" class="btn_in_game">
-                <img src="items/texture/minecraft_crafting_table.png" alt="free cratging" class="game-icon">
-                Crating free
-            </a>
-        </div>
-    </div>
-    <div id="footer">
-        <p>&copy; 2025 Recipe Craft Master. All rights reserved.</p>
-        <p>Created by NekShor.</p>
-        <p>For any questions or feedback, feel free to reach out!</p>
-        <div id="contact-list">
-            <div id="twitter" class="contact">
-                <a href="https://x.com/NekShor" class="btn_in_game" target="_blank">
-                    <img src="images/twitter.webp" alt="Twitter" class="contact-icon">
-                    <p>@lord_ant1</p>
-                </a>
-            </div>
-            <div id="github" class="contact">
-                <a href="https://github.com/NekShor" class="btn_in_game" target="_blank">
-                    <img src="images/github.png" alt="GitHub" class="contact-icon">
-                    <p>Github : NekShor</p>
-                </a>
-            </div>
-            <div id="mail" class="contact">
-                <a href="mailto:antoine27bigot@gmail.com" class="btn_in_game" target="_blank">
-                    <img src="images/email.png" alt="Email" class="contact-icon">
-                    <p>antoine27bigot@gmail.com</p>
-                </a>
-            </div>
-            <div id="portfolio" class="contact">
-                <a href="https://nekshor.fr" class="btn_in_game" target="_blank">
-                    <img src="images/portfolio.png" alt="Portfolio" class="contact-icon">
-                    <p>https://nekshor.fr</p>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div id="alert">
+    </footer>
+    
+    <aside id="alert" role="banner">
         <p>This site is in beta version; there may be bugs or unfinished features. Feel free to report them to me.</p>
-    </div>
+    </aside>
 
     <script>
         lauch_items();

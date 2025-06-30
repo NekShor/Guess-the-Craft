@@ -74,7 +74,7 @@
     width: auto!important;
 }
 
-#contact-list p {
+#contact-list span {
     font-size: 0.4em;
     margin: 0;
 }
@@ -101,6 +101,7 @@ p{
     #contact-list {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     #contact-list a {
@@ -114,6 +115,11 @@ p{
     .contact {
         width: 100%;
         margin: 10px auto;
+    }
+
+    #contact-list span {
+        font-size: 0.4em;
+        margin: 0;
     }
 }
 
