@@ -153,6 +153,54 @@ document.addEventListener("mouseup", function(event) {
     }
 });
 
+if ('ontouchstart' in window) {
+    let lastTouchTime = 0;
+
+    document.addEventListener("touchstart", function(event) {
+        const currentTime = new Date().getTime();
+        const timeDifference = currentTime - lastTouchTime;
+
+        if (timeDifference < 300) { // Si deux tapotements en moins de 300ms
+            event.preventDefault(); // Empêche le zoom
+        }
+
+        lastTouchTime = currentTime;
+    }, { passive: false }); // Définit l'écouteur comme non passif
+}
+
+let touchTimeout;
+
+document.addEventListener("touchstart", function(event) {
+    if (event.target.classList.contains("grid-item")) {
+        event.preventDefault(); // Prevent default behavior
+        var place = event.target.closest(".grid-item");
+
+        touchTimeout = setTimeout(() => {
+            is_left_click = true; // Simule un clic gauche prolongé
+            place_item(place); // Place l'élément
+        }, 0); // 500ms pour considérer comme un maintien
+    }
+}, { passive: false });
+
+document.addEventListener("touchend", function(event) {
+    clearTimeout(touchTimeout); // Annule le timeout si le toucher est relâché
+    is_left_click = false;
+});
+
+document.addEventListener("touchmove", function(event) {
+    var cursor_position = event.touches[0];
+    var target = document.elementFromPoint(cursor_position.clientX, cursor_position.clientY);
+    
+    if (target.classList.contains("grid-item")) {
+        event.preventDefault(); // Empêche le comportement par défaut du déplacement
+        if (is_left_click) {
+            place_item(target.closest(".grid-item")); // Place l'élément si le clic gauche est actif
+        }
+    }
+}, { passive: false });
+
+
+
 function matchesIngredient(expected, actual, tagMap) {
     if (!expected) return false;
 
