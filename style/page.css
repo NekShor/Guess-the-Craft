@@ -152,7 +152,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #c6c6c6;
-  
+  overflow-x: hidden;
+  margin: 0;
 }
 
 * {
@@ -279,6 +280,8 @@ body::-webkit-scrollbar {
     .header_button {
       padding: 0!important;
       text-align: center!important;
+      height: 35px!important;
+      width: 35px!important;
   }
 }
 .no_mobile {

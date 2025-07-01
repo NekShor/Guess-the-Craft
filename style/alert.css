@@ -8,6 +8,7 @@
     text-align: center;
     padding: 5px 0px;
     font-size: 12px;
+    height: 1rem;
 }
 
 #alert p {
@@ -16,4 +17,11 @@
 
 body {
     padding-bottom: 50px;
+}
+
+@media (max-width: 600px) {
+    #alert {
+        font-size: 10px;
+        height: 2rem;
+    }
 }
