@@ -81,7 +81,7 @@ function is_good_craft (item) {
             time: time_diff
         });
 
-        if(items_crafted.length % 5 === 0) {
+        if(items_crafted.length % 25 === 0) {
             send_data_collect();
         }
 

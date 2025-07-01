@@ -275,6 +275,7 @@ function send_data_times_collect () {
         json: JSON.stringify(data_complete),
     }
 
+    console.log("Sending data to Supabase:", data_formate);
     // supabase
     fetch("https://zdaigtrxwbjcvxdtwwgk.supabase.co/rest/v1/recipe-craft", {
         method: "POST",
