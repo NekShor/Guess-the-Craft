@@ -9,7 +9,7 @@ function get_one_item () {
 function lauch_items () {
     set_item_to_page();
     // random time between 1000 et 45000
-    var randomTime = Math.floor(Math.random() * (5000 - 2000 + 1));
+    var randomTime = Math.floor(Math.random() * (9000 - 2000 + 1));
     setTimeout(function() {
         lauch_items();
     }, randomTime);
