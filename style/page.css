@@ -200,10 +200,15 @@ body::-webkit-scrollbar {
     display: none!important;
 }
 
-.information_button {
-    width: 40px!important;
+.header_button {
+    width: 50px!important;
     padding: 0!important;
     text-align: center!important;
+    margin: 0px 10px;
+    height: 50px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #select-item {
@@ -271,8 +276,7 @@ body::-webkit-scrollbar {
         width: 100%; 
     }
 
-    .information_button {
-      width: 40px!important;
+    .header_button {
       padding: 0!important;
       text-align: center!important;
   }

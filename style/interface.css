@@ -17,9 +17,9 @@
 
 #header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    height: 100px;
+    flex-direction: row;
 }
 
 .infos {
@@ -32,7 +32,7 @@
 
 h2 {
     font-family: 'Minecraft', sans-serif;
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: #4c4c4c;
     margin: 0.5rem 0;
     text-align: center;
@@ -110,10 +110,6 @@ h2 {
     border-color: #b0b0b0 #6a6a6a #6a6a6a #b0b0b0;
 }
 
-#information_btn {
-    width: 30px!important;
-}
-
 #home_btn {
     width: 30px!important;
     display: flex;
@@ -123,9 +119,15 @@ h2 {
     height: 44px;
 }
 
+.div_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 800px) {
     .interface_btn {
-        width: 40%!important;
         padding: 0.5rem;
         font-size: 1rem;
     }
@@ -169,6 +171,7 @@ h2 {
     }
 
     #header {
-        height: 60px;
+        flex-direction: column;
+
     }
 }

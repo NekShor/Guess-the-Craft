@@ -66,20 +66,24 @@
         </div>
     </div>
     <div id="header">
-        <input type="button" class="interface_btn white shadow start_button" id="start-game" value="Start Game" onclick="start_game()">
-        <input type="button" class="interface_btn white shadow stop_button" id="stop-game" value="Stop Game" onclick="stop_game()">
-        <div id="timer" class="infos white" style="display: none;"> 
-            <h2>Timer</h2>
-            <span id="time">00:00</span>
+        <div id="btn_header" class="div_header">
+            <input type="button" class="interface_btn white shadow header_button" id="information_btn" value="I" data-open="false" onclick="information(this)">
+            <button type="button" class="interface_btn white shadow header_button" onclick="window.location.href='index.html'">
+                <img src="images/home.svg" alt="Home" style="width: 20px; height: 20px;">
+            </button>
         </div>
-        <div id="score" class="infos white" style="display: none;">
-            <h2>Score</h2>
-            <span id="score-value">0</span>
+        <div id="info_header" class="div_header">
+            <input type="button" class="interface_btn white shadow start_button" id="start-game" value="Start Game" onclick="start_game()">
+            <input type="button" class="interface_btn white shadow stop_button" id="stop-game" value="Stop Game" onclick="stop_game()">
+            <div id="timer" class="infos white" style="display: none;"> 
+                <h2>Timer</h2>
+                <span id="time">00:00</span>
+            </div>
+            <div id="score" class="infos white" style="display: none;">
+                <h2>Score</h2>
+                <span id="score-value">0</span>
+            </div>
         </div>
-        <input type="button" class="interface_btn white shadow information_button" id="information_btn" value="I" data-open="false" onclick="information(this)">
-        <a type="button" class="interface_btn white shadow home_button" id="home_btn" href="index.html">
-            <img src="images/home.svg" alt="Home" style="width: 20px; height: 20px;">
-        </a>
     </div>
     <div id="container" style="display: flex;">
         <div id="prevent-day" class="mcui " style="display: none">
