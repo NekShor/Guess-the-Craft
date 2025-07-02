@@ -31,13 +31,13 @@ app.get('/game.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'game.html'));
 });
 
-// Route for game with parameters (e.g., /game/level/1 or /game?mode=easy)
-app.get('/game/:param?', (req, res) => {
+// Route for game with any additional path
+app.get('/game', (req, res) => {
     res.sendFile(path.join(__dirname, 'game.html'));
 });
 
-// Route for index with parameters
-app.get('/index/:param?', (req, res) => {
+// Route for index with any additional path
+app.get('/index', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
@@ -52,13 +52,18 @@ app.get('/api/params', (req, res) => {
 });
 
 // Catch-all route - serve index.html for SPA routing
-app.get('*', (req, res) => {
-  // Check if the request is for an HTML file
-  if (req.path.endsWith('.html') || req.path === '/' || !req.path.includes('.')) {
+app.use((req, res, next) => {
+  // Check if the request is for an HTML file or root path
+  if (req.path.endsWith('.html') || req.path === '/' || (!req.path.includes('.') && !req.path.startsWith('/api'))) {
     res.sendFile(path.join(__dirname, 'index.html'));
   } else {
-    res.status(404).send('File not found');
+    next(); // Continue to other routes or static files
   }
+});
+
+// 404 handler for remaining requests
+app.use((req, res) => {
+  res.status(404).send('File not found');
 });
 
 // Start the server
