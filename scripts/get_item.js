@@ -32,7 +32,17 @@ function set_item_selected (item) {
     var itemObject = items_restrain.find(function(i) { return i.code === item; });
     item_selected = itemObject;
     document.getElementById("item_selected").innerHTML = "<img src=\"items/texture/"+item_selected.code+".png\"><p>" + item_selected.name.replace('minecraft ', '').trim() + "</p>";
-    
+    console.log(item_selected.name.replace('minecraft ', '').trim().length)
+    if (item_selected.name.replace('minecraft ', '').trim().length > 25) {
+        document.getElementById("item_selected").classList.add("very-long-name");
+        document.getElementById("item_selected").classList.remove("long-name");
+    } else if (item_selected.name.replace('minecraft ', '').trim().length > 15) {
+        document.getElementById("item_selected").classList.add("long-name");
+        document.getElementById("item_selected").classList.remove("very-long-name");
+    } else {
+        document.getElementById("item_selected").classList.remove("long-name", "very-long-name");
+    }
+
     var crafting_grid = document.getElementById("crafting-grid");
     crafting_grid.style.cursor = "url('items/texture/"+item_selected.code+".png') 32 32, auto";
     var found_items = document.getElementById("found-items");
