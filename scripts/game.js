@@ -46,10 +46,13 @@ function stop_game() {
     best_score_display.textContent = best_score;
     var score_display = document.getElementById("score-value");
     score_display.textContent = count_good;
-    var html = end_game_div.innerHTML;
+
+    var sharebtn = document.getElementById("share");
+    var html = "";
     html += "<div class='pseudo'>Your pseudo : &nbsp <input id='pseudo_value' type='text' class='invslot' value='"+(localStorage.getItem("pseudo") || "")+"' onChange='localStorage.setItem(\"pseudo\", this.value)'></div>";
-    html += "<div class='buttons'><button class='interface_btn share' onClick='shareGame("+(minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds+", "+count_good+")'>Share your score on twitter</button></div>"; 
-    end_game_div.innerHTML = html;
+    html += "<div class='buttons'><button style='margin: 0 auto;' class='interface_btn share' onClick=\"shareGame('"+(minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds+"', '"+count_good+"')\">Share your score</button></div>"; 
+    html += "<br><div class='buttons'><button class='interface_btn share' onClick=\"shareGame('"+(minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds+"', '"+count_good+"', 'twitter')\">Share your score on twitter</button></div>"; 
+    sharebtn.innerHTML = html;
     list_item_found = [];
     item_wanted = null;
     try{
@@ -63,8 +66,10 @@ function stop_game() {
     send_data_times_collect();
 }
 
-function shareGame(time, score) {
+function shareGame(timer, score, reseau = null) {
     var url = window.location.href;
+    url = url.split("?")[0];
+    url = url.split("/").slice(0, -1).join("/") + "/resultat.html";  
     
     if (url.includes("?")) {
         url += "&pseudo=" + encodeURIComponent(localStorage.getItem("pseudo") || "");
@@ -73,14 +78,24 @@ function shareGame(time, score) {
         url += "?pseudo=" + encodeURIComponent(localStorage.getItem("pseudo") || "");
     }
     url += "&score=" + score;
-    url += "&time=" + time;
-    url += "&best_score=" + (localStorage.getItem("best_score") || 0);
+    url += "&time=" + timer;
+    url += "&bestscore=" + (localStorage.getItem("best_score") || 0);
+    url += "&gamemode=speed-craft";
 
-    var text = "My score in the Guess the Craft game: " + score + " in " + time + "! Check it out: " + url;
-    var twitterUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
-    window.open(twitterUrl, '_blank');
+    if (reseau === "twitter") {
+        var text = "I just completed the Guess the Craft game with a score of " + score + " in " + timer + "! Check it out: " + url;
+        var twitterUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
+        window.open(twitterUrl, '_blank');
+    } else {
+        // copy to clipboard
+        var textArea = document.createElement("textarea");
+        textArea.value = url;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+    }
 }
-
 
 function close_end_interface () {
     var end_game_div = document.getElementById("end-game");

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Résultat</title>
+        <link rel="stylesheet" href="style/page.css">
+        <link rel="stylesheet" href="style/interface.css">
+        <link rel="stylesheet" href="style/end_game.css">
+        <link rel="stylesheet" href="style/craft.css">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <!-- favicon -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <!-- no robot -->
+        <meta name="robots" content="noindex, nofollow">
+
+        <meta name="description" content="Minecraft Crafting Game - Test your crafting skills and knowledge of Minecraft recipes.">
+
+        <style>
+            #streak img {
+                width: 30px;
+                height: 30px;
+                margin: 0 2px;
+            }
+
+            #streak {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+            }
+
+            #end-game {
+                display: block;
+                padding-bottom: 20px;
+            }
+
+            p{
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+                word-break: break-word;
+            }
+            #buttons {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="end-game" class="white mcui" style="">
+            <h1 id="pseudo"></h1>
+            <p id="end-message">has finished the game in <span id="game-mode"></span> mode !</p>
+            <p id="score"></p>
+            <p id="bestscore">His best score: <span id="final-best-score">0</span></p>
+            <p id="time">Time taken: <span id="final-time">00:00</span></p>
+            <p id="streak">Streak: <span id="final-streak">0</span></p>
+            <br>
+            <div id="buttons">
+                <a class="interface_btn white shadow" href="index.html"> Home </a>
+                <a class="interface_btn white shadow" style="padding-left: 10px; padding-right: 10px; margin-left: 20px;" id="link" href="index.html"> Home </a>
+            </div>
+        </div>
+        <script>
+            var params = new URLSearchParams(window.location.search);
+            var pseudo = params.get('pseudo') == "" || params.get('pseudo') == null ? "Unknown" : params.get('pseudo');
+            var finalScore = params.get('score') || 0;
+            var finalBestScore = params.get('bestscore') || 0;
+            var finalTime = params.get('time') || "00:00";
+            var streak = params.get('streak') || 0;
+            var gameMode = params.get('gamemode') || "Unknown";
+
+            var pseudoElement = document.getElementById("pseudo");
+            var finalScoreElement = document.getElementById("score");
+            var finalBestScoreElement = document.getElementById("final-best-score");
+            var finalTimeElement = document.getElementById("final-time");
+            var finalStreakElement = document.getElementById("final-streak");
+            var gameModeElement = document.getElementById("game-mode");
+
+            var link = document.querySelector("#link");
+
+            if (gameMode === "items-set") {
+                document.getElementById("bestscore").style.display = "none";
+                finalScoreElement.textContent = "Items found : "+finalScore;
+                var html = "";
+                for (var i = 0; i < streak; i++) {
+                    html += "<img src='items/texture/minecraft_experience_bottle.png' class='streak_icon' alt='Streak Icon'>";
+                }
+                finalStreakElement.innerHTML = html || "0";
+
+                link.textContent = "Play at Recursive Craft";
+                link.href = "game.html?mode=items-set&cumulative=true";
+                gameModeElement.textContent = "Recursive Craft";
+            } else if (gameMode === "speed-craft") {
+                document.getElementById("streak").style.display = "none";
+                finalScoreElement.textContent = "Score : "+finalScore;
+
+                link.textContent = "Play at Speed Craft";
+                link.href = "game.html";
+                gameModeElement.textContent = "Speed Craft";
+            } else {
+                window.location.href = "index.html";
+            }
+
+            pseudoElement.textContent = pseudo;
+            finalBestScore.textContent = finalBestScore;
+            finalTimeElement.textContent = finalTime;
+        </script>
+    </body>
+</html>

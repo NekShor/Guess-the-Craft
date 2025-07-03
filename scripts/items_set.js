@@ -149,14 +149,17 @@ function display_win() {
     html += "<div class='buttons'><a class='interface_btn go_home' href='index.html' style='text-align: center;display: block;'>Home</a><button class='interface_btn close' onClick='this.parentElement.parentElement.remove()'>Close</button></div>";
     
     html += "<div class='pseudo'>Your pseudo : &nbsp <input id='pseudo_value' type='text' class='invslot' value='"+(localStorage.getItem("pseudo") || "")+"' onChange='localStorage.setItem(\"pseudo\", this.value)'></div>";
-    html += "<div class='buttons'><button class='interface_btn share' onClick='shareGame()'>Share your score on twitter</button></div>";    
+    html += "<div class='buttons'><button style='margin: 0 auto;' class='interface_btn share' onClick='shareGame()'>Share your score</button></div>";    
+    html += "<br><div class='buttons'><button class='interface_btn share' onClick='shareGame('twitter')'>Share your score on twitter</button></div>";    
     document.getElementById("end-game").innerHTML = html;
     clearInterval(interval);
 }
 
-function shareGame() {
+function shareGame(reseau = null) {
     var score = items_crafted.length;
     var url = window.location.href;
+    url = url.split("?")[0];
+    url = url.split("/").slice(0, -1).join("/") + "/resultat.html";  
     
     if (url.includes("?")) {
         url += "&pseudo=" + encodeURIComponent(localStorage.getItem("pseudo") || "");
@@ -167,11 +170,20 @@ function shareGame() {
     url += "&time=" + encodeURIComponent(get_timer_str());
     url += "&streak=" + get_streak();
     url += "&score=" + score;
-    url += "&endgame=true";
+    url += "&gamemode=items-set";
 
-    var text = "I just completed the Guess the Craft game with a score of " + score + " in " + get_timer_str() + "! Check it out: " + url;
-    var twitterUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
-    window.open(twitterUrl, '_blank');
+    if (reseau === "twitter") {
+        var text = "I just completed the Guess the Craft game with a score of " + score + " in " + timer + "! Check it out: " + url;
+        var twitterUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
+        window.open(twitterUrl, '_blank');
+    } else {
+        var textArea = document.createElement("textarea");
+        textArea.value = url;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+    }
 }
 
 
