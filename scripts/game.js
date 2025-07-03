@@ -41,13 +41,15 @@ function stop_game() {
     var minutes = Math.floor(timer_total / 60);
     var seconds = timer_total % 60;
     final_time.textContent = (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
-    set_timer(0);
-    count_good = 0;
     var best_score_display = document.getElementById("final-best-score");
     var best_score = localStorage.getItem("best_score") || 0;
     best_score_display.textContent = best_score;
     var score_display = document.getElementById("score-value");
     score_display.textContent = count_good;
+    var html = end_game_div.innerHTML;
+    html += "<div class='pseudo'>Your pseudo : &nbsp <input id='pseudo_value' type='text' class='invslot' value='"+(localStorage.getItem("pseudo") || "")+"' onChange='localStorage.setItem(\"pseudo\", this.value)'></div>";
+    html += "<div class='buttons'><button class='interface_btn share' onClick='shareGame("+(minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds+", "+count_good+")'>Share your score on twitter</button></div>"; 
+    end_game_div.innerHTML = html;
     list_item_found = [];
     item_wanted = null;
     try{
@@ -55,9 +57,30 @@ function stop_game() {
     } catch (e) {
     }
     clear_table();
+    count_good = 0;
+    set_timer(0);
 
     send_data_times_collect();
 }
+
+function shareGame(time, score) {
+    var url = window.location.href;
+    
+    if (url.includes("?")) {
+        url += "&pseudo=" + encodeURIComponent(localStorage.getItem("pseudo") || "");
+    }
+    else {
+        url += "?pseudo=" + encodeURIComponent(localStorage.getItem("pseudo") || "");
+    }
+    url += "&score=" + score;
+    url += "&time=" + time;
+    url += "&best_score=" + (localStorage.getItem("best_score") || 0);
+
+    var text = "My score in the Guess the Craft game: " + score + " in " + time + "! Check it out: " + url;
+    var twitterUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
+    window.open(twitterUrl, '_blank');
+}
+
 
 function close_end_interface () {
     var end_game_div = document.getElementById("end-game");

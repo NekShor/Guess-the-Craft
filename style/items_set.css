@@ -63,7 +63,7 @@
     justify-content: space-between;
 }
 
-#streak {
+.items-set-mode #streak {
     display: flex!important;
     align-items: center;
     justify-content: center;

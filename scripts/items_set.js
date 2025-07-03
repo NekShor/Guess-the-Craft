@@ -147,10 +147,33 @@ function display_win() {
     }
 
     html += "<div class='buttons'><a class='interface_btn go_home' href='index.html' style='text-align: center;display: block;'>Home</a><button class='interface_btn close' onClick='this.parentElement.parentElement.remove()'>Close</button></div>";
+    
+    html += "<div class='pseudo'>Your pseudo : &nbsp <input id='pseudo_value' type='text' class='invslot' value='"+(localStorage.getItem("pseudo") || "")+"' onChange='localStorage.setItem(\"pseudo\", this.value)'></div>";
+    html += "<div class='buttons'><button class='interface_btn share' onClick='shareGame()'>Share your score on twitter</button></div>";    
     document.getElementById("end-game").innerHTML = html;
     clearInterval(interval);
-
 }
+
+function shareGame() {
+    var score = items_crafted.length;
+    var url = window.location.href;
+    
+    if (url.includes("?")) {
+        url += "&pseudo=" + encodeURIComponent(localStorage.getItem("pseudo") || "");
+    }
+    else {
+        url += "?pseudo=" + encodeURIComponent(localStorage.getItem("pseudo") || "");
+    }
+    url += "&time=" + encodeURIComponent(get_timer_str());
+    url += "&streak=" + get_streak();
+    url += "&score=" + score;
+    url += "&endgame=true";
+
+    var text = "I just completed the Guess the Craft game with a score of " + score + " in " + get_timer_str() + "! Check it out: " + url;
+    var twitterUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
+    window.open(twitterUrl, '_blank');
+}
+
 
 function add_found_item_to_list () {
     if(urlParams.get('cumulative') === 'true') {
