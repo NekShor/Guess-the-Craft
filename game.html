@@ -84,6 +84,12 @@
                 <span id="score-value">0</span>
             </div>
         </div>
+        <div id="streak" class="no_mobile" style="display: none;">
+            <h2>Streak :</h2>
+            <div id="streak_div" class="streak_div">
+
+            </div>
+        </div>
     </div>
     <div id="container" style="display: flex;">
         <div id="prevent-day" class="mcui " style="display: none">
@@ -204,6 +210,7 @@
                 display_good_items();
                 display_score_value();
                 display_prevent_day();
+                display_streak();
             }, 500);
         } else {
             console.error('Invalid game mode specified in URL parameters.');

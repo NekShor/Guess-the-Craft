@@ -63,8 +63,28 @@
     justify-content: space-between;
 }
 
+#streak {
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    font-size: 1.2rem;
+    color: #fff;
+    flex-direction: column;
+}
+
+#streak_div img {
+    width: 30px;
+    height: 30px;
+}
+
 @media (max-width: 800px) {
     .items-set-mode #prevent-day {
         /* width: 100%; */
+    }
+
+    #streak {
+        display: none!important;
     }
 }

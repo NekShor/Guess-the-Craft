@@ -111,12 +111,45 @@ function display_good_items () {
         max_craft = filterCraftableRecipes(items_restrain_codes, crafts, tagMap);
     }
     if( items_restrain.length >= max_craft.length) {
-        send_data_collect();
-        document.getElementById("end-game").style.display = "block";
-        localStorage.setItem("time_end", new Date().getTime());
-        document.getElementById("end-game").innerHTML = "<p>Well done, you have found all the crafts in "+get_timer_str()+" !</p><br><div class='buttons'><a class='interface_btn go_home' href='index.html' style='text-align: center;display: block;'>Home</a><button class='interface_btn close' onClick='this.parentElement.parentElement.remove()'>Close</button></div>";
-        clearInterval(interval);
+        display_win();
     }
+}
+
+function display_win() {
+    send_data_collect();
+    var win_date = localStorage.getItem("win_date") || null;
+    if (win_date === null || win_date === undefined) {
+        var today = new Date();
+        var today_string = today.toISOString().split('T')[0];
+        var win_date_list = [today_string];
+ 
+        localStorage.setItem("win_date", JSON.stringify(win_date_list));
+    } else {
+        var win_date_list = JSON.parse(win_date);
+        var today = new Date();
+        var today_string = today.toISOString().split('T')[0];
+        if (!win_date_list.includes(today_string)) {
+            win_date_list.push(today_string);
+            localStorage.setItem("win_date", JSON.stringify(win_date_list));
+        }
+    }
+    display_streak();
+    document.getElementById("end-game").style.display = "block";
+    localStorage.setItem("time_end", new Date().getTime());
+    var html = "<p>Well done, you have found all the crafts in "+get_timer_str()+" !</p>"
+    var streak = get_streak(); 
+    if (streak > 0) {
+        html += "<div id='streak_div'><p>Streak : </p>";
+        for (var i = 0; i < streak; i++) {
+            html += "<img src='items/texture/minecraft_experience_bottle.png' class='streak_icon' alt='Streak Icon'>";
+        }
+        html += "</div>";
+    }
+
+    html += "<div class='buttons'><a class='interface_btn go_home' href='index.html' style='text-align: center;display: block;'>Home</a><button class='interface_btn close' onClick='this.parentElement.parentElement.remove()'>Close</button></div>";
+    document.getElementById("end-game").innerHTML = html;
+    clearInterval(interval);
+
 }
 
 function add_found_item_to_list () {
@@ -177,6 +210,47 @@ function display_score_value() {
     max_craft = filterCraftableRecipes(items_restrain_codes, crafts, tagMap);
     var score_value_div = document.getElementById("score-value");
     score_value_div.innerHTML = items_restrain.length + " / " + max_craft.length;
+}
+
+function display_streak() {
+    var streak_div = document.getElementById("streak_div");
+    var win_date = localStorage.getItem("win_date");
+    if (win_date === null || win_date === undefined) {
+        streak_div.style.display = "none";
+        return;
+    }
+    var streak = get_streak();
+    streak_div.style.display = "flex";
+    var html = ""
+    for (var i = 0; i < streak; i++) {
+        html += "<img src='items/texture/minecraft_experience_bottle.png' class='streak_icon' alt='Streak Icon'>";
+    }
+    streak_div.innerHTML = html;
+}
+
+function get_streak() {
+    var win_date = localStorage.getItem("win_date");
+
+    var win_date_list = JSON.parse(win_date);
+    var today = new Date();
+    var streak = 0;
+    win_date_list.sort(function(a, b) {
+        return new Date(b).getTime() - new Date(a).getTime();
+    });
+    
+    var expectedDate = new Date(today);
+    for (var i = 0; i < win_date_list.length; i++) {
+        var dateStr = expectedDate.toISOString().split('T')[0];
+        
+        if (win_date_list.includes(dateStr)) {
+            streak++;
+            expectedDate.setDate(expectedDate.getDate() - 1);
+        } else {
+            break;
+        }
+    }
+
+    return streak;
 }
 
 function display_prevent_day() {
